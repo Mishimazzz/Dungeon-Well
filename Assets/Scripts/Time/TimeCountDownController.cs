@@ -6,6 +6,8 @@ using TMPro;
 public class TimeCountDownController : MonoBehaviour
 {
     public TimeController timeController;
+    public GameObject timeCountDownPanel;
+    public TextMeshProUGUI exploreButtonText;
     public TextMeshProUGUI hourText;
     public TextMeshProUGUI minuteText;
     public TextMeshProUGUI secondText;
@@ -61,7 +63,16 @@ public class TimeCountDownController : MonoBehaviour
         }
 
         Debug.Log(" Times Up!!!");
+        timeCountDownPanel.SetActive(false);
+        exploreButtonText.text = "Explore";
+        timeController.hour = 0; timeController.min = 0; timeController.sec = 0;
+        RefreshTimeUI();
     }
 
-    
+    public void RefreshTimeUI()
+    {
+        timeController.hourText.text = timeController.hour.ToString("D2");
+        timeController.minuteText.text = timeController.min.ToString("D2");
+        timeController.secondText.text = timeController.sec.ToString("D2");
+    }
 }

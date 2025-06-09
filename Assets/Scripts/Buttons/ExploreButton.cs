@@ -8,6 +8,7 @@ public class ExploreButton : MonoBehaviour
 {
     public GameObject timePanel;
     public GameObject timeStopPanel;
+    public Button exploreButton;
     public TextMeshProUGUI exploreButtonText;
     public void OnButtonClick()
     {
@@ -15,6 +16,9 @@ public class ExploreButton : MonoBehaviour
         Debug.Log(" Debug: You click the Explore button");
 
         if (text.Equals("Explore")) timePanel.SetActive(true);
-        else timeStopPanel.SetActive(true);
+        else
+        {
+            timeStopPanel.SetActive(true);
+        }
     }
 }
