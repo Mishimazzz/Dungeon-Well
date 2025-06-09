@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class TimeCountDownController : MonoBehaviour
+{
+    public TimeController timeController;
+    public TextMeshProUGUI hourText;
+    public TextMeshProUGUI minuteText;
+    public TextMeshProUGUI secondText;
+
+    void Start()
+    {
+        StartCoroutine(CountDown());
+    }
+
+    private IEnumerator CountDown()
+    {
+        int hour = timeController.hour;
+        int min = timeController.min;
+        int sec = timeController.sec;
+
+        // show time at first
+        hourText.text = hour.ToString("D2");
+        minuteText.text = min.ToString("D2");
+        secondText.text = sec.ToString("D2");
+
+        while (hour > 0 || min > 0 || sec > 0)
+        {
+            //wait for one second
+            yield return new WaitForSeconds(1f);
+
+            sec--;
+            if (sec < 0 && (min > 0 || hour > 0))
+            {
+                sec = 59;
+                min--;
+                if (min < 0 && hour > 0)
+                {
+                    min = 59;
+                    hour--;
+                }
+            }
+
+            hourText.text = hour.ToString("D2");
+            minuteText.text = min.ToString("D2");
+            secondText.text = sec.ToString("D2");
+        }
+
+        Debug.Log(" Times Up!!!");
+    }
+
+    
+}
