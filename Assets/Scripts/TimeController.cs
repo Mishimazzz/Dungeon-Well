@@ -8,9 +8,9 @@ public class TimeController : MonoBehaviour
     public TextMeshProUGUI hourText;
     public TextMeshProUGUI minuteText;
     public TextMeshProUGUI secondText;
-    public int hour { get; private set; }
-    public int min { get; private set; }
-    public int sec { get; private set; }
+    public int hour { get; set; }
+    public int min { get; set; }
+    public int sec { get; set; }
 
     public void IncreaseHour()
     {
@@ -51,6 +51,13 @@ public class TimeController : MonoBehaviour
     {
         sec--;
         if (sec == -1) sec = 59;
+        secondText.text = sec.ToString("D2");
+    }
+
+    public void RefreshTimeUI()
+    {
+        hourText.text = hour.ToString("D2");
+        minuteText.text = min.ToString("D2");
         secondText.text = sec.ToString("D2");
     }
 }

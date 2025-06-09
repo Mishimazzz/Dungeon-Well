@@ -10,13 +10,25 @@ public class TimeCountDownController : MonoBehaviour
     public TextMeshProUGUI minuteText;
     public TextMeshProUGUI secondText;
 
-    void Start()
+    public bool isCounting;
+
+    void Update()
     {
-        StartCoroutine(CountDown());
+        StartCountdown();
+    }
+
+    public void StartCountdown()
+    {
+        if (!isCounting)
+        {
+            StartCoroutine(CountDown());
+            isCounting = true;
+        }
     }
 
     private IEnumerator CountDown()
     {
+        timeController.RefreshTimeUI();
         int hour = timeController.hour;
         int min = timeController.min;
         int sec = timeController.sec;
