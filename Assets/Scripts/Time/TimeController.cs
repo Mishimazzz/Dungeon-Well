@@ -15,21 +15,21 @@ public class TimeController : MonoBehaviour
     public void IncreaseHour()
     {
         hour++;
-        if (hour == 25) hour = 0;
+        if (hour == 24) hour = 0;
         hourText.text = hour.ToString("D2");
     }
 
     public void DecreaseHour()
     {
         hour--;
-        if (hour == -1) hour = 24;
+        if (hour < 0) hour = 23;
         hourText.text = hour.ToString("D2");
     }
 
     public void IncreaseMinute()
     {
         min++;
-        if (min == 61) min = 0;
+        if (min == 60) min = 0;
         minuteText.text = min.ToString("D2");
     }
 
@@ -43,7 +43,7 @@ public class TimeController : MonoBehaviour
     public void IncreaseSecond()
     {
         sec++;
-        if (sec == 61) sec = 0;
+        if (sec == 60) sec = 0;
         secondText.text = sec.ToString("D2");
     }
 

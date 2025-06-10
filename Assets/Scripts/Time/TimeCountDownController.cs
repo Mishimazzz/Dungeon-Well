@@ -7,6 +7,7 @@ public class TimeCountDownController : MonoBehaviour
 {
     public TimeController timeController;
     public GameObject timeCountDownPanel;
+    public GameObject timeUpPanel;
     public TextMeshProUGUI exploreButtonText;
     public TextMeshProUGUI hourText;
     public TextMeshProUGUI minuteText;
@@ -64,6 +65,7 @@ public class TimeCountDownController : MonoBehaviour
 
         Debug.Log(" Times Up!!!");
         timeCountDownPanel.SetActive(false);
+        timeUpPanel.SetActive(true);
         exploreButtonText.text = "Explore";
         timeController.hour = 0; timeController.min = 0; timeController.sec = 0;
         RefreshTimeUI();
