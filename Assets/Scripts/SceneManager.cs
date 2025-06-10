@@ -26,7 +26,7 @@ public class SceneManager : MonoBehaviour
     public void LoadScene()
     {
         string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        // Debug.Log(currentSceneName);
+        Debug.Log(currentSceneName);
         if (currentSceneName.Equals("WellScene")) LoadFarm();
         else if (currentSceneName.Equals("FarmScene")) LoadWell();
     }
