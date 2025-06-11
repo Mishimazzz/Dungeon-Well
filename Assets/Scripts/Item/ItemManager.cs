@@ -17,5 +17,15 @@ public class ItemManager : MonoBehaviour
             -> setting time 45 - 60  minutes, 16 item + coins + 2 rare item + 1 ultra Rare
             -> after 1 hour, 16 items + coins + 3 rare + 1 ultra rare x per hour
         */
+
+
+    }
+
+    //compute how many time that player excute
+    //To do
+    public float ComputeTime()
+    {
+        float excuteTime = 0;
+        return excuteTime;
     }
 }

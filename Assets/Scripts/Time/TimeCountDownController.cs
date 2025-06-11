@@ -13,6 +13,10 @@ public class TimeCountDownController : MonoBehaviour
     public TextMeshProUGUI minuteText;
     public TextMeshProUGUI secondText;
 
+    //keep original set time
+    public int tempHour; public int tempMin; public int tempSec;
+    //time left
+    public int hourLeft; public int minLeft; public int secLeft;
     public bool isCounting;
 
     void Update()
@@ -35,6 +39,10 @@ public class TimeCountDownController : MonoBehaviour
         int hour = timeController.hour;
         int min = timeController.min;
         int sec = timeController.sec;
+        // copy setting time
+        tempHour = hour;
+        tempMin = min;
+        tempSec = sec;
 
         // show time at first
         hourText.text = hour.ToString("D2");
@@ -57,13 +65,14 @@ public class TimeCountDownController : MonoBehaviour
                     hour--;
                 }
             }
+            hourLeft = hour;minLeft = min;secLeft = sec;
 
             hourText.text = hour.ToString("D2");
             minuteText.text = min.ToString("D2");
             secondText.text = sec.ToString("D2");
         }
 
-        Debug.Log(" Times Up!!!");
+        //when time is finish
         timeCountDownPanel.SetActive(false);
         timeUpPanel.SetActive(true);
         exploreButtonText.text = "Explore";
