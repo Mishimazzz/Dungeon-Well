@@ -15,14 +15,9 @@ public class ButtonManage : MonoBehaviour
 
     public TimeCountDownController timeCountDownController;
 
-    void Awake()
-    {
-        if (timeUpPanel == null)
-            Debug.LogError("timeUpPanel is NULL in Awake! " + gameObject.name);
-    }
     public void StartButton()
     {
-        Debug.Log(" Debug: You click the start button");
+        // Debug.Log(" Debug: You click the start button");
         timePanel.SetActive(false);
         timeCountDownPanel.SetActive(true);
         exploreButtonText.text = "Cancel";
@@ -31,7 +26,7 @@ public class ButtonManage : MonoBehaviour
     public void ExploreButton()
     {
         string text = exploreButtonText.text;
-        Debug.Log(" Debug: You click the Explore button");
+        // Debug.Log(" Debug: You click the Explore button");
 
         if (text.Equals("Explore")) timePanel.SetActive(true);
         else
