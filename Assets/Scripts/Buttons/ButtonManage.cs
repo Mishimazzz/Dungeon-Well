@@ -14,6 +14,12 @@ public class ButtonManage : MonoBehaviour
     public GameObject timeCountDownPanel;
 
     public TimeCountDownController timeCountDownController;
+
+    void Awake()
+    {
+        if (timeUpPanel == null)
+            Debug.LogError("timeUpPanel is NULL in Awake! " + gameObject.name);
+    }
     public void StartButton()
     {
         Debug.Log(" Debug: You click the start button");
