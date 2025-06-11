@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public ItemDatabase itemDatabase;
+    public ItemDatabase itemCommonList;
+    public ItemDatabase itemRareList;
+    public ItemDatabase itemUltraRareList;
     public ButtonManage buttonManage;
     public TimeStopController timeStopController;
     private float executeTime;
@@ -29,9 +31,33 @@ public class ItemManager : MonoBehaviour
 
     }
 
-    public void SpawnItemsByRarity()
+    public void SpawnItemsByRarity(Rare rareLevel, int count)
     {
+        if (rareLevel == Rare.Common)
+        {
+
+        }
         
+    }
+
+    public void SpawnItem(ItemDatabase itemDatabase)
+    {
+        float total = 0f;
+        foreach (var item in itemDatabase.Iteams)
+            total += item.probability;
+
+        float rand = Random.Range(0f, total);
+        float current = 0f;
+
+        foreach (var item in itemDatabase.Iteams)
+        {
+            current += item.probability;
+            if (rand <= current)
+            {
+                Instantiate(item.prefab, transform.position, Quaternion.identity);
+                break;
+            }
+        }
     }
 
     public float GetTime()

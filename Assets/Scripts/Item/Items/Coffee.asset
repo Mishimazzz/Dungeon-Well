@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Coffee
   m_EditorClassIdentifier: 
   prefab: {fileID: 5272944622519518521, guid: f2c6d7755874f2c4cb7de463ddf886b2, type: 3}
-  probability: 0.4
+  probability: 0.6
   rareLevel: 1
