@@ -5,6 +5,9 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     public ItemDatabase itemDatabase;
+    public ButtonManage buttonManage;
+    public TimeStopController timeStopController;
+    private float executeTime;
 
     public void SpawItem()
     {
@@ -18,14 +21,31 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 16 items + coins + 3 rare + 1 ultra rare x per hour
         */
 
+        //get player execute time
+        executeTime = GetTime();
+
+
+
 
     }
 
-    //compute how many time that player excute
-    //To do
-    public float ComputeTime()
+    public void SpawnItemsByRarity()
     {
-        float excuteTime = 0;
-        return excuteTime;
+        
+    }
+
+    public float GetTime()
+    {
+        float returnTime = 0f;
+        if (buttonManage.TotalFullExecuteTime != 0f)
+        {
+            returnTime = buttonManage.TotalFullExecuteTime;
+        }
+        else if (timeStopController.TotalExecuteTime != 0f)
+        {
+            returnTime = timeStopController.TotalExecuteTime;
+        }
+
+        return returnTime;
     }
 }

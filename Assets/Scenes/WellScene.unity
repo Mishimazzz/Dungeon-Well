@@ -898,6 +898,7 @@ MonoBehaviour:
   exploreButton: {fileID: 1100066201}
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
+  TotalFullExecuteTime: 0
   timeCountDownController: {fileID: 154203155}
 --- !u!4 &410099229
 Transform:
@@ -1320,6 +1321,7 @@ MonoBehaviour:
   exploreButton: {fileID: 1100066201}
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
+  TotalFullExecuteTime: 0
   timeCountDownController: {fileID: 154203155}
 --- !u!1 &640225373
 GameObject:
@@ -3274,6 +3276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1023543529}
+  - component: {fileID: 1023543530}
   m_Layer: 0
   m_Name: ItemManager
   m_TagString: Untagged
@@ -3290,12 +3293,27 @@ Transform:
   m_GameObject: {fileID: 1023543528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4348297, y: 0.53018165, z: 0.027324002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1023543530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023543528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a820ac313c88f774a9bdcbf5dfb0da12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDatabase: {fileID: 0}
+  buttonManage: {fileID: 0}
+  timeStopController: {fileID: 0}
 --- !u!1 &1100066199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,6 +3466,7 @@ MonoBehaviour:
   exploreButton: {fileID: 1100066201}
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
+  TotalFullExecuteTime: 0
   timeCountDownController: {fileID: 154203155}
 --- !u!1 &1145234471
 GameObject:

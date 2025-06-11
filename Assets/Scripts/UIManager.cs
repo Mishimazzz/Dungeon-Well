@@ -104,7 +104,7 @@ public class UIManager : MonoBehaviour
 
         exploreButton.onClick.RemoveAllListeners();
         exploreButton.onClick.AddListener(ExploreButtonMethod);
-        Debug.Log("BindExploreButton: 绑定成功");
+        // Debug.Log("BindExploreButton: 绑定成功");
     }
 
     public void BindStartButton()
@@ -173,7 +173,7 @@ public class UIManager : MonoBehaviour
 
         timeUpButton.onClick.RemoveAllListeners();
         timeUpButton.onClick.AddListener(TimeUpButtonMethod);
-        Debug.Log("BindTimeUpButton: 绑定成功");
+        // Debug.Log("BindTimeUpButton: 绑定成功");
     }
 
     private void TimeUpButtonMethod()

@@ -22,7 +22,7 @@ public class TimeStopController : MonoBehaviour
         Debug.Log("hourLeft:" + hourLeft);
         Debug.Log("minLeft:" + minLeft);
         Debug.Log("secLeft:" + secLeft);
-        ComputeExecuteTime();
+        TotalExecuteTime = ComputeExecuteTime();
 
         //whole system action
         timeCountDownPanel.SetActive(false);
@@ -49,18 +49,18 @@ public class TimeStopController : MonoBehaviour
         int executeHour;
         if (timeCountDownController.tempHour > 0) executeHour = Mathf.Abs(timeCountDownController.tempHour - 1 - hourLeft);
         else executeHour = Mathf.Abs(timeCountDownController.tempHour - hourLeft);
-        
+
         if (timeCountDownController.tempMin == 0) timeCountDownController.tempMin = 60;
         if (timeCountDownController.tempSec == 0) timeCountDownController.tempSec = 60;
 
         int executeMin = Mathf.Abs(timeCountDownController.tempMin -1 - minLeft);
         int executeSec = Mathf.Abs(timeCountDownController.tempSec - secLeft);
-        Debug.Log("executeHour:" + executeHour);
-        Debug.Log("executeMin:" + executeMin);
-        Debug.Log("executeSec:" + executeSec);
-        TotalExecuteTime = executeHour*60 + executeMin + executeSec / 60f;
-        Debug.Log("TotalExecuteTime:" + TotalExecuteTime);
-        return TotalExecuteTime;
+        // Debug.Log("executeHour:" + executeHour);
+        // Debug.Log("executeMin:" + executeMin);
+        // Debug.Log("executeSec:" + executeSec);
+        float tempTotalExecuteTime = executeHour*60 + executeMin + executeSec / 60f;
+        // Debug.Log("TotalExecuteTime:" + TotalExecuteTime);
+        return tempTotalExecuteTime;
     }
 
 }
