@@ -895,6 +895,7 @@ MonoBehaviour:
   timePanel: {fileID: 220271513}
   timeStopPanel: {fileID: 1945011294}
   timeUpPanel: {fileID: 574712946}
+  itemManager: {fileID: 1023543530}
   exploreButton: {fileID: 1100066201}
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
@@ -1318,6 +1319,7 @@ MonoBehaviour:
   timePanel: {fileID: 220271513}
   timeStopPanel: {fileID: 1945011294}
   timeUpPanel: {fileID: 0}
+  itemManager: {fileID: 0}
   exploreButton: {fileID: 1100066201}
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
@@ -3316,6 +3318,7 @@ MonoBehaviour:
   itemUltraRareList: {fileID: 11400000, guid: cbb723515d8209d40bb23e65edbbaf4c, type: 2}
   buttonManage: {fileID: 410099228}
   timeStopController: {fileID: 75961065}
+  coinObject: {fileID: 8956153759867601066, guid: 30c53460dbfcc7648be983da659c42a7, type: 3}
 --- !u!1 &1100066199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,6 +3468,7 @@ MonoBehaviour:
   timePanel: {fileID: 220271513}
   timeStopPanel: {fileID: 1945011294}
   timeUpPanel: {fileID: 0}
+  itemManager: {fileID: 0}
   exploreButton: {fileID: 1100066201}
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}

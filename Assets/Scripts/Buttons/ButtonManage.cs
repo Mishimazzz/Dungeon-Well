@@ -9,6 +9,7 @@ public class ButtonManage : MonoBehaviour
     public GameObject timePanel;
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
+    public ItemManager itemManager;
     public Button exploreButton;
     public TextMeshProUGUI exploreButtonText;
     public GameObject timeCountDownPanel;
@@ -39,6 +40,7 @@ public class ButtonManage : MonoBehaviour
     public void TimeUpButtom()
     {
         TotalFullExecuteTime = ComputeFullExecuteTime();
+        itemManager.SpawItem();
         timeUpPanel.SetActive(false);
     }
 
