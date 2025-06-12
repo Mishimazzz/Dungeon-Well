@@ -5,11 +5,20 @@ using UnityEngine.UI;
 public class ItemDisplay : MonoBehaviour
 {
     public Image itemIcon;
-    public TextMeshProUGUI itemCountText;
+    public TextMeshProUGUI itemText;
 
-    public void Set(ItemData data, int count)
+    void Awake()
     {
-        itemIcon.sprite = data.prefab.GetComponent<SpriteRenderer>()?.sprite;
-        itemCountText.text = count.ToString();
+        if (itemIcon == null)
+            itemIcon = transform.Find("ItemIcon").GetComponent<Image>();
+
+        if (itemText == null)
+            itemText = transform.Find("ItemCountText").GetComponent<TextMeshProUGUI>();
+    }
+
+    public void SetItem(Sprite icon, int count)
+    {
+        itemIcon.sprite = icon;
+        itemText.text = count.ToString();
     }
 }

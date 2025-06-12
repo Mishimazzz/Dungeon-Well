@@ -9,16 +9,12 @@ public class ItemManager : MonoBehaviour
     public ItemDatabase itemUltraRareList;
     public ButtonManage buttonManage;
     public TimeStopController timeStopController;
-
-    // items UI
-    public Transform inventoryPanel; // 拖UI上的InventoryPanel
-    public GameObject itemSlotPrefab; // item prefab
-    public List<ItemData> allItemTypes; // 编辑器里拖所有可能的ItemData
-
-    private Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
-    private Dictionary<ItemData, ItemDisplay> slotDict = new Dictionary<ItemData, ItemDisplay>();
     private float executeTime;
 
+    // items UI
+    public List<ItemDisplay> itemSlots; // Inspector里拖5个ItemSlot
+    private Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
+    
     //test
     public GameObject coinObject;
 
@@ -47,7 +43,7 @@ public class ItemManager : MonoBehaviour
             Debug.Log("you reach here");
             GiveCoin(1);
         }
-        else if (executeTime <= 5)
+        else if (executeTime <= 2)//5
         {
             itemCount = 1;
             GiveCoin(2);
@@ -173,37 +169,37 @@ public class ItemManager : MonoBehaviour
     }
 
     // 添加物品
-    public void AddItem(ItemData data, int amount)
-    {
-        if (!itemDict.ContainsKey(data))
-            itemDict[data] = 0;
-        itemDict[data] += amount;
-        RefreshUI();
-    }
+    // public void AddItem(ItemData data, int amount)
+    // {
+    //     if (!itemDict.ContainsKey(data))
+    //         itemDict[data] = 0;
+    //     itemDict[data] += amount;
+    //     RefreshUI();
+    // }
 
-    // 刷新UI
-    public void RefreshUI()
-    {
-        // 先隐藏所有slot
-        foreach (var slot in slotDict.Values)
-            slot.gameObject.SetActive(false);
+    // // 刷新UI
+    // public void RefreshUI()
+    // {
+    //     int i = 0;
+    //     foreach (var kv in itemDict)
+    //     {
+    //         if (i < itemSlots.Count)
+    //         {
+    //             itemSlots[i].Set(kv.Key, kv.Value);
+    //             itemSlots[i].gameObject.SetActive(true);
+    //             i++;
+    //         }
+    //     }
+    //     // 多余的格子隐藏
+    //     for (; i < itemSlots.Count; i++)
+    //     {
+    //         itemSlots[i].gameObject.SetActive(false);
+    //     }
+    // }
 
-        foreach (var kv in itemDict)
-        {
-            if (!slotDict.ContainsKey(kv.Key))
-            {
-                var go = Instantiate(itemSlotPrefab, inventoryPanel);
-                var slot = go.GetComponent<ItemDisplay>();
-                slotDict[kv.Key] = slot;
-            }
-            slotDict[kv.Key].Set(kv.Key, kv.Value);
-            slotDict[kv.Key].gameObject.SetActive(true);
-        }
-    }
-
-    // 获得物品时调用
-    public void GiveItem(ItemData data, int amount)
-    {
-        AddItem(data, amount);
-    }
+    // // 获得物品时调用
+    // public void GiveItem(ItemData data, int amount)
+    // {
+    //     AddItem(data, amount);
+    // }
 }
