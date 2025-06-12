@@ -3324,6 +3324,9 @@ MonoBehaviour:
   itemUltraRareList: {fileID: 11400000, guid: cbb723515d8209d40bb23e65edbbaf4c, type: 2}
   buttonManage: {fileID: 410099228}
   timeStopController: {fileID: 75961065}
+  inventoryPanel: {fileID: 0}
+  itemSlotPrefab: {fileID: 0}
+  allItemTypes: []
   coinObject: {fileID: 8956153759867601066, guid: 30c53460dbfcc7648be983da659c42a7, type: 3}
 --- !u!1 &1100066199
 GameObject:

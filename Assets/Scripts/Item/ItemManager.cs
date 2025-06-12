@@ -9,6 +9,14 @@ public class ItemManager : MonoBehaviour
     public ItemDatabase itemUltraRareList;
     public ButtonManage buttonManage;
     public TimeStopController timeStopController;
+
+    // items UI
+    public Transform inventoryPanel; // 拖UI上的InventoryPanel
+    public GameObject itemSlotPrefab; // item prefab
+    public List<ItemData> allItemTypes; // 编辑器里拖所有可能的ItemData
+
+    private Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
+    private Dictionary<ItemData, ItemDisplay> slotDict = new Dictionary<ItemData, ItemDisplay>();
     private float executeTime;
 
     //test
@@ -74,7 +82,7 @@ public class ItemManager : MonoBehaviour
             itemCount = 16;
             rareCount = 3;
             ultraRareCount = hourCount;
-            GiveCoin(5* hourCount);
+            GiveCoin(5 * hourCount);
         }
 
         SpawnItemsByRarity(Rare.Common, itemCount);
@@ -162,5 +170,40 @@ public class ItemManager : MonoBehaviour
             Instantiate(coinObject, transform.position, Quaternion.identity);
             amount--;
         }
+    }
+
+    // 添加物品
+    public void AddItem(ItemData data, int amount)
+    {
+        if (!itemDict.ContainsKey(data))
+            itemDict[data] = 0;
+        itemDict[data] += amount;
+        RefreshUI();
+    }
+
+    // 刷新UI
+    public void RefreshUI()
+    {
+        // 先隐藏所有slot
+        foreach (var slot in slotDict.Values)
+            slot.gameObject.SetActive(false);
+
+        foreach (var kv in itemDict)
+        {
+            if (!slotDict.ContainsKey(kv.Key))
+            {
+                var go = Instantiate(itemSlotPrefab, inventoryPanel);
+                var slot = go.GetComponent<ItemDisplay>();
+                slotDict[kv.Key] = slot;
+            }
+            slotDict[kv.Key].Set(kv.Key, kv.Value);
+            slotDict[kv.Key].gameObject.SetActive(true);
+        }
+    }
+
+    // 获得物品时调用
+    public void GiveItem(ItemData data, int amount)
+    {
+        AddItem(data, amount);
     }
 }
