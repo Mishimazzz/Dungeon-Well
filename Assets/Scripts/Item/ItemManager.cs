@@ -12,11 +12,17 @@ public class ItemManager : MonoBehaviour
     private float executeTime;
 
     // items UI
-    public List<ItemDisplay> itemSlots; // Inspector里拖5个ItemSlot
+    public List<ItemDisplay> itemSlots;
     private Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
-    
+    public GameObject itemDisplayPrefab;
     //test
-    public GameObject coinObject;
+    public ItemData coinItemData; // Assign the coin ItemData in the Inspector
+    private int totalItemHavest;//havest # of items except coin 
+
+    void Start()
+    {
+        
+    }
 
     public void SpawItem()
     {
@@ -81,6 +87,22 @@ public class ItemManager : MonoBehaviour
             GiveCoin(5 * hourCount);
         }
 
+        totalItemHavest = itemCount + rareCount + ultraRareCount;
+        //load item prefab and UI, icon
+        for (int i = 0; i < totalItemHavest; i++)
+        {
+            GameObject go = Instantiate(itemDisplayPrefab);
+            ItemDisplay display = go.GetComponent<ItemDisplay>();
+            if (display == null)
+            {
+                Debug.LogError("itemDisplayPrefab 上没有 ItemDisplay 脚本！");
+                return;
+            }
+            Debug.Log("add");
+            itemSlots.Add(display);
+            go.SetActive(false);
+        }
+
         SpawnItemsByRarity(Rare.Common, itemCount);
         SpawnItemsByRarity(Rare.Rare, rareCount);
         SpawnItemsByRarity(Rare.UltraRare, ultraRareCount);
@@ -128,7 +150,7 @@ public class ItemManager : MonoBehaviour
             current += item.probability;
             if (rand <= current)
             {
-                Instantiate(item.prefab, transform.position, Quaternion.identity);
+                AddItem(item, 1);
                 break;
             }
         }
@@ -160,46 +182,56 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 600 coins x per hour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
+        GameObject go = Instantiate(itemDisplayPrefab);
+        ItemDisplay display = go.GetComponent<ItemDisplay>();
+        if (display == null)
+        {
+            Debug.LogError("itemDisplayPrefab 上没有 ItemDisplay 脚本！");
+            return;
+        }
+        Debug.Log("add");
+        itemSlots.Add(display);
+        go.SetActive(false);
         while (amount > 0)
         {
             Debug.Log("amount:" + amount);
-            Instantiate(coinObject, transform.position, Quaternion.identity);
+            AddItem(coinItemData, 1);
             amount--;
         }
     }
 
     // 添加物品
-    // public void AddItem(ItemData data, int amount)
-    // {
-    //     if (!itemDict.ContainsKey(data))
-    //         itemDict[data] = 0;
-    //     itemDict[data] += amount;
-    //     RefreshUI();
-    // }
+    public void AddItem(ItemData data, int amount)
+    {
+        if (!itemDict.ContainsKey(data))
+            itemDict[data] = 0;
+        itemDict[data] += amount;
+        RefreshUI();
+    }
 
-    // // 刷新UI
-    // public void RefreshUI()
-    // {
-    //     int i = 0;
-    //     foreach (var kv in itemDict)
-    //     {
-    //         if (i < itemSlots.Count)
-    //         {
-    //             itemSlots[i].Set(kv.Key, kv.Value);
-    //             itemSlots[i].gameObject.SetActive(true);
-    //             i++;
-    //         }
-    //     }
-    //     // 多余的格子隐藏
-    //     for (; i < itemSlots.Count; i++)
-    //     {
-    //         itemSlots[i].gameObject.SetActive(false);
-    //     }
-    // }
+    public void RefreshUI()
+    {
+        Debug.Log("itemDict count: " + itemDict.Count);
+        int i = 0;
+        foreach (var kv in itemDict)
+        {
+            Debug.Log($"显示物品: {kv.Key.name}, 数量: {kv.Value}");
+            // if(itemSlots[0] == null) Debug.Log("itemSlots[0] = ", itemSlots[0]);
 
-    // // 获得物品时调用
-    // public void GiveItem(ItemData data, int amount)
-    // {
-    //     AddItem(data, amount);
-    // }
+            if (i < itemSlots.Count)
+            {
+                Sprite icon = null;
+                if (kv.Key.prefab != null)
+                {
+                    var sr = kv.Key.prefab.GetComponent<SpriteRenderer>();
+                    if (sr != null) icon = sr.sprite;
+                }
+                itemSlots[i].SetItem(icon, kv.Value);
+                itemSlots[i].gameObject.SetActive(true);
+                i++;
+            }
+        }
+        for (; i < itemSlots.Count; i++)
+            itemSlots[i].gameObject.SetActive(false);
+    }
 }
