@@ -4629,9 +4629,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 410099228}
-        m_TargetAssemblyTypeName: ButtonManage, Assembly-CSharp
-        m_MethodName: TimeUpButtom
+      - m_Target: {fileID: 2019368299}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: BindTimeUpButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

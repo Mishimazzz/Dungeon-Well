@@ -156,8 +156,9 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 600 coins x per hour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
-        while (amount >= 0)
+        while (amount > 0)
         {
+            Debug.Log("amount:" + amount);
             Instantiate(coinObject, transform.position, Quaternion.identity);
             amount--;
         }
