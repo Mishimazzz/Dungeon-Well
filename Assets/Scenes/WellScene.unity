@@ -3326,6 +3326,7 @@ MonoBehaviour:
   timeStopController: {fileID: 75961065}
   itemSlots: []
   itemDisplayPrefab: {fileID: 6707118579446928508, guid: b7c895e4c64dfb7439897b71be0db78a, type: 3}
+  canvas: {fileID: 511539914}
   coinItemData: {fileID: 11400000, guid: 06ffb4029263d9349988571a16ffc1f3, type: 2}
 --- !u!1 &1100066199
 GameObject:

@@ -15,14 +15,10 @@ public class ItemManager : MonoBehaviour
     public List<ItemDisplay> itemSlots;
     private Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
+    public Transform canvas;
     //test
     public ItemData coinItemData; // Assign the coin ItemData in the Inspector
     private int totalItemHavest;//havest # of items except coin 
-
-    void Start()
-    {
-        
-    }
 
     public void SpawItem()
     {
@@ -46,7 +42,6 @@ public class ItemManager : MonoBehaviour
 
         if (executeTime <= 1)
         {
-            Debug.Log("you reach here");
             GiveCoin(1);
         }
         else if (executeTime <= 2)//5
@@ -91,7 +86,7 @@ public class ItemManager : MonoBehaviour
         //load item prefab and UI, icon
         for (int i = 0; i < totalItemHavest; i++)
         {
-            GameObject go = Instantiate(itemDisplayPrefab);
+            GameObject go = Instantiate(itemDisplayPrefab, canvas);
             ItemDisplay display = go.GetComponent<ItemDisplay>();
             if (display == null)
             {
@@ -182,7 +177,7 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 600 coins x per hour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
-        GameObject go = Instantiate(itemDisplayPrefab);
+        GameObject go = Instantiate(itemDisplayPrefab,canvas);
         ItemDisplay display = go.GetComponent<ItemDisplay>();
         if (display == null)
         {
