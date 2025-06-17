@@ -40,11 +40,11 @@ public class ItemManager : MonoBehaviour
         int rareCount = 0;
         int ultraRareCount = 0;
 
-        if (executeTime <= 1)
+        if (executeTime <= .1)//1
         {
             GiveCoin(1);
         }
-        else if (executeTime <= 2)//5
+        else if (executeTime <= .2)//5
         {
             itemCount = 1;
             GiveCoin(2);

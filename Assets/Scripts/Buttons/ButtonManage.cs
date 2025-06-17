@@ -41,7 +41,7 @@ public class ButtonManage : MonoBehaviour
     {
         // Debug.Log("you touch two times TimeUpButton()");
         TotalFullExecuteTime = ComputeFullExecuteTime();
-        itemManager.SpawItem();
+        // itemManager.SpawItem();
         timeUpPanel.SetActive(false);
     }
 
