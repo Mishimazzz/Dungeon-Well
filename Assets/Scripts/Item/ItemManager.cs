@@ -19,6 +19,7 @@ public class ItemManager : MonoBehaviour
     private Vector3 firstPosition = new Vector3(-685, 140, 0);
     public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-685, 140, 0), new Vector3(-345, 140, 0), new Vector3(-5, 140, 0), new Vector3(335, 140, 0) };
     private int currentItemPositionIndex = 1;
+    public GameObject GridPrefab;
     //test
     public ItemData coinItemData; // Assign the coin ItemData in the Inspector
     private int totalItemHavest;//havest # of items except coin 
@@ -90,6 +91,7 @@ public class ItemManager : MonoBehaviour
         for (int i = 0; i < totalItemHavest; i++)
         {
             Vector3 position = GetNextItemPosition();
+            SpawnGrid(position);
             GameObject go = Instantiate(itemDisplayPrefab, canvas);
             go.transform.localPosition = position;
 
@@ -157,6 +159,14 @@ public class ItemManager : MonoBehaviour
         }
     }
 
+    public void SpawnGrid(Vector3 position)
+    {
+        //generate grid
+        GameObject go = Instantiate(GridPrefab, canvas);
+        go.transform.localPosition = position;
+        go.transform.SetSiblingIndex(8);//second layer,你得数一下Time里头的层数
+    }
+
     public float GetTime()
     {
         float returnTime = 0f;
@@ -183,21 +193,21 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 600 coins x per hour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
-
         GameObject go = Instantiate(itemDisplayPrefab, canvas);
         go.transform.localPosition = firstPosition;
+        SpawnGrid(firstPosition);
         ItemDisplay display = go.GetComponent<ItemDisplay>();
         if (display == null)
         {
             Debug.LogError("itemDisplayPrefab 上没有 ItemDisplay 脚本！");
             return;
         }
-        Debug.Log("add");
+        // Debug.Log("add");
         itemSlots.Add(display);
         go.SetActive(false);
         while (amount > 0)
         {
-            Debug.Log("amount:" + amount);
+            // Debug.Log("amount:" + amount);
             AddItem(coinItemData, 1);
             amount--;
         }
@@ -259,6 +269,11 @@ public class ItemManager : MonoBehaviour
             {
                 Destroy(obj);
             }
+            if (obj.name == "Grid(Clone)")
+            {
+                Destroy(obj);
+            }
         }
+        itemSlots.Clear();
     }
 }
