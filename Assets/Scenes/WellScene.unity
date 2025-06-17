@@ -498,6 +498,8 @@ MonoBehaviour:
   hourText: {fileID: 2096451671}
   minuteText: {fileID: 1794003455}
   secondText: {fileID: 1153581249}
+  buttonManage: {fileID: 410099228}
+  itemManager: {fileID: 1023543530}
   tempHour: 0
   tempMin: 0
   tempSec: 0
@@ -3327,6 +3329,11 @@ MonoBehaviour:
   itemSlots: []
   itemDisplayPrefab: {fileID: 6707118579446928508, guid: b7c895e4c64dfb7439897b71be0db78a, type: 3}
   canvas: {fileID: 511539914}
+  itemPositions:
+  - {x: -685, y: 140, z: 0}
+  - {x: -345, y: 140, z: 0}
+  - {x: -5, y: 140, z: 0}
+  - {x: 335, y: 140, z: 0}
   coinItemData: {fileID: 11400000, guid: 06ffb4029263d9349988571a16ffc1f3, type: 2}
 --- !u!1 &1100066199
 GameObject:

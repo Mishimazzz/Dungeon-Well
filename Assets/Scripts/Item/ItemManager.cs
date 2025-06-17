@@ -16,6 +16,9 @@ public class ItemManager : MonoBehaviour
     private Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
     public Transform canvas;
+    private Vector3 firstPosition = new Vector3(-685, 140, 0);
+    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-685, 140, 0), new Vector3(-345, 140, 0), new Vector3(-5, 140, 0), new Vector3(335, 140, 0) };
+    private int currentItemPositionIndex = 1;
     //test
     public ItemData coinItemData; // Assign the coin ItemData in the Inspector
     private int totalItemHavest;//havest # of items except coin 
@@ -40,16 +43,16 @@ public class ItemManager : MonoBehaviour
         int rareCount = 0;
         int ultraRareCount = 0;
 
-        if (executeTime <= .1)//1
+        if (executeTime <= 0.1)//1
         {
             GiveCoin(1);
         }
-        else if (executeTime <= .2)//5
+        else if (executeTime <= 0.2)//5
         {
             itemCount = 1;
             GiveCoin(2);
         }
-        else if (executeTime <= 15)
+        else if (executeTime <= 1)//15
         {
             itemCount = 3;
             GiveCoin(3);
@@ -86,17 +89,20 @@ public class ItemManager : MonoBehaviour
         //load item prefab and UI, icon
         for (int i = 0; i < totalItemHavest; i++)
         {
+            Vector3 position = GetNextItemPosition();
             GameObject go = Instantiate(itemDisplayPrefab, canvas);
+            go.transform.localPosition = position;
+
             ItemDisplay display = go.GetComponent<ItemDisplay>();
             if (display == null)
             {
                 Debug.LogError("itemDisplayPrefab 上没有 ItemDisplay 脚本！");
                 return;
             }
-            Debug.Log("add");
             itemSlots.Add(display);
             go.SetActive(false);
         }
+
 
         SpawnItemsByRarity(Rare.Common, itemCount);
         SpawnItemsByRarity(Rare.Rare, rareCount);
@@ -177,7 +183,9 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 600 coins x per hour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
-        GameObject go = Instantiate(itemDisplayPrefab,canvas);
+
+        GameObject go = Instantiate(itemDisplayPrefab, canvas);
+        go.transform.localPosition = firstPosition;
         ItemDisplay display = go.GetComponent<ItemDisplay>();
         if (display == null)
         {
@@ -228,5 +236,29 @@ public class ItemManager : MonoBehaviour
         }
         for (; i < itemSlots.Count; i++)
             itemSlots[i].gameObject.SetActive(false);
+    }
+
+    private Vector3 GetNextItemPosition()
+    {
+        // Debug.Log(currentItemPositionIndex);
+        // Debug.Log(itemPositions.Count);
+        if (currentItemPositionIndex >= itemPositions.Count)
+            currentItemPositionIndex = 0;
+
+        // Debug.Log("get"+ itemPositions[currentItemPositionIndex]);
+        return itemPositions[currentItemPositionIndex++];
+    }
+
+    public void ClearAllItemDisplays()
+    {
+        // 查找所有名为 "ItemDisplayPrefab(Clone)" 的物体
+        var objs = GameObject.FindObjectsOfType<GameObject>();
+        foreach (var obj in objs)
+        {
+            if (obj.name == "ItemDisplayPrefab(Clone)")
+            {
+                Destroy(obj);
+            }
+        }
     }
 }
