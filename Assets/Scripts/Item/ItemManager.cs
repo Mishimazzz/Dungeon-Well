@@ -44,16 +44,16 @@ public class ItemManager : MonoBehaviour
         int rareCount = 0;
         int ultraRareCount = 0;
 
-        if (executeTime <= 0.1)//1
+        if (executeTime <= 0.01)//1
         {
             GiveCoin(1);
         }
-        else if (executeTime <= 0.2)//5
+        else if (executeTime <= 0.02)//5
         {
             itemCount = 1;
             GiveCoin(2);
         }
-        else if (executeTime <= 1)//15
+        else if (executeTime <= 0.03)//15
         {
             itemCount = 3;
             GiveCoin(3);
@@ -91,7 +91,7 @@ public class ItemManager : MonoBehaviour
         for (int i = 0; i < totalItemHavest; i++)
         {
             Vector3 position = GetNextItemPosition();
-            SpawnGrid(position);
+            // SpawnGrid(position);
             GameObject go = Instantiate(itemDisplayPrefab, canvas);
             go.transform.localPosition = position;
 
@@ -104,7 +104,6 @@ public class ItemManager : MonoBehaviour
             itemSlots.Add(display);
             go.SetActive(false);
         }
-
 
         SpawnItemsByRarity(Rare.Common, itemCount);
         SpawnItemsByRarity(Rare.Rare, rareCount);
@@ -241,6 +240,7 @@ public class ItemManager : MonoBehaviour
                 }
                 itemSlots[i].SetItem(icon, kv.Value);
                 itemSlots[i].gameObject.SetActive(true);
+                SpawnGrid(itemSlots[i].transform.localPosition);
                 i++;
             }
         }
@@ -261,7 +261,7 @@ public class ItemManager : MonoBehaviour
 
     public void ClearAllItemDisplays()
     {
-        // 查找所有名为 "ItemDisplayPrefab(Clone)" 的物体
+        // 删除所有 ItemDisplayPrefab(Clone) 和 Grid(Clone)
         var objs = GameObject.FindObjectsOfType<GameObject>();
         foreach (var obj in objs)
         {
@@ -275,5 +275,7 @@ public class ItemManager : MonoBehaviour
             }
         }
         itemSlots.Clear();
+        itemDict.Clear();
+        currentItemPositionIndex = 1; 
     }
 }
