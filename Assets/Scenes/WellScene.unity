@@ -573,6 +573,9 @@ MonoBehaviour:
   hourText: {fileID: 2096451671}
   minuteText: {fileID: 1794003455}
   secondText: {fileID: 1153581249}
+  executeHour: {fileID: 1818449333}
+  executeMin: {fileID: 1391213904}
+  executeSec: {fileID: 1194005083}
   buttonManage: {fileID: 410099228}
   itemManager: {fileID: 1023543530}
   tempHour: 0
@@ -1127,6 +1130,9 @@ MonoBehaviour:
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
   TotalFullExecuteTime: 0
+  executeHour: 0
+  executeMin: 0
+  executeSec: 0
   timeCountDownController: {fileID: 154203155}
 --- !u!4 &410099229
 Transform:
@@ -1557,6 +1563,9 @@ MonoBehaviour:
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
   TotalFullExecuteTime: 0
+  executeHour: 0
+  executeMin: 0
+  executeSec: 0
   timeCountDownController: {fileID: 154203155}
 --- !u!1 &640225373
 GameObject:
@@ -3865,6 +3874,9 @@ MonoBehaviour:
   exploreButtonText: {fileID: 968549163}
   timeCountDownPanel: {fileID: 1646568773}
   TotalFullExecuteTime: 0
+  executeHour: 0
+  executeMin: 0
+  executeSec: 0
   timeCountDownController: {fileID: 154203155}
 --- !u!1 &1145234471
 GameObject:
