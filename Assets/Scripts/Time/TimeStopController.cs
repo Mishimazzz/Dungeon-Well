@@ -33,9 +33,13 @@ public class TimeStopController : MonoBehaviour
         timeUpPanel.SetActive(true);
 
         buttonManage.TotalFullExecuteTime = buttonManage.ComputeFullExecuteTime();
-        executeHour.text = buttonManage.executeHour.ToString("D2");
-        executeMin.text = buttonManage.executeMin.ToString("D2");
-        executeSec.text = buttonManage.executeSec.ToString("D2");
+        int actualHour = buttonManage.executeHour - hourLeft;
+        int actualMin = buttonManage.executeMin - minLeft;
+        int actualSec = buttonManage.executeSec - secLeft;
+
+        executeHour.text = actualHour.ToString("D2");
+        executeMin.text = actualMin.ToString("D2");
+        executeSec.text = actualSec.ToString("D2");
         itemManager.SpawItem();
 
         exploreButtonText.text = "Explore";
