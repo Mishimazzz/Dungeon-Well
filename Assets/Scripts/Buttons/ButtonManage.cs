@@ -14,6 +14,7 @@ public class ButtonManage : MonoBehaviour
     public TextMeshProUGUI exploreButtonText;
     public GameObject timeCountDownPanel;
     public float TotalFullExecuteTime;
+    public int executeHour; public int executeMin; public int executeSec;
 
     public TimeCountDownController timeCountDownController;
 
@@ -47,9 +48,9 @@ public class ButtonManage : MonoBehaviour
 
     public float ComputeFullExecuteTime()
     {
-        int executeHour = timeCountDownController.tempHour;
-        int executeMin = timeCountDownController.tempMin;
-        int executeSec = timeCountDownController.tempSec;
+        executeHour = timeCountDownController.tempHour;
+        executeMin = timeCountDownController.tempMin;
+        executeSec = timeCountDownController.tempSec;
         Debug.Log("executeHour:" + executeHour);
         Debug.Log("executeMin:" + executeMin);
         Debug.Log("executeSec:" + executeSec);

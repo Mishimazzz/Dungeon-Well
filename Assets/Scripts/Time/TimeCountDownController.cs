@@ -12,6 +12,7 @@ public class TimeCountDownController : MonoBehaviour
     public TextMeshProUGUI hourText;
     public TextMeshProUGUI minuteText;
     public TextMeshProUGUI secondText;
+    public TextMeshProUGUI executeHour; public TextMeshProUGUI executeMin; public TextMeshProUGUI executeSec;
     public ButtonManage buttonManage;
     public ItemManager itemManager;
 
@@ -81,8 +82,10 @@ public class TimeCountDownController : MonoBehaviour
         timeController.hour = 0; timeController.min = 0; timeController.sec = 0;
         RefreshTimeUI();
 
-        // ✅ 关键补充：设置执行时间并生成 item
         buttonManage.TotalFullExecuteTime = buttonManage.ComputeFullExecuteTime();
+        executeHour.text = buttonManage.executeHour.ToString("D2");
+        executeMin.text = buttonManage.executeMin.ToString("D2");
+        executeSec.text = buttonManage.executeSec.ToString("D2");
         itemManager.SpawItem();
     }
 
