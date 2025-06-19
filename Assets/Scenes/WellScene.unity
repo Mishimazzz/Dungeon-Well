@@ -377,9 +377,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeStopPanel: {fileID: 1945011294}
   timeCountDownPanel: {fileID: 1646568773}
+  timeUpPanel: {fileID: 574712946}
   timeController: {fileID: 963367379}
   timeCountDownController: {fileID: 154203155}
   exploreButtonText: {fileID: 968549163}
+  buttonManage: {fileID: 410099228}
+  itemManager: {fileID: 1023543530}
+  executeHour: {fileID: 1818449333}
+  executeMin: {fileID: 1391213904}
+  executeSec: {fileID: 1194005083}
   hourLeft: 0
   minLeft: 0
   secLeft: 0
