@@ -81,6 +81,7 @@ public class TimeCountDownController : MonoBehaviour
         exploreButtonText.text = "Explore";
         timeController.hour = 0; timeController.min = 0; timeController.sec = 0;
         RefreshTimeUI();
+        WindowsToastNotifier.ShowToast("探索完成", "探索时间结束！可以领取奖励了。");
 
         buttonManage.TotalFullExecuteTime = buttonManage.ComputeFullExecuteTime();
         executeHour.text = buttonManage.executeHour.ToString("D2");
