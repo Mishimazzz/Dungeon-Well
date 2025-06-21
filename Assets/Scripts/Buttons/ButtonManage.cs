@@ -59,4 +59,14 @@ public class ButtonManage : MonoBehaviour
         Debug.Log("TotalExecuteTime:" + tempTotalFullExecuteTime);
         return tempTotalFullExecuteTime;
     }
+
+    public void OpenPlayerBag()
+    {
+
+    }
+
+    public void ClosePlayerBag()
+    {
+
+    }
 }
