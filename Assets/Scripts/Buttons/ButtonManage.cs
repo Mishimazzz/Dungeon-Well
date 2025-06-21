@@ -9,6 +9,7 @@ public class ButtonManage : MonoBehaviour
     public GameObject timePanel;
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
+    public HarvestItem harvestItem;
     public ItemManager itemManager;
     public Button exploreButton;
     public TextMeshProUGUI exploreButtonText;
@@ -40,8 +41,8 @@ public class ButtonManage : MonoBehaviour
 
     public void TimeUpButtom()
     {
-        // Debug.Log("you touch two times TimeUpButton()");
-        // TotalFullExecuteTime = ComputeFullExecuteTime();
+        //clean all the items in time up panel and save in player's bag
+        harvestItem.AddItemsInBag(itemManager.itemDict);
         itemManager.ClearAllItemDisplays();
         timeUpPanel.SetActive(false);
     }

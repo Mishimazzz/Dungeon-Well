@@ -13,7 +13,7 @@ public class ItemManager : MonoBehaviour
 
     // items UI
     public List<ItemDisplay> itemSlots;
-    private Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
+    public Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
     public Transform canvas;
     private Vector3 firstPosition = new Vector3(-685, 140, 0);
@@ -223,11 +223,11 @@ public class ItemManager : MonoBehaviour
 
     public void RefreshUI()
     {
-        Debug.Log("itemDict count: " + itemDict.Count);
+        //Debug.Log("itemDict count: " + itemDict.Count);
         int i = 0;
         foreach (var kv in itemDict)
         {
-            Debug.Log($"显示物品: {kv.Key.name}, 数量: {kv.Value}");
+            //Debug.Log($"显示物品: {kv.Key.name}, 数量: {kv.Value}");
             // if(itemSlots[0] == null) Debug.Log("itemSlots[0] = ", itemSlots[0]);
 
             if (i < itemSlots.Count)
