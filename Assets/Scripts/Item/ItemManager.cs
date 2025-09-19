@@ -16,13 +16,15 @@ public class ItemManager : MonoBehaviour
     public Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
     public Transform canvas;
-    private Vector3 firstPosition = new Vector3(-685, 140, 0);
-    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-685, 140, 0), new Vector3(-345, 140, 0), new Vector3(-5, 140, 0), new Vector3(335, 140, 0) };
+    private Vector3 firstPosition = new Vector3(-330, 100, 0);
+    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-330, 100, 0), new Vector3(-110, 100, 0), new Vector3(110, 100, 0), new Vector3(330, 100, 0) };
     private int currentItemPositionIndex = 1;
     public GameObject GridPrefab;
     //test
     public ItemData coinItemData; // Assign the coin ItemData in the Inspector
     private int totalItemHavest;//havest # of items except coin 
+
+    private HashSet<string> spawnedItems = new HashSet<string>();
 
     public void SpawItem()
     {
@@ -240,7 +242,12 @@ public class ItemManager : MonoBehaviour
                 }
                 itemSlots[i].SetItem(icon, kv.Value);
                 itemSlots[i].gameObject.SetActive(true);
-                SpawnGrid(itemSlots[i].transform.localPosition);
+                // 只在第一次遇到该物品时生成 grid
+                if (!spawnedItems.Contains(kv.Key.name))
+                {
+                    SpawnGrid(itemSlots[i].transform.localPosition);
+                    spawnedItems.Add(kv.Key.name);
+                }
                 i++;
             }
         }
