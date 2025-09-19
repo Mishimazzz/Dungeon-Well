@@ -283,6 +283,7 @@ public class ItemManager : MonoBehaviour
         }
         itemSlots.Clear();
         itemDict.Clear();
+        spawnedItems.Clear();
         currentItemPositionIndex = 1; 
     }
 }
