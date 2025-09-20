@@ -16,8 +16,9 @@ public class ItemManager : MonoBehaviour
     public Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
     public Transform canvas;
-    private Vector3 firstPosition = new Vector3(-330, 100, 0);
-    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-330, 100, 0), new Vector3(-110, 100, 0), new Vector3(110, 100, 0), new Vector3(330, 100, 0) };
+    private Vector3 firstPosition = new Vector3(-5, -85, 0);
+    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-5, -85, 0), new Vector3(85, -85, 0), new Vector3(175, -85, 0), new Vector3(265, -85, 0),
+                                                            new Vector3(-5, -185, 0), new Vector3(85, -185, 0), new Vector3(175, -185, 0), new Vector3(265, -185, 0) };
     private int currentItemPositionIndex = 1;
     public GameObject GridPrefab;
     //test
