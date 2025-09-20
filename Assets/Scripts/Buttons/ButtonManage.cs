@@ -9,6 +9,7 @@ public class ButtonManage : MonoBehaviour
     public GameObject timePanel;
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
+    public GameObject BagPanel;
     public HarvestItem harvestItem;
     public ItemManager itemManager;
     public Button exploreButton;
@@ -52,21 +53,17 @@ public class ButtonManage : MonoBehaviour
         executeHour = timeCountDownController.tempHour;
         executeMin = timeCountDownController.tempMin;
         executeSec = timeCountDownController.tempSec;
-        Debug.Log("executeHour:" + executeHour);
-        Debug.Log("executeMin:" + executeMin);
-        Debug.Log("executeSec:" + executeSec);
+        // Debug.Log("executeHour:" + executeHour);
+        // Debug.Log("executeMin:" + executeMin);
+        // Debug.Log("executeSec:" + executeSec);
         float tempTotalFullExecuteTime = executeHour * 60 + executeMin + executeSec / 60f;
-        Debug.Log("TotalExecuteTime:" + tempTotalFullExecuteTime);
+        // Debug.Log("TotalExecuteTime:" + tempTotalFullExecuteTime);
         return tempTotalFullExecuteTime;
     }
 
-    public void OpenPlayerBag()
+    public void TogglePlayerBag()
     {
-
-    }
-
-    public void ClosePlayerBag()
-    {
-
+        bool isActive = BagPanel.activeSelf;
+        BagPanel.SetActive(!isActive); 
     }
 }
