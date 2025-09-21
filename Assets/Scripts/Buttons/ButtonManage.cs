@@ -53,17 +53,20 @@ public class ButtonManage : MonoBehaviour
         executeHour = timeCountDownController.tempHour;
         executeMin = timeCountDownController.tempMin;
         executeSec = timeCountDownController.tempSec;
-        // Debug.Log("executeHour:" + executeHour);
-        // Debug.Log("executeMin:" + executeMin);
-        // Debug.Log("executeSec:" + executeSec);
         float tempTotalFullExecuteTime = executeHour * 60 + executeMin + executeSec / 60f;
-        // Debug.Log("TotalExecuteTime:" + tempTotalFullExecuteTime);
         return tempTotalFullExecuteTime;
     }
 
+    // TODO:如果背包一开始就一直打开，获得的物品ui不会显示
     public void TogglePlayerBag()
     {
         bool isActive = BagPanel.activeSelf;
-        BagPanel.SetActive(!isActive); 
+        BagPanel.SetActive(!isActive);
+
+        if (isActive) // 如果是刚打开
+        {
+            HarvestItem.Instance.RefreshBagUI();
+        }
     }
+    
 }

@@ -2036,19 +2036,18 @@ MonoBehaviour:
   gridPrefab: {fileID: 3474742832060698928, guid: 1c041c54ffddc424488d2005d0b39195, type: 3}
   itemDisplayPrefab: {fileID: 6707118579446928508, guid: b7c895e4c64dfb7439897b71be0db78a, type: 3}
   bagPanel: {fileID: 818529529}
+  BagPanel: {fileID: 818529528}
+  needRefreshBag: 0
   itemPositions:
-  - {x: -1100, y: 100, z: 0}
-  - {x: -1000, y: 100, z: 0}
-  - {x: -900, y: 100, z: 0}
-  - {x: -800, y: 100, z: 0}
-  - {x: -700, y: 100, z: 0}
-  - {x: -600, y: 100, z: 0}
-  - {x: -500, y: 100, z: 0}
-  - {x: -400, y: 100, z: 0}
-  - {x: -1100, y: 0, z: 0}
-  - {x: -1000, y: 0, z: 0}
-  - {x: -900, y: 0, z: 0}
-  - {x: -800, y: 0, z: 0}
+  - {x: -470, y: -50, z: 0}
+  - {x: -388, y: -50, z: 0}
+  - {x: -304, y: -50, z: 0}
+  - {x: -470, y: -130, z: 0}
+  - {x: -388, y: -130, z: 0}
+  - {x: -304, y: -130, z: 0}
+  - {x: -470, y: -210, z: 0}
+  - {x: -388, y: -210, z: 0}
+  - {x: -304, y: -210, z: 0}
 --- !u!1 &692655461
 GameObject:
   m_ObjectHideFlags: 0

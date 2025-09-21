@@ -10,22 +10,33 @@ public class HarvestItem : MonoBehaviour
   public GameObject gridPrefab;           // 拖你的背包格子Prefab
   public GameObject itemDisplayPrefab;    // 拖你的物品显示Prefab
   public Transform bagPanel;              // 拖你的背包Panel（父物体）
+  public GameObject BagPanel;
+  public bool needRefreshBag = false;
 
   private List<GameObject> gridObjs = new List<GameObject>();
   private List<ItemDisplay> bagSlots = new List<ItemDisplay>();
 
   public List<Vector3> itemPositions = new List<Vector3>
   {
-    // Row 1 (Y = 100)
-    new Vector3(-1100, 100, 0),
-    new Vector3(-1000, 100, 0),
-    new Vector3(-900, 100, 0),
-    new Vector3(-800, 100, 0),
-    new Vector3(-700, 100, 0),
-    new Vector3(-600, 100, 0),
-    new Vector3(-500, 100, 0),
-    new Vector3(-400, 100, 0),
+    new Vector3(-470, -50, 0),
+    new Vector3(-388, -50, 0),
+    new Vector3(-304, -50, 0),
+    new Vector3(-470, -130, 0),
+    new Vector3(-388, -130, 0),
+    new Vector3(-304, -130, 0),
+    new Vector3(-470, -210, 0),
+    new Vector3(-388, -210, 0),
+    new Vector3(-304, -210, 0),
   };
+
+  void Update()
+  {
+    if (needRefreshBag && BagPanel.activeSelf)
+    {
+      RefreshBagUI();
+      needRefreshBag = false; // 刷新一次后重置
+    }
+  }
 
 
   private int currentBagPositionIndex = 0;
@@ -36,7 +47,7 @@ public class HarvestItem : MonoBehaviour
     else Destroy(gameObject);
   }
 
-  // 添加物品到背包（自动叠加）
+  // 添加物品到背包,自动叠加
   public void AddItemsInBag(Dictionary<ItemData, int> ItemDict)
   {
     foreach (var item in ItemDict)
@@ -46,7 +57,7 @@ public class HarvestItem : MonoBehaviour
       else
         playerBag[item.Key] = item.Value;
     }
-    RefreshBagUI();
+    needRefreshBag = true;
   }
 
   // 生成并刷新背包UI
