@@ -27,6 +27,8 @@ public class ItemManager : MonoBehaviour
 
     private HashSet<string> spawnedItems = new HashSet<string>();
 
+    private List<GameObject> DestroyItems = new List<GameObject>();// 之后instanitiate物品之后需要删除的
+
     public void SpawItem()
     {
         /*
@@ -94,16 +96,12 @@ public class ItemManager : MonoBehaviour
         for (int i = 0; i < totalItemHavest; i++)
         {
             Vector3 position = GetNextItemPosition();
-            // SpawnGrid(position);
+            SpawnGrid(position);
             GameObject go = Instantiate(itemDisplayPrefab, canvas);
+            DestroyItems.Add(go);
             go.transform.localPosition = position;
 
             ItemDisplay display = go.GetComponent<ItemDisplay>();
-            if (display == null)
-            {
-                Debug.LogError("itemDisplayPrefab 上没有 ItemDisplay 脚本！");
-                return;
-            }
             itemSlots.Add(display);
             go.SetActive(false);
         }
@@ -165,6 +163,7 @@ public class ItemManager : MonoBehaviour
     {
         //generate grid
         GameObject go = Instantiate(GridPrefab, canvas);
+        DestroyItems.Add(go);
         go.transform.localPosition = position;
         go.transform.SetSiblingIndex(8);//second layer,你得数一下Time里头的层数
     }
@@ -196,6 +195,7 @@ public class ItemManager : MonoBehaviour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
         GameObject go = Instantiate(itemDisplayPrefab, canvas);
+        DestroyItems.Add(go);
         go.transform.localPosition = firstPosition;
         SpawnGrid(firstPosition);
         ItemDisplay display = go.GetComponent<ItemDisplay>();
@@ -270,18 +270,12 @@ public class ItemManager : MonoBehaviour
     public void ClearAllItemDisplays()
     {
         // 删除所有 ItemDisplayPrefab(Clone) 和 Grid(Clone)
-        var objs = GameObject.FindObjectsOfType<GameObject>();
-        foreach (var obj in objs)
+        foreach (var obj in DestroyItems)
         {
-            if (obj.name == "ItemDisplayPrefab(Clone)")
-            {
+            if (obj != null)
                 Destroy(obj);
-            }
-            if (obj.name == "Grid(Clone)")
-            {
-                Destroy(obj);
-            }
         }
+        spawnedItems.Clear();
         itemSlots.Clear();
         itemDict.Clear();
         spawnedItems.Clear();
