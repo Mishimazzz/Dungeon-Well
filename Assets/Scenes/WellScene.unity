@@ -3797,10 +3797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a820ac313c88f774a9bdcbf5dfb0da12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemLowLevelList: {fileID: 0}
-  itemMidLevelList: {fileID: 0}
-  itemHighLevelList: {fileID: 0}
-  itemUltraRareList: {fileID: 11400000, guid: cbb723515d8209d40bb23e65edbbaf4c, type: 2}
+  characterLevel: 0
   buttonManage: {fileID: 410099228}
   timeStopController: {fileID: 75961065}
   itemSlots: []
@@ -3815,8 +3812,11 @@ MonoBehaviour:
   - {x: 85, y: -185, z: 0}
   - {x: 175, y: -185, z: 0}
   - {x: 265, y: -185, z: 0}
+  seedBoxPosition:
+  - {x: -97, y: -55, z: 0}
   GridPrefab: {fileID: 3474742832060698928, guid: 1c041c54ffddc424488d2005d0b39195, type: 3}
   coinItemData: {fileID: 11400000, guid: 06ffb4029263d9349988571a16ffc1f3, type: 2}
+  itemDatabase: {fileID: 11400000, guid: 9c82ea941a2e6b34c817f35a10f4658c, type: 2}
 --- !u!1 &1054705958
 GameObject:
   m_ObjectHideFlags: 0

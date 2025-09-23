@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e13985b6d679048b9f0b667a94c82b, type: 3}
-  m_Name: Juice
+  m_Name: ChineseYamSeed
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2199607342979779312, guid: afc983ea23fd51246adcb31b29a5f14b, type: 3}
+  prefab: {fileID: 45885501074092247, guid: 1523c2cbb6aad0f4c895f36b60bad06a, type: 3}
   probability: 0.6
-  rareLevel: 1
-  itemLevel: 1
+  rareLevel: 0
+  itemLevel: 0
+  isSeed: 1

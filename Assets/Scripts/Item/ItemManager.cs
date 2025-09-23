@@ -14,10 +14,16 @@ public class ItemManager : MonoBehaviour
     public Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
     public Transform canvas;
-    private Vector3 firstPosition = new Vector3(-5, -85, 0);
+    //bag position
     public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-5, -85, 0), new Vector3(85, -85, 0), new Vector3(175, -85, 0), new Vector3(265, -85, 0),
                                                             new Vector3(-5, -185, 0), new Vector3(85, -185, 0), new Vector3(175, -185, 0), new Vector3(265, -185, 0) };
+
     private int currentItemPositionIndex = 1;
+    private Vector3 firstPosition = new Vector3(-5, -85, 0);
+
+    // seedbox position
+    public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-256, -129, 0) };
+    private int currentSeedPositionIndex = 0;
     public GameObject GridPrefab;
     //test
     public ItemData coinItemData; // Assign the coin ItemData in the Inspector
@@ -97,20 +103,20 @@ public class ItemManager : MonoBehaviour
             GiveCoin(5 * hourCount);
         }
 
-        totalItemHavest = LowLevelCount + MidLevelCount + HighLevelCount + UltraRareCount;
-        //load item prefab and UI, icon
-        for (int i = 0; i < totalItemHavest; i++)
-        {
-            Vector3 position = GetNextItemPosition();
-            SpawnGrid(position);
-            GameObject go = Instantiate(itemDisplayPrefab, canvas);
-            DestroyItems.Add(go);
-            go.transform.localPosition = position;
+        // totalItemHavest = LowLevelCount + MidLevelCount + HighLevelCount + UltraRareCount;
+        // //load item prefab and UI, icon
+        // for (int i = 0; i < totalItemHavest; i++)
+        // {
+        //     Vector3 position = GetNextItemPosition();
+        //     SpawnGrid(position);
+        //     GameObject go = Instantiate(itemDisplayPrefab, canvas);
+        //     DestroyItems.Add(go);
+        //     go.transform.localPosition = position;
 
-            ItemDisplay display = go.GetComponent<ItemDisplay>();
-            itemSlots.Add(display);
-            go.SetActive(false);
-        }
+        //     ItemDisplay display = go.GetComponent<ItemDisplay>();
+        //     itemSlots.Add(display);
+        //     go.SetActive(false);
+        // }
 
         SpawnItemsByRarity(Rare.LowLevel, LowLevelCount);
         SpawnItemsByRarity(Rare.MidLevel, MidLevelCount);
@@ -135,14 +141,11 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    // 改造过的 SpawnItem
     public void SpawnItem(Level level, Rare rare)
     {
-        // 拿到对应等级和稀有度的列表
         List<ItemData> list = itemDatabase.GetItems(level, rare);
         if (list == null || list.Count == 0) return;
 
-        // 按概率抽一个
         float total = 0f;
         foreach (var item in list) total += item.probability;
 
@@ -154,6 +157,21 @@ public class ItemManager : MonoBehaviour
             current += item.probability;
             if (rand <= current)
             {
+                Vector3 position = GetNextItemPosition(item);
+
+                // 生成 Grid
+                SpawnGrid(position);
+
+                // 生成 UI
+                GameObject go = Instantiate(itemDisplayPrefab, canvas);
+                DestroyItems.Add(go);
+                go.transform.localPosition = position;
+
+                ItemDisplay display = go.GetComponent<ItemDisplay>();
+                itemSlots.Add(display);
+                go.SetActive(false);
+
+                // 逻辑层：加入物品
                 AddItem(item, 1);
                 break;
             }
@@ -257,15 +275,20 @@ public class ItemManager : MonoBehaviour
             itemSlots[i].gameObject.SetActive(false);
     }
 
-    private Vector3 GetNextItemPosition()
+    private Vector3 GetNextItemPosition(ItemData data)
     {
-        // Debug.Log(currentItemPositionIndex);
-        // Debug.Log(itemPositions.Count);
-        if (currentItemPositionIndex >= itemPositions.Count)
-            currentItemPositionIndex = 0;
-
-        // Debug.Log("get"+ itemPositions[currentItemPositionIndex]);
-        return itemPositions[currentItemPositionIndex++];
+        if (data.isSeed == Seed.Yes)
+        {
+            if (currentSeedPositionIndex >= seedBoxPosition.Count)
+                currentSeedPositionIndex = 0;
+            return seedBoxPosition[currentSeedPositionIndex++];
+        }
+        else
+        {
+            if (currentItemPositionIndex >= itemPositions.Count)
+                currentItemPositionIndex = 0;
+            return itemPositions[currentItemPositionIndex++];
+        }
     }
 
     //选择一个向下兼容，且随机的等级

@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: ItemDatabase
   m_EditorClassIdentifier: 
   E:
-    low: []
-    mid: []
-    high: []
+    low:
+    - {fileID: 11400000, guid: cf3ef87a92aac924897fce4c3fed2cf7, type: 2}
+    - {fileID: 11400000, guid: 879d11d6ccb1a664a892b601e82d9623, type: 2}
+    mid:
+    - {fileID: 11400000, guid: 9738808b80ed8434e90d6eb296e6ed2a, type: 2}
+    high:
+    - {fileID: 11400000, guid: 91d13a083fdac034c88dd12d407c8739, type: 2}
     ultra: []
   D:
     low: []
-    mid: []
+    mid:
+    - {fileID: 11400000, guid: ff44f89a36bacf2428aabb46ff1b60d2, type: 2}
     high: []
     ultra: []
   C:

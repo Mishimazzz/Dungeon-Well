@@ -14,7 +14,8 @@ using UnityEngine.AI;
  - UltraRare (5% - 1%)
 */
 public enum Rare { LowLevel, MidLevel, HighLevel, UltraRare }
-public enum Level { E,D,C,B,A,S }
+public enum Level { E, D, C, B, A, S }
+public enum Seed { No, Yes }
 
 [CreateAssetMenu(fileName = "ItemData", menuName = "Item System/Item Data")]
 public class ItemData : ScriptableObject
@@ -26,4 +27,5 @@ public class ItemData : ScriptableObject
     //稀有程度(tag)
     public Rare rareLevel;
     public Level itemLevel;
+    public Seed isSeed;
 }
