@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public ItemDatabase itemCommonList;
-    public ItemDatabase itemRareList;
-    public ItemDatabase itemUltraRareList;
+    public Level characterLevel = Level.E; // TODO: import主角的等级
     public ButtonManage buttonManage;
     public TimeStopController timeStopController;
     private float executeTime;
@@ -27,6 +25,8 @@ public class ItemManager : MonoBehaviour
 
     private HashSet<string> spawnedItems = new HashSet<string>();
 
+    public ItemDatabase itemDatabase;//item大列表
+
     private List<GameObject> DestroyItems = new List<GameObject>();// 之后instanitiate物品之后需要删除的
 
     public void SpawItem()
@@ -34,64 +34,70 @@ public class ItemManager : MonoBehaviour
         /*
             -> if the setting time <= 1 minutes, only got coins.
             -> setting time 1 - 5 minutes, 1 item + coins
-            -> setting time 6 - 15 minutes, 3 item + coins
-            -> setting time 16 - 30 minutes, 6 item + coins + 1 rare item
-            -> setting time 31 - 45  minutes, 10 item + coins + 2 rare item
-            -> setting time 45 - 60  minutes, 16 item + coins + 2 rare item + 1 ultra Rare
-            -> after 1 hour, 16 items + coins + 3 rare + 1 ultra rare x per hour
+            -> setting time 6 - 15 minutes, 2 LowLevel + 1 Mid +  coins
+            -> setting time 16 - 30 minutes, 4 LowLevel + 2 Mid + coins + 1 HighLevel
+            -> setting time 31 - 45  minutes, 7 LowLevel + 3 Mid + coins + 2 HighLevel
+            -> setting time 45 - 60  minutes, 10 LowLevel + 4 Mid + coins + 3 HighLevel + 1 UltraRare
+            -> after 1 hour, 10 LowLevel + 4 Mid + coins + 3 HighLevel + 1 UltraRare x per hour
         */
 
         //get player execute time
         executeTime = GetTime();
 
         //basic setting
-        int itemCount = 0;
-        int rareCount = 0;
-        int ultraRareCount = 0;
+        int LowLevelCount = 0;
+        int MidLevelCount = 0;
+        int HighLevelCount = 0;
+        int UltraRareCount = 0;
 
         if (executeTime <= 0.01)//1
         {
             GiveCoin(1);
         }
-        else if (executeTime <= 0.02)//5
+        else if (executeTime <= 0.08)//5
         {
-            itemCount = 1;
+            LowLevelCount = 1;
             GiveCoin(2);
         }
-        else if (executeTime <= 0.03)//15
+        else if (executeTime <= 15)//15
         {
-            itemCount = 3;
+            LowLevelCount = 2;
+            MidLevelCount = 1;
             GiveCoin(3);
         }
         else if (executeTime <= 30)
         {
-            itemCount = 6;
-            rareCount = 1;
+            LowLevelCount = 4;
+            MidLevelCount = 2;
+            HighLevelCount = 1;
             GiveCoin(4);
         }
         else if (executeTime <= 45)
         {
-            itemCount = 10;
-            rareCount = 2;
+            LowLevelCount = 7;
+            MidLevelCount = 3;
+            HighLevelCount = 2;
             GiveCoin(5);
         }
         else if (executeTime <= 60)
         {
-            itemCount = 16;
-            rareCount = 2;
-            ultraRareCount = 1;
+            LowLevelCount = 10;
+            MidLevelCount = 4;
+            HighLevelCount = 3;
+            UltraRareCount = 1;
             GiveCoin(5);
         }
         else
         {
             int hourCount = Mathf.FloorToInt(executeTime / 60f);
-            itemCount = 16;
-            rareCount = 3;
-            ultraRareCount = hourCount;
+            LowLevelCount = 10;
+            MidLevelCount = 4;
+            HighLevelCount = 3;
+            UltraRareCount = hourCount;
             GiveCoin(5 * hourCount);
         }
 
-        totalItemHavest = itemCount + rareCount + ultraRareCount;
+        totalItemHavest = LowLevelCount + MidLevelCount + HighLevelCount + UltraRareCount;
         //load item prefab and UI, icon
         for (int i = 0; i < totalItemHavest; i++)
         {
@@ -106,49 +112,44 @@ public class ItemManager : MonoBehaviour
             go.SetActive(false);
         }
 
-        SpawnItemsByRarity(Rare.Common, itemCount);
-        SpawnItemsByRarity(Rare.Rare, rareCount);
-        SpawnItemsByRarity(Rare.UltraRare, ultraRareCount);
+        SpawnItemsByRarity(Rare.LowLevel, LowLevelCount);
+        SpawnItemsByRarity(Rare.MidLevel, MidLevelCount);
+        SpawnItemsByRarity(Rare.HighLevel, HighLevelCount);
+        SpawnItemsByRarity(Rare.UltraRare, UltraRareCount);
     }
 
     public void SpawnItemsByRarity(Rare rareLevel, int count)
     {
-        if (rareLevel == Rare.Common && count > 0)
+        while (count > 0)
         {
-            while (count > 0)
-            {
-                SpawnItem(itemCommonList);
-                count--;
-            }
-        }
-        else if (rareLevel == Rare.Rare && count > 0)
-        {
-            while (count > 0)
-            {
-                SpawnItem(itemRareList);
-                count--;
-            }
-        }
-        else if (rareLevel == Rare.UltraRare && count > 0)
-        {
-            while (count > 0)
-            {
-                SpawnItem(itemUltraRareList);
-                count--;
-            }
+            // 1. 随机一个向下兼容等级
+            Level level = GetRandomLevel();
+            Debug.Log("Level: " + level);
+            Debug.Log("rareLevel: " + rareLevel);
+            Debug.Log("count: " + count);
+
+            // 2. 根据等级 + 稀有度，从数据库抽物品
+            SpawnItem(level, rareLevel);
+
+            count--;
         }
     }
 
-    public void SpawnItem(ItemDatabase itemDatabase)
+    // 改造过的 SpawnItem
+    public void SpawnItem(Level level, Rare rare)
     {
+        // 拿到对应等级和稀有度的列表
+        List<ItemData> list = itemDatabase.GetItems(level, rare);
+        if (list == null || list.Count == 0) return;
+
+        // 按概率抽一个
         float total = 0f;
-        foreach (var item in itemDatabase.Iteams)
-            total += item.probability;
+        foreach (var item in list) total += item.probability;
 
         float rand = Random.Range(0f, total);
         float current = 0f;
 
-        foreach (var item in itemDatabase.Iteams)
+        foreach (var item in list)
         {
             current += item.probability;
             if (rand <= current)
@@ -267,6 +268,26 @@ public class ItemManager : MonoBehaviour
         return itemPositions[currentItemPositionIndex++];
     }
 
+    //选择一个向下兼容，且随机的等级
+    private Level GetRandomLevel()
+    {
+        //向下兼容的等级list
+        List<Level> levels = new List<Level>();
+
+        foreach (Level lv in System.Enum.GetValues(typeof(Level)))
+        {
+            if ((int)lv <= (int)characterLevel)
+            {
+                levels.Add(lv);
+            }
+        }
+
+        //随机
+        int index = Random.Range(0, levels.Count);
+        return levels[index];
+    }
+    
+
     public void ClearAllItemDisplays()
     {
         // 删除所有 ItemDisplayPrefab(Clone) 和 Grid(Clone)
@@ -279,6 +300,6 @@ public class ItemManager : MonoBehaviour
         itemSlots.Clear();
         itemDict.Clear();
         spawnedItems.Clear();
-        currentItemPositionIndex = 1; 
+        currentItemPositionIndex = 1;
     }
 }

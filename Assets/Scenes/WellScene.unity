@@ -3797,8 +3797,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a820ac313c88f774a9bdcbf5dfb0da12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemCommonList: {fileID: 11400000, guid: 00577d659c93bc9498ce6f9b11b33a8f, type: 2}
-  itemRareList: {fileID: 11400000, guid: 4fc3ed11f4b54e34e86f2c3617dd32bc, type: 2}
+  itemLowLevelList: {fileID: 0}
+  itemMidLevelList: {fileID: 0}
+  itemHighLevelList: {fileID: 0}
   itemUltraRareList: {fileID: 11400000, guid: cbb723515d8209d40bb23e65edbbaf4c, type: 2}
   buttonManage: {fileID: 410099228}
   timeStopController: {fileID: 75961065}

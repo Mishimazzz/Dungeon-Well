@@ -10,9 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74c9ab2adea4d01469b036a9fde157f9, type: 3}
-  m_Name: ItemCommonList
+  m_Name: ItemDatabase
   m_EditorClassIdentifier: 
-  Iteams:
-  - {fileID: 11400000, guid: 06ffb4029263d9349988571a16ffc1f3, type: 2}
-  - {fileID: 11400000, guid: ff44f89a36bacf2428aabb46ff1b60d2, type: 2}
-  - {fileID: 11400000, guid: 9738808b80ed8434e90d6eb296e6ed2a, type: 2}
+  E:
+    low: []
+    mid: []
+    high: []
+    ultra: []
+  D:
+    low: []
+    mid: []
+    high: []
+    ultra: []
+  C:
+    low: []
+    mid: []
+    high: []
+    ultra: []
+  B:
+    low: []
+    mid: []
+    high: []
+    ultra: []
+  A:
+    low: []
+    mid: []
+    high: []
+    ultra: []
+  S:
+    low: []
+    mid: []
+    high: []
+    ultra: []
