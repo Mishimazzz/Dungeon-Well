@@ -75,7 +75,7 @@ public class ButtonManage : MonoBehaviour
 
         if (isActive) // 如果是刚打开
         {
-            HarvestItem.Instance.RefreshBagUI();
+            HarvestItem.Instance.RefreshSeedBoxUI();
         }
     }
 

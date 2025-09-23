@@ -22,8 +22,6 @@ public class ItemManager : MonoBehaviour
     private Vector3 firstPosition = new Vector3(-5, -85, 0);
 
     // seedbox position
-    public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-256, -85, 0) };
-    private int currentSeedPositionIndex = 0;
     public GameObject GridPrefab;
     //test
     public ItemData coinItemData; // Assign the coin ItemData in the Inspector
@@ -55,6 +53,7 @@ public class ItemManager : MonoBehaviour
         int MidLevelCount = 0;
         int HighLevelCount = 0;
         int UltraRareCount = 0;
+        Debug.Log("total executeTime:" + executeTime);
 
         if (executeTime <= 0.01)//1
         {
@@ -108,7 +107,7 @@ public class ItemManager : MonoBehaviour
         for (int i = 0; i < totalItemHavest; i++)
         {
             Vector3 position = GetNextItemPosition();
-            SpawnGrid(position);
+            // SpawnGrid(position);
             GameObject go = Instantiate(itemDisplayPrefab, canvas);
             DestroyItems.Add(go);
             go.transform.localPosition = position;
