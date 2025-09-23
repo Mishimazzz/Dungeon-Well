@@ -7706,6 +7706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WellScence
       objectReference: {fileID: 0}
+    - target: {fileID: 8399529846399508540, guid: 836314195f8f7b14b88d386dc9b6e40e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
