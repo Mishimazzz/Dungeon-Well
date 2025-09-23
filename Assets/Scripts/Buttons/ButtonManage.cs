@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonManage : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class ButtonManage : MonoBehaviour
 
     public TimeCountDownController timeCountDownController;
 
-    public void StartButton()
+  public void StartButton()
     {
         // Debug.Log(" Debug: You click the start button");
         timePanel.SetActive(false);
