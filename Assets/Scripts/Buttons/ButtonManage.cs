@@ -56,8 +56,6 @@ public class ButtonManage : MonoBehaviour
         float tempTotalFullExecuteTime = executeHour * 60 + executeMin + executeSec / 60f;
         return tempTotalFullExecuteTime;
     }
-
-    // TODO:如果背包一开始就一直打开，获得的物品ui不会显示
     public void TogglePlayerBag()
     {
         bool isActive = BagPanel.activeSelf;
@@ -68,5 +66,16 @@ public class ButtonManage : MonoBehaviour
             HarvestItem.Instance.RefreshBagUI();
         }
     }
-    
+
+    //退出游戏
+    public void QuitGame()
+    {
+        Application.Quit();
+        //unity play 退出
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
+
 }
