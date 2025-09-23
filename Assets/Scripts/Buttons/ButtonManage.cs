@@ -10,6 +10,7 @@ public class ButtonManage : MonoBehaviour
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
     public GameObject BagPanel;
+    public GameObject SeedPanel;
     public HarvestItem harvestItem;
     public ItemManager itemManager;
     public Button exploreButton;
@@ -67,14 +68,25 @@ public class ButtonManage : MonoBehaviour
         }
     }
 
+    public void ToggleSeedBox()
+    {
+        bool isActive = SeedPanel.activeSelf;
+        SeedPanel.SetActive(!isActive);
+
+        if (isActive) // 如果是刚打开
+        {
+            HarvestItem.Instance.RefreshBagUI();
+        }
+    }
+
     //退出游戏
     public void QuitGame()
     {
         Application.Quit();
         //unity play 退出
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
     }
 
 
