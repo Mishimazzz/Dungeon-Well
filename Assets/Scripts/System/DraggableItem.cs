@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Canvas canvas;          
+    private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
     private Vector3 originalPosition;
     private Transform originalParent;
+    private bool canDrag = false;
+    public bool isInSeedBox;
 
     private List<RectTransform> farmGridAreas = new List<RectTransform>();
 
@@ -29,10 +31,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = gameObject.AddComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
+
+        // 检查是否在 SeedBoxPanel 之下
+        isInSeedBox = transform.IsChildOf(GameObject.Find("SeedBoxPanel").transform);
+
+        //只有种子物品&在种子仓库里的物品才允许拖动
+        canDrag = isInSeedBox;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!CanDrag()) return;
         canvasGroup.blocksRaycasts = false;
         originalPosition = transform.localPosition;
         originalParent = transform.parent;
@@ -40,20 +49,22 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!CanDrag()) return;
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!CanDrag()) return;
         canvasGroup.blocksRaycasts = true;
-        
+
         bool insideAnyGrid = false;
         foreach (var farmGrid in farmGridAreas)
         {
             Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Debug.Log("World MousePos: " + worldMousePos);
             // Debug.Log("FarmGrid WorldPos: " + farmGrid.position);
-            Debug.Log("FarmGrid WorldPos: " + farmGrid.localPosition);
+            // Debug.Log("FarmGrid WorldPos: " + farmGrid.localPosition);
 
             if (IsInsideFarmGrid(farmGrid.position, worldMousePos))
             {
@@ -91,5 +102,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         return rangeWidthLeft <= screenPos.x && screenPos.x <= rangeWidthRight &&
         rangeHeightTop >= screenPos.y && rangeHeightBottom <= screenPos.y;
+    }
+
+    private bool CanDrag()
+    {
+        return isInSeedBox;
     }
 }
