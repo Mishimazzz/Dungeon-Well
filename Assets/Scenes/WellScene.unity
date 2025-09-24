@@ -1276,7 +1276,7 @@ RectTransform:
   - {fileID: 1070056567}
   - {fileID: 818529529}
   - {fileID: 1188937297}
-  - {fileID: 1088647299}
+  - {fileID: 1481859405}
   - {fileID: 1942891434}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2042,9 +2042,9 @@ MonoBehaviour:
   gridPrefab: {fileID: 3474742832060698928, guid: 1c041c54ffddc424488d2005d0b39195, type: 3}
   itemDisplayPrefab: {fileID: 4225993256049203260, guid: 18c8f37e687c8e540ab0c86869ced094, type: 3}
   bagPanel: {fileID: 818529529}
-  BagPanel: {fileID: 818529528}
+  BagPanel: {fileID: 1481859404}
   needRefreshBag: 0
-  seedBoxPanel: {fileID: 1088647299}
+  seedBoxPanel: {fileID: 1481859405}
   SeedBoxPanel: {fileID: 1088647298}
   seedGridPrefab: {fileID: 4210189656688591717, guid: 6c9e8d0deb2a93b40840cb429093edab, type: 3}
   needRefreshSeedBox: 0
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   - {x: -388, y: -210, z: 0}
   - {x: -304, y: -210, z: 0}
   seedBoxPosition:
-  - {x: -176, y: 150, z: 0}
+  - {x: -95, y: -53, z: 0}
 --- !u!1 &692655461
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,7 +4053,7 @@ GameObject:
   - component: {fileID: 1088647301}
   - component: {fileID: 1088647300}
   m_Layer: 5
-  m_Name: SeedBoxPanel
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4068,15 +4068,15 @@ RectTransform:
   m_GameObject: {fileID: 1088647298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.33314285, y: 0.33314285, z: 0.33314285}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 511539914}
+  m_Father: {fileID: 1481859405}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.410004, y: -114.96001}
-  m_SizeDelta: {x: 717.09, y: 689.76}
+  m_AnchoredPosition: {x: -21, y: -104}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088647300
 MonoBehaviour:
@@ -5894,6 +5894,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413167191}
   m_CullTransparentMesh: 1
+--- !u!1 &1481859404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481859405}
+  m_Layer: 5
+  m_Name: SeedBoxPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1481859405
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481859404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1088647299}
+  m_Father: {fileID: 511539914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1497434225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7339,7 +7375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4707fb2d77e234f925652420de41eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: c73d30d2b6652d34398a53cc88b9703e, type: 3}
+  cursorTexture: {fileID: 0}
   hotSpot: {x: 0, y: 0}
 --- !u!1 &2052944458
 GameObject:

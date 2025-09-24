@@ -38,7 +38,7 @@ public class HarvestItem : MonoBehaviour
     new Vector3(-304, -210, 0),
   };
 
-  public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-95, -54, 0) };
+  public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-63, 57, 0) };
 
   void Update()
   {
@@ -103,9 +103,9 @@ public class HarvestItem : MonoBehaviour
       gridGo.transform.localPosition = position;
       gridObjs.Add(gridGo);
 
-      // 生成ItemDisplay，作为Grid的子物体
-      GameObject go = Instantiate(itemDisplayPrefab, gridGo.transform);
-      go.transform.localPosition = Vector3.zero;
+      // 生成ItemDisplay
+      GameObject go = Instantiate(itemDisplayPrefab, bagPanel);
+      go.transform.localPosition = position;
       ItemDisplay display = go.GetComponent<ItemDisplay>();
       bagSlots.Add(display);
 
@@ -151,9 +151,9 @@ public class HarvestItem : MonoBehaviour
       gridGo.transform.localPosition = position;
       seedGridObjs.Add(gridGo);
 
-      // 生成ItemDisplay，作为Grid的子物体
-      GameObject go = Instantiate(itemDisplayPrefab, gridGo.transform);
-      go.transform.localPosition = Vector3.zero;
+      // 生成ItemDisplay
+      GameObject go = Instantiate(itemDisplayPrefab, seedBoxPanel);
+      go.transform.localPosition = position;
       ItemDisplay display = go.GetComponent<ItemDisplay>();
       seedSlots.Add(display);
 
@@ -188,8 +188,4 @@ public class HarvestItem : MonoBehaviour
     bagSlots.Clear();
     currentBagPositionIndex = 0;
   }
-
-
-
-
 }

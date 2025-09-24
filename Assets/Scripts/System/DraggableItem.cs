@@ -11,13 +11,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Vector3 originalPosition;
     private Transform originalParent;
 
-    [SerializeField] private float snapBuffer = 30f;        // 容错范围，越大越容易“吸附”
-
     private List<RectTransform> farmGridAreas = new List<RectTransform>();
 
     private void Start()
     {
-        // 自动收集所有带 "FarmCell" 标签的格子
+        // 自动收集所有带 "FarmGrid" 标签的格子
         GameObject[] cells = GameObject.FindGameObjectsWithTag("FarmGrid");
         foreach (var cell in cells)
         {
