@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Juice
   m_EditorClassIdentifier: 
   prefab: {fileID: 2199607342979779312, guid: afc983ea23fd51246adcb31b29a5f14b, type: 3}
-  probability: 0.75
-  rareLevel: 0
+  probability: 0.6
+  rareLevel: 1
+  itemLevel: 1
