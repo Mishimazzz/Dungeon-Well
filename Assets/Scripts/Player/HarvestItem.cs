@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -81,33 +80,29 @@ public class HarvestItem : MonoBehaviour
   // 生成并刷新背包UI
   public void RefreshBagUI()
   {
-    ClearBagUI();
-    currentBagPositionIndex = 0;
-    // int currentSeedPositionIndex = 0;
-
     int i = 0;
     foreach (var kv in playerBag)
     {
-      // 只显示普通物品
-      if (kv.Key.isSeed == Seed.Yes)
-        continue;
+      if (kv.Key.isSeed == Seed.Yes) continue;
 
-      // 用普通物品位置
-      Vector3 position;
-      if (currentBagPositionIndex >= itemPositions.Count)
-        currentBagPositionIndex = 0;
-      position = itemPositions[currentBagPositionIndex++];
+      ItemDisplay display;
+      GameObject gridGo;
+      if (i < bagSlots.Count)
+      {
+        display = bagSlots[i];
+        gridGo = gridObjs[i];
+      }
+      else
+      {
+        gridGo = Instantiate(gridPrefab, bagPanel);
+        gridGo.transform.localPosition = itemPositions[i % itemPositions.Count];
+        gridObjs.Add(gridGo);
 
-      // 生成Grid
-      GameObject gridGo = Instantiate(gridPrefab, bagPanel);
-      gridGo.transform.localPosition = position;
-      gridObjs.Add(gridGo);
-
-      // 生成ItemDisplay
-      GameObject go = Instantiate(itemDisplayPrefab, bagPanel);
-      go.transform.localPosition = position;
-      ItemDisplay display = go.GetComponent<ItemDisplay>();
-      bagSlots.Add(display);
+        GameObject go = Instantiate(itemDisplayPrefab, bagPanel);
+        go.transform.localPosition = itemPositions[i % itemPositions.Count];
+        display = go.GetComponent<ItemDisplay>();
+        bagSlots.Add(display);
+      }
 
       // 设置icon和数量
       Sprite icon = null;
@@ -122,40 +117,40 @@ public class HarvestItem : MonoBehaviour
 
       i++;
     }
+    // 隐藏多余的格子
+    for (; i < bagSlots.Count; i++)
+    {
+      bagSlots[i].gameObject.SetActive(false);
+      gridObjs[i].SetActive(false);
+    }
   }
 
   public void RefreshSeedBoxUI()
   {
-    // 清空种子仓库UI
-    foreach (var grid in seedGridObjs)
-    {
-      Destroy(grid);
-    }
-    seedGridObjs.Clear();
-    seedSlots.Clear();
-    int currentSeedPositionIndex = 0;
-
+    int i = 0;
     foreach (var kv in playerBag)
     {
       if (kv.Key.isSeed == Seed.No)
         continue; // 跳过普通物品
 
-      // 用种子专用位置
-      Vector3 position;
-      if (currentSeedPositionIndex >= seedBoxPosition.Count)
-        currentSeedPositionIndex = 0;
-      position = seedBoxPosition[currentSeedPositionIndex++];
+      ItemDisplay display;
+      GameObject gridGo;
+      if (i < seedSlots.Count)
+      {
+        display = seedSlots[i];
+        gridGo = seedGridObjs[i];
+      }
+      else
+      {
+        gridGo = Instantiate(seedGridPrefab, seedBoxPanel);
+        gridGo.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
+        seedGridObjs.Add(gridGo);
 
-      // 生成Grid
-      GameObject gridGo = Instantiate(seedGridPrefab, seedBoxPanel);
-      gridGo.transform.localPosition = position;
-      seedGridObjs.Add(gridGo);
-
-      // 生成ItemDisplay
-      GameObject go = Instantiate(itemDisplayPrefab, seedBoxPanel);
-      go.transform.localPosition = position;
-      ItemDisplay display = go.GetComponent<ItemDisplay>();
-      seedSlots.Add(display);
+        GameObject go = Instantiate(itemDisplayPrefab, seedBoxPanel);
+        go.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
+        display = go.GetComponent<ItemDisplay>();
+        seedSlots.Add(display);
+      }
 
       // 设置icon和数量
       Sprite icon = null;
@@ -167,6 +162,14 @@ public class HarvestItem : MonoBehaviour
       display.SetItem(icon, kv.Value);
       display.gameObject.SetActive(true);
       gridGo.SetActive(true);
+
+      i++;
+    }
+    // 隐藏多余的格子
+    for (; i < seedSlots.Count; i++)
+    {
+      seedSlots[i].gameObject.SetActive(false);
+      seedGridObjs[i].SetActive(false);
     }
   }
 

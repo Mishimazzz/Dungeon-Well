@@ -32,8 +32,18 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         canvasGroup = gameObject.AddComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
 
-        // 检查是否在 SeedBoxPanel 之下
-        isInSeedBox = transform.IsChildOf(GameObject.Find("SeedBoxPanel").transform);
+        Transform seedBoxPanelTransform = GameObject.Find("SeedBoxPanel")?.transform;
+
+        if (seedBoxPanelTransform != null)
+        {
+            // 正常情况，检查是否在 SeedBoxPanel 之下
+            isInSeedBox = transform.IsChildOf(seedBoxPanelTransform);
+        }
+        else
+        {
+            // 如果没找到 SeedBoxPanel，就认为不在里面
+            isInSeedBox = false;
+        }
 
         //只有种子物品&在种子仓库里的物品才允许拖动
         canDrag = isInSeedBox;

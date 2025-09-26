@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
 public class PersistentCanvases : MonoBehaviour
 {
     private static GameObject uiCanvasInstance;

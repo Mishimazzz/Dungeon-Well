@@ -854,8 +854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: -142}
-  m_SizeDelta: {x: 400, y: 425}
+  m_AnchoredPosition: {x: -425, y: -143.7}
+  m_SizeDelta: {x: 350, y: 425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &303178312
 MonoBehaviour:
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   timeStopPanel: {fileID: 1945011294}
   timeUpPanel: {fileID: 574712946}
   BagPanel: {fileID: 818529528}
-  SeedPanel: {fileID: 1088647298}
+  SeedPanel: {fileID: 1481859404}
   harvestItem: {fileID: 685738451}
   itemManager: {fileID: 1023543530}
   exploreButton: {fileID: 1100066201}
@@ -2003,7 +2003,7 @@ MonoBehaviour:
   gridPrefab: {fileID: 3474742832060698928, guid: 1c041c54ffddc424488d2005d0b39195, type: 3}
   itemDisplayPrefab: {fileID: 4225993256049203260, guid: 18c8f37e687c8e540ab0c86869ced094, type: 3}
   bagPanel: {fileID: 818529529}
-  BagPanel: {fileID: 1481859404}
+  BagPanel: {fileID: 303178310}
   needRefreshBag: 0
   seedBoxPanel: {fileID: 1481859405}
   SeedBoxPanel: {fileID: 1088647298}
@@ -3943,7 +3943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1088647299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5794,7 +5794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1481859405
 RectTransform:
   m_ObjectHideFlags: 0
