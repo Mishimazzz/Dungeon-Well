@@ -20,30 +20,43 @@ public class TimeStopController : MonoBehaviour
     public float TotalExecuteTime;
     public void SelectYes()
     {
-        //stop the time, and find hourLeft,min,sec
-        hourLeft = timeCountDownController.hourLeft; minLeft = timeCountDownController.minLeft; secLeft = timeCountDownController.secLeft;
-        Debug.Log("hourLeft:" + hourLeft);
-        Debug.Log("minLeft:" + minLeft);
-        Debug.Log("secLeft:" + secLeft);
+        // 停止计时并获取剩余时间
+        hourLeft = timeCountDownController.hourLeft;
+        minLeft = timeCountDownController.minLeft;
+        secLeft = timeCountDownController.secLeft;
+
+        Debug.Log($"hourLeft:{hourLeft}, minLeft:{minLeft}, secLeft:{secLeft}");
+
         TotalExecuteTime = ComputeExecuteTime();
 
-        //whole system action
+        // 切 UI
         timeCountDownPanel.SetActive(false);
         timeStopPanel.SetActive(false);
         timeUpPanel.SetActive(true);
 
-        buttonManage.TotalFullExecuteTime = buttonManage.ComputeFullExecuteTime();
-        int actualHour = buttonManage.executeHour - hourLeft;
-        int actualMin = buttonManage.executeMin - minLeft;
-        int actualSec = buttonManage.executeSec - secLeft;
+        // === 正确计算实际执行时间 ===
+        int startSeconds = timeCountDownController.tempHour * 3600
+                         + timeCountDownController.tempMin * 60
+                         + timeCountDownController.tempSec;
 
+        int leftSeconds = hourLeft * 3600 + minLeft * 60 + secLeft;
+        int actualSeconds = Mathf.Max(0, startSeconds - leftSeconds);
+
+        int actualHour = actualSeconds / 3600;
+        int actualMin = (actualSeconds % 3600) / 60;
+        int actualSec = actualSeconds % 60;
+
+        // 显示
         executeHour.text = actualHour.ToString("D2");
         executeMin.text = actualMin.ToString("D2");
         executeSec.text = actualSec.ToString("D2");
-        itemManager.SpawItem();
 
+        // 其他逻辑
+        itemManager.SpawItem();
         exploreButtonText.text = "Explore";
-        timeController.hour = 0; timeController.min = 0; timeController.sec = 0;
+        timeController.hour = 0;
+        timeController.min = 0;
+        timeController.sec = 0;
         RefreshTimeUI();
     }
 
@@ -61,34 +74,26 @@ public class TimeStopController : MonoBehaviour
 
     public float ComputeExecuteTime()
     {
-        // 起始时间
-        int startHour = timeCountDownController.tempHour;
-        int startMin = timeCountDownController.tempMin;
-        int startSec = timeCountDownController.tempSec;
+        // 起始时间（秒）
+        int totalStartSec = timeCountDownController.tempHour * 3600
+                          + timeCountDownController.tempMin * 60
+                          + timeCountDownController.tempSec;
 
-        // 剩余时间
-        int leftHour = hourLeft;
-        int leftMin = minLeft;
-        int leftSec = secLeft;
+        // 剩余时间（秒）
+        int totalLeftSec = hourLeft * 3600
+                         + minLeft * 60
+                         + secLeft;
 
-        // 转为总秒数
-        int totalStartSec = startHour * 3600 + startMin * 60 + startSec;
-        int totalLeftSec = leftHour * 3600 + leftMin * 60 + leftSec;
+        // 已用时间（秒）
+        int usedSec = Mathf.Max(0, totalStartSec - totalLeftSec);
 
-        // 实际消耗的秒数
-        int usedSec = totalStartSec - totalLeftSec;
-        if (usedSec < 0) usedSec = 0;
+        // 拆分成 h:m:s
+        buttonManage.executeHour = usedSec / 3600;
+        buttonManage.executeMin = (usedSec % 3600) / 60;
+        buttonManage.executeSec = usedSec % 60;
 
-        // 转回时分秒
-        int executeHour = usedSec / 3600;
-        int executeMin = (usedSec % 3600) / 60;
-        int executeSec = usedSec % 60;
-
-        buttonManage.executeHour = executeHour;
-        buttonManage.executeMin = executeMin;
-        buttonManage.executeSec = executeSec;
-
-        buttonManage.TotalFullExecuteTime = executeHour * 60 + executeMin + executeSec / 60f;
+        // 总时间(分钟为单位)
+        buttonManage.TotalFullExecuteTime = usedSec / 60f;
         return buttonManage.TotalFullExecuteTime;
     }
 

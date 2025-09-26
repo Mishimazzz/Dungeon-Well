@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c9ab2adea4d01469b036a9fde157f9, type: 3}
-  m_Name: ItemRareList
+  m_Script: {fileID: 11500000, guid: d5e13985b6d679048b9f0b667a94c82b, type: 3}
+  m_Name: ChineseYamSeed
   m_EditorClassIdentifier: 
-  Iteams:
-  - {fileID: 11400000, guid: 91d13a083fdac034c88dd12d407c8739, type: 2}
+  prefab: {fileID: 45885501074092247, guid: 1523c2cbb6aad0f4c895f36b60bad06a, type: 3}
+  probability: 0.6
+  rareLevel: 0
+  itemLevel: 0
+  isSeed: 1

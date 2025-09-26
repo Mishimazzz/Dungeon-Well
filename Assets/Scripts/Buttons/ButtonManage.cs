@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonManage : MonoBehaviour
 {
     public GameObject timePanel;
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
+    public GameObject BagPanel;
+    public GameObject SeedPanel;
     public HarvestItem harvestItem;
     public ItemManager itemManager;
     public Button exploreButton;
@@ -19,7 +22,7 @@ public class ButtonManage : MonoBehaviour
 
     public TimeCountDownController timeCountDownController;
 
-    public void StartButton()
+  public void StartButton()
     {
         // Debug.Log(" Debug: You click the start button");
         timePanel.SetActive(false);
@@ -52,21 +55,40 @@ public class ButtonManage : MonoBehaviour
         executeHour = timeCountDownController.tempHour;
         executeMin = timeCountDownController.tempMin;
         executeSec = timeCountDownController.tempSec;
-        Debug.Log("executeHour:" + executeHour);
-        Debug.Log("executeMin:" + executeMin);
-        Debug.Log("executeSec:" + executeSec);
         float tempTotalFullExecuteTime = executeHour * 60 + executeMin + executeSec / 60f;
-        Debug.Log("TotalExecuteTime:" + tempTotalFullExecuteTime);
         return tempTotalFullExecuteTime;
     }
-
-    public void OpenPlayerBag()
+    public void TogglePlayerBag()
     {
+        bool isActive = BagPanel.activeSelf;
+        BagPanel.SetActive(!isActive);
 
+        if (isActive) // 如果是刚打开
+        {
+            HarvestItem.Instance.RefreshBagUI();
+        }
     }
 
-    public void ClosePlayerBag()
+    public void ToggleSeedBox()
     {
+        bool isActive = SeedPanel.activeSelf;
+        SeedPanel.SetActive(!isActive);
 
+        if (isActive) // 如果是刚打开
+        {
+            HarvestItem.Instance.RefreshSeedBoxUI();
+        }
     }
+
+    //退出游戏
+    public void QuitGame()
+    {
+        Application.Quit();
+        //unity play 退出
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
+
 }
