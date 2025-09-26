@@ -28,4 +28,8 @@ public class ItemData : ScriptableObject
     public Rare rareLevel;
     public Level itemLevel;
     public Seed isSeed;
+
+    // 额外字段（只有 isSeed == Yes 才显示）
+    public float growTime;
+    public GameObject harvestPrefab;
 }

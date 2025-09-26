@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -78,11 +79,29 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
             if (IsInsideFarmGrid(farmGrid.position, worldMousePos))
             {
-                Debug.Log($"放进去了 {farmGrid.name} ");
-                rectTransform.localPosition = farmGrid.localPosition;
+                Debug.Log($"放进去了 {farmGrid.name}");
+
+                // 找到这个物品
+                ItemDisplay display = GetComponent<ItemDisplay>();
+                if (display != null && display.itemData != null)
+                {
+                    ItemData data = display.itemData;
+
+                    // 在 playerBag 里减少数量
+                    if (HarvestItem.Instance.HasItem(data))
+                    {
+                        
+                        HarvestItem.Instance.ConsumeItem(data, 1); // 消耗1个
+                        GameObject plantedSeed = Instantiate(data.prefab, farmGrid.position, Quaternion.identity);
+                        HarvestItem.Instance.needRefreshSeedBox = true;
+                    }
+                }
+
+                rectTransform.localPosition = originalPosition;
                 insideAnyGrid = true;
                 break;
             }
+
         }
 
         if (!insideAnyGrid)

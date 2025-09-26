@@ -11,13 +11,13 @@ public class HarvestItem : MonoBehaviour
   public Transform bagPanel;              // 拖你的背包Panel（父物体）
   public GameObject BagPanel;
   public bool needRefreshBag = false;
-  
+
 
   public Transform seedBoxPanel; // 拖你的种子仓库Panel（父物体）
   public GameObject SeedBoxPanel;
   public GameObject seedGridPrefab;
   private List<GameObject> seedGridObjs = new List<GameObject>();
-  private List<ItemDisplay> seedSlots = new List<ItemDisplay>();
+  public List<ItemDisplay> seedSlots = new List<ItemDisplay>();
   public bool needRefreshSeedBox = false;
 
 
@@ -111,7 +111,7 @@ public class HarvestItem : MonoBehaviour
         var sr = kv.Key.prefab.GetComponent<SpriteRenderer>();
         if (sr != null) icon = sr.sprite;
       }
-      display.SetItem(icon, kv.Value);
+      display.SetItem(icon, kv.Value, kv.Key);
       display.gameObject.SetActive(true);
       gridGo.SetActive(true);
 
@@ -159,7 +159,7 @@ public class HarvestItem : MonoBehaviour
         var sr = kv.Key.prefab.GetComponent<SpriteRenderer>();
         if (sr != null) icon = sr.sprite;
       }
-      display.SetItem(icon, kv.Value);
+      display.SetItem(icon, kv.Value, kv.Key);
       display.gameObject.SetActive(true);
       gridGo.SetActive(true);
 
@@ -191,4 +191,22 @@ public class HarvestItem : MonoBehaviour
     bagSlots.Clear();
     currentBagPositionIndex = 0;
   }
+
+  // 检查是否有物品
+  public bool HasItem(ItemData data)
+  {
+    return playerBag.ContainsKey(data) && playerBag[data] > 0;
+  }
+
+  // 消耗物品
+  public void ConsumeItem(ItemData data, int amount)
+  {
+    if (playerBag.ContainsKey(data))
+    {
+      playerBag[data] -= amount;
+      if (playerBag[data] <= 0)
+        playerBag.Remove(data);
+    }
+  }
+
 }
