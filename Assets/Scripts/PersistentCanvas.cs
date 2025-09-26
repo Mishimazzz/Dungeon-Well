@@ -4,21 +4,11 @@ using UnityEngine;
 
 public class PersistentCanvas : MonoBehaviour
 {
-    private static PersistentCanvas instance;
-    public GameObject TimeCanvas;
+    public GameObject canvas;
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(TimeCanvas);
-        }
-        else
-        {
-            Destroy(TimeCanvas);
-            Destroy(gameObject);
-        }
+        DontDestroyOnLoad(canvas);
     }
 }
 
