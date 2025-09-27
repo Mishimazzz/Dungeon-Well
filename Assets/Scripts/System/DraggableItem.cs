@@ -90,9 +90,13 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     // 在 playerBag 里减少数量
                     if (HarvestItem.Instance.HasItem(data))
                     {
-                        
+
                         HarvestItem.Instance.ConsumeItem(data, 1); // 消耗1个
-                        GameObject plantedSeed = Instantiate(data.prefab, farmGrid.position, Quaternion.identity);
+                        GameObject plantedSeed = Instantiate(data.harvestPrefab, farmGrid.position, Quaternion.identity);
+                        // 给它加上 SeedManager，并初始化
+                        Debug.Log("种子开始工作");
+                        SeedManager manager = plantedSeed.AddComponent<SeedManager>();
+                        manager.Init(data);
                         HarvestItem.Instance.needRefreshSeedBox = true;
                     }
                 }

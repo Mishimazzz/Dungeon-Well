@@ -817,6 +817,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45274c3b17190914d994d6b4ab08eead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TotalTime: 0
+  currentTime: 0
+  stage1Prefab: {fileID: 0}
+  stage2Prefab: {fileID: 0}
+  stage3Prefab: {fileID: 0}
 --- !u!1 &220271513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,9 +3791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31371ec10a174654e96ed86995189257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windowWidth: 1250
-  windowHeight: 800
-  margin: 12
 --- !u!4 &1054705960
 Transform:
   m_ObjectHideFlags: 0

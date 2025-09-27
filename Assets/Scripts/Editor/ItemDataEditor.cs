@@ -21,7 +21,12 @@ public class ItemDataEditor : Editor
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Seed Options", EditorStyles.boldLabel);
 
-            itemData.harvestPrefab = (GameObject)EditorGUILayout.ObjectField("Harvest Prefab", itemData.harvestPrefab, typeof(GameObject), false);
+            itemData.harvestPrefab = (GameObject)EditorGUILayout.ObjectField(
+                "Harvest Prefab",
+                itemData.harvestPrefab,
+                typeof(GameObject),
+                false
+            );
             itemData.firstPhase = EditorGUILayout.FloatField("FirstPhase", itemData.firstPhase);
             itemData.secondPhase = EditorGUILayout.FloatField("SecondPhase", itemData.secondPhase);
             itemData.thirdPhase = EditorGUILayout.FloatField("ThirdPhase", itemData.thirdPhase);
@@ -31,6 +36,26 @@ public class ItemDataEditor : Editor
                 typeof(SeedManager),
                 true   // 允许场景对象（false 就只能拖 asset）
             );
+            itemData.firstPhasePrefab = (GameObject)EditorGUILayout.ObjectField(
+                "First Phase Prefab",
+                itemData.firstPhasePrefab,
+                typeof(GameObject),
+                false
+            );
+            itemData.secondPhasePrefab = (GameObject)EditorGUILayout.ObjectField(
+                "Second Phase Prefab",
+                itemData.secondPhasePrefab,
+                typeof(GameObject),
+                false
+            );
+
+            itemData.thirdPhasePrefab = (GameObject)EditorGUILayout.ObjectField(
+                "Third Phase Prefab",
+                itemData.thirdPhasePrefab,
+                typeof(GameObject),
+                false
+            );
+
         }
 
         if (GUI.changed)

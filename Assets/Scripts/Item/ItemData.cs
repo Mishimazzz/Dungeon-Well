@@ -33,6 +33,9 @@ public class ItemData : ScriptableObject
     public float firstPhase = 0;//种土里第1阶段，秒数
     public float secondPhase;//种土里第2阶段，秒数
     public float thirdPhase;//种土里第3阶段（成熟），秒数
+    public GameObject firstPhasePrefab;
+    public GameObject secondPhasePrefab;
+    public GameObject thirdPhasePrefab;
     public GameObject harvestPrefab;//成熟图例
     public SeedManager seedManagerScript;//放seed的脚本的game obj
 }
