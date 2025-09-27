@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum SceneType { Well, Farm }
 public class SceneManager : MonoBehaviour
 {
+    public Button seedBoxButton;
     public void LoadSceneByName(SceneType type)
     {
         switch (type)
@@ -20,8 +22,16 @@ public class SceneManager : MonoBehaviour
     }
 
     //switch scenes
-    public void LoadWell() => LoadSceneByName(SceneType.Well);
-    public void LoadFarm() => LoadSceneByName(SceneType.Farm);
+    public void LoadWell()
+    {
+        LoadSceneByName(SceneType.Well);
+        seedBoxButton.gameObject.SetActive(false);
+    }
+    public void LoadFarm()
+    {
+        LoadSceneByName(SceneType.Farm);
+        seedBoxButton.gameObject.SetActive(true);
+    }
 
     public void LoadScene()
     {
