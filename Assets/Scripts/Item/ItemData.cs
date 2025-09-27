@@ -30,6 +30,9 @@ public class ItemData : ScriptableObject
     public Seed isSeed;
 
     // 额外字段（只有 isSeed == Yes 才显示）
-    public float growTime;
-    public GameObject harvestPrefab;
+    public float firstPhase = 0;//种土里第1阶段，秒数
+    public float secondPhase;//种土里第2阶段，秒数
+    public float thirdPhase;//种土里第3阶段（成熟），秒数
+    public GameObject harvestPrefab;//成熟图例
+    public SeedManager seedManagerScript;//放seed的脚本的game obj
 }

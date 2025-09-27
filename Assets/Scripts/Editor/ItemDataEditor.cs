@@ -21,8 +21,16 @@ public class ItemDataEditor : Editor
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Seed Options", EditorStyles.boldLabel);
 
-            itemData.growTime = EditorGUILayout.FloatField("Grow Time", itemData.growTime);
             itemData.harvestPrefab = (GameObject)EditorGUILayout.ObjectField("Harvest Prefab", itemData.harvestPrefab, typeof(GameObject), false);
+            itemData.firstPhase = EditorGUILayout.FloatField("FirstPhase", itemData.firstPhase);
+            itemData.secondPhase = EditorGUILayout.FloatField("SecondPhase", itemData.secondPhase);
+            itemData.thirdPhase = EditorGUILayout.FloatField("ThirdPhase", itemData.thirdPhase);
+            itemData.seedManagerScript = (SeedManager)EditorGUILayout.ObjectField(
+                "Seed Manager Script",
+                itemData.seedManagerScript,
+                typeof(SeedManager),
+                true   // 允许场景对象（false 就只能拖 asset）
+            );
         }
 
         if (GUI.changed)

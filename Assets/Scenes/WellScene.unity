@@ -773,6 +773,50 @@ MonoBehaviour:
   minLeft: 0
   secLeft: 0
   isCounting: 0
+--- !u!1 &160187818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160187819}
+  - component: {fileID: 160187820}
+  m_Layer: 0
+  m_Name: SeedManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160187819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160187818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1070056567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160187820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160187818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45274c3b17190914d994d6b4ab08eead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &220271513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,6 +2052,7 @@ MonoBehaviour:
   seedBoxPanel: {fileID: 1481859405}
   SeedBoxPanel: {fileID: 1088647298}
   seedGridPrefab: {fileID: 4210189656688591717, guid: 6c9e8d0deb2a93b40840cb429093edab, type: 3}
+  seedSlots: []
   needRefreshSeedBox: 0
   itemPositions:
   - {x: -470, y: -50, z: 0}
@@ -3741,6 +3786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31371ec10a174654e96ed86995189257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windowWidth: 1250
+  windowHeight: 800
+  margin: 12
 --- !u!4 &1054705960
 Transform:
   m_ObjectHideFlags: 0
@@ -3924,6 +3972,7 @@ Transform:
   - {fileID: 685738450}
   - {fileID: 410099229}
   - {fileID: 2038576183}
+  - {fileID: 160187819}
   m_Father: {fileID: 511539914}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088647298
@@ -7429,8 +7478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4707fb2d77e234f925652420de41eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: c73d30d2b6652d34398a53cc88b9703e, type: 3}
-  hotSpot: {x: 0, y: 0}
+  cursorTexture: {fileID: 2800000, guid: 1534519a3043ac94388e4e25116cc3c4, type: 3}
+  hotspot: {x: 0, y: 0}
+  cursorMode: 0
 --- !u!1 &2052944458
 GameObject:
   m_ObjectHideFlags: 0

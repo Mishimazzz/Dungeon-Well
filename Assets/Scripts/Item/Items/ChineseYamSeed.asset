@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: ChineseYamSeed
   m_EditorClassIdentifier: 
   prefab: {fileID: 45885501074092247, guid: 1523c2cbb6aad0f4c895f36b60bad06a, type: 3}
-  probability: 0.946
+  probability: 0.6
   rareLevel: 0
   itemLevel: 0
   isSeed: 1
+  firstPhase: 0
+  secondPhase: 5
+  thirdPhase: 10
+  harvestPrefab: {fileID: 0}
+  seedManagerScript: {fileID: 0}
