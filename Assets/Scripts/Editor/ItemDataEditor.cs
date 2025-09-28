@@ -27,9 +27,6 @@ public class ItemDataEditor : Editor
                 typeof(GameObject),
                 false
             );
-            itemData.firstPhase = EditorGUILayout.FloatField("FirstPhase", itemData.firstPhase);
-            itemData.secondPhase = EditorGUILayout.FloatField("SecondPhase", itemData.secondPhase);
-            itemData.thirdPhase = EditorGUILayout.FloatField("ThirdPhase", itemData.thirdPhase);
             itemData.seedManagerScript = (SeedManager)EditorGUILayout.ObjectField(
                 "Seed Manager Script",
                 itemData.seedManagerScript,
@@ -52,6 +49,12 @@ public class ItemDataEditor : Editor
             itemData.thirdPhasePrefab = (GameObject)EditorGUILayout.ObjectField(
                 "Third Phase Prefab",
                 itemData.thirdPhasePrefab,
+                typeof(GameObject),
+                false
+            );
+            itemData.emptyPrefab = (GameObject)EditorGUILayout.ObjectField(
+                "Empty Prefab",
+                itemData.emptyPrefab,
                 typeof(GameObject),
                 false
             );

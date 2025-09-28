@@ -37,5 +37,6 @@ public class ItemData : ScriptableObject
     public GameObject secondPhasePrefab;
     public GameObject thirdPhasePrefab;
     public GameObject harvestPrefab;//成熟图例
+    public GameObject emptyPrefab;//空白图例，用来调用Draggableitem.cs里头的manager line95
     public SeedManager seedManagerScript;//放seed的脚本的game obj
 }

@@ -92,7 +92,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     {
 
                         HarvestItem.Instance.ConsumeItem(data, 1); // 消耗1个
-                        GameObject plantedSeed = Instantiate(data.harvestPrefab, farmGrid.position, Quaternion.identity);
+                        GameObject plantedSeed = Instantiate(data.emptyPrefab, farmGrid.position, Quaternion.identity);
                         // 给它加上 SeedManager，并初始化
                         Debug.Log("种子开始工作");
                         SeedManager manager = plantedSeed.AddComponent<SeedManager>();

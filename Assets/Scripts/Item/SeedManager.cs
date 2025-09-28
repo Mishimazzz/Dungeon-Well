@@ -11,7 +11,9 @@ public class SeedManager : MonoBehaviour
   public GameObject stage1Prefab;
   public GameObject stage2Prefab;
   public GameObject stage3Prefab;
+  public GameObject havestPrefab;
   private bool initialized = false;
+  private bool hasChanged = false;
   public void Init(ItemData seed)
   {
     if (seed == null || seed.isSeed == Seed.No)
@@ -28,6 +30,7 @@ public class SeedManager : MonoBehaviour
     stage1Prefab = seed.firstPhasePrefab;
     stage2Prefab = seed.secondPhasePrefab;
     stage3Prefab = seed.thirdPhasePrefab;
+    havestPrefab = seed.harvestPrefab;
 
     initialized = true;
     Debug.Log("SeedManager 初始化完成");
@@ -46,7 +49,10 @@ public class SeedManager : MonoBehaviour
     {
       //更新为第三阶段收获（在土里的图例）
       if (seedInstance != null)
+      {
         SwitchPrefab(stage3Prefab);
+        OnMouseDown();
+      }
     }
   }
 
@@ -70,7 +76,42 @@ public class SeedManager : MonoBehaviour
       Destroy(currentStageObj);
     }
 
-    // 不要传 parent，直接放在世界坐标
+    //放在世界坐标
     currentStageObj = Instantiate(newPrefab, transform.position, Quaternion.identity);
+  }
+
+  //点击收获农作物，会变成收获物到背包里
+  void OnMouseDown()
+  {
+    if (hasChanged) return;
+    if (currentStageObj != null && currentStageObj.name.Contains(stage3Prefab.name))
+    {
+      Destroy(gameObject);
+      Destroy(currentStageObj);   // 删除当前阶段实例
+      currentStageObj = null;
+
+      // 获取下一个可用的格子位置
+      Vector3 pos = HarvestItem.Instance.GetNextBagPosition();
+      Debug.Log(pos);
+
+      // 生成一个新的 ItemDisplay和grid（收获物品图标）
+      GameObject gridGo = Instantiate(HarvestItem.Instance.gridPrefab, HarvestItem.Instance.bagPanel);
+      gridGo.transform.localPosition = pos;
+      HarvestItem.Instance.gridObjs.Add(gridGo);
+      GameObject newItem = Instantiate(HarvestItem.Instance.itemDisplayPrefab, HarvestItem.Instance.bagPanel);
+      newItem.transform.localPosition = pos;
+
+      // 设置 ItemDisplay 的内容（比如收获的物品数据）
+      ItemDisplay itemDisplay = newItem.GetComponent<ItemDisplay>();
+      Sprite icon = seedInstance.harvestPrefab.GetComponent<SpriteRenderer>().sprite;
+      itemDisplay.SetItem(icon, 1, seedInstance);
+
+      // 存入背包 slot 列表
+      HarvestItem.Instance.bagSlots.Add(itemDisplay);
+      // HarvestItem.Instance.AddOneToBag(seedInstance);
+
+      Debug.Log("收获物品放入背包");
+      hasChanged = true;
+    }
   }
 }

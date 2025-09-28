@@ -822,6 +822,7 @@ MonoBehaviour:
   stage1Prefab: {fileID: 0}
   stage2Prefab: {fileID: 0}
   stage3Prefab: {fileID: 0}
+  havestPrefab: {fileID: 0}
 --- !u!1 &220271513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2060,7 @@ MonoBehaviour:
   seedGridPrefab: {fileID: 4210189656688591717, guid: 6c9e8d0deb2a93b40840cb429093edab, type: 3}
   seedSlots: []
   needRefreshSeedBox: 0
+  bagSlots: []
   itemPositions:
   - {x: -470, y: -50, z: 0}
   - {x: -388, y: -50, z: 0}
@@ -2069,6 +2071,7 @@ MonoBehaviour:
   - {x: -470, y: -210, z: 0}
   - {x: -388, y: -210, z: 0}
   - {x: -304, y: -210, z: 0}
+  currentBagPosition: {x: 0, y: 0, z: 0}
   seedBoxPosition:
   - {x: -95, y: -53, z: 0}
 --- !u!1 &711207454

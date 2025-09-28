@@ -23,5 +23,6 @@ MonoBehaviour:
   firstPhasePrefab: {fileID: 5499947497597004373, guid: 76552036caace61409d391267eade52a, type: 3}
   secondPhasePrefab: {fileID: 729301695744601798, guid: 7fe8571460271844a8eb04f8da7f5aef, type: 3}
   thirdPhasePrefab: {fileID: 1256287083910619193, guid: 1db8dc8b240ef134795e7ed87708eeaa, type: 3}
-  harvestPrefab: {fileID: 2744093365008630385, guid: 9eabbf7c5694d9c4e8951b98e37b10d1, type: 3}
+  harvestPrefab: {fileID: 8762699518558944159, guid: 1a74b078edfefa842b9203808b55b657, type: 3}
+  emptyPrefab: {fileID: 2744093365008630385, guid: 9eabbf7c5694d9c4e8951b98e37b10d1, type: 3}
   seedManagerScript: {fileID: 0}

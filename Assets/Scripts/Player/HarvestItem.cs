@@ -11,6 +11,7 @@ public class HarvestItem : MonoBehaviour
   public Transform bagPanel;              // 拖你的背包Panel（父物体）
   public GameObject BagPanel;
   public bool needRefreshBag = false;
+  private int currentBagPositionIndex = 0;
 
 
   public Transform seedBoxPanel; // 拖你的种子仓库Panel（父物体）
@@ -21,8 +22,8 @@ public class HarvestItem : MonoBehaviour
   public bool needRefreshSeedBox = false;
 
 
-  private List<GameObject> gridObjs = new List<GameObject>();
-  private List<ItemDisplay> bagSlots = new List<ItemDisplay>();
+  public List<GameObject> gridObjs = new List<GameObject>();
+  public List<ItemDisplay> bagSlots = new List<ItemDisplay>();
 
   public List<Vector3> itemPositions = new List<Vector3>
   {
@@ -36,6 +37,7 @@ public class HarvestItem : MonoBehaviour
     new Vector3(-388, -210, 0),
     new Vector3(-304, -210, 0),
   };
+  public Vector3 currentBagPosition;
 
   public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-63, 57, 0) };
 
@@ -53,9 +55,6 @@ public class HarvestItem : MonoBehaviour
       needRefreshSeedBox = false; // 刷新一次后重置
     }
   }
-
-
-  private int currentBagPositionIndex = 0;
 
   private void Awake()
   {
@@ -116,6 +115,7 @@ public class HarvestItem : MonoBehaviour
       gridGo.SetActive(true);
 
       i++;
+      currentBagPositionIndex = i;
     }
     // 隐藏多余的格子
     for (; i < bagSlots.Count; i++)
@@ -173,10 +173,11 @@ public class HarvestItem : MonoBehaviour
     }
   }
 
-  private Vector3 GetNextBagPosition()
+  public Vector3 GetNextBagPosition()
   {
     if (currentBagPositionIndex >= itemPositions.Count)
       currentBagPositionIndex = 0;
+    Debug.Log("position index:" + currentBagPositionIndex);
     return itemPositions[currentBagPositionIndex++];
   }
 
@@ -209,4 +210,15 @@ public class HarvestItem : MonoBehaviour
     }
   }
 
+  // 添加单个物品(一般给农作物用)
+  public void AddOneToBag(ItemData data, int count = 1)
+  {
+    if (playerBag.ContainsKey(data))
+      playerBag[data] += count;
+    else
+      playerBag[data] = count;
+
+    needRefreshBag = true;
+    needRefreshSeedBox = true;
+  }
 }
