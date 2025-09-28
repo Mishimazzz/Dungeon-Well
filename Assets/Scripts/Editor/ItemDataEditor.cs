@@ -21,10 +21,10 @@ public class ItemDataEditor : Editor
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Seed Options", EditorStyles.boldLabel);
 
-            itemData.harvestPrefab = (GameObject)EditorGUILayout.ObjectField(
-                "Harvest Prefab",
-                itemData.harvestPrefab,
-                typeof(GameObject),
+            itemData.harvestItem = (ItemData)EditorGUILayout.ObjectField(
+                "Harvest Item",
+                itemData.harvestItem,
+                typeof(ItemData),
                 false
             );
             itemData.seedManagerScript = (SeedManager)EditorGUILayout.ObjectField(

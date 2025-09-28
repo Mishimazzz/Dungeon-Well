@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e13985b6d679048b9f0b667a94c82b, type: 3}
+  m_Name: ChineseYum
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8762699518558944159, guid: 1a74b078edfefa842b9203808b55b657, type: 3}
+  probability: 0
+  rareLevel: 0
+  itemLevel: 0
+  isSeed: 0
+  firstPhase: 0
+  secondPhase: 0
+  thirdPhase: 0
+  firstPhasePrefab: {fileID: 0}
+  secondPhasePrefab: {fileID: 0}
+  thirdPhasePrefab: {fileID: 0}
+  harvestPrefab: {fileID: 0}
+  emptyPrefab: {fileID: 0}
+  seedManagerScript: {fileID: 0}

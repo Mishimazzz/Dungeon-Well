@@ -82,7 +82,14 @@ public class HarvestItem : MonoBehaviour
     int i = 0;
     foreach (var kv in playerBag)
     {
-      if (kv.Key.isSeed == Seed.Yes) continue;
+      // if (kv.Key.isSeed == Seed.Yes) continue;
+      if (kv.Key.isSeed == Seed.Yes)
+      {
+        Debug.Log($"[BagUI] 跳过种子物品: {kv.Key.name}, 数量={kv.Value}");
+        continue;
+      }
+
+      Debug.Log($"[BagUI] 显示普通物品: {kv.Key.name}, 数量={kv.Value}");
 
       ItemDisplay display;
       GameObject gridGo;

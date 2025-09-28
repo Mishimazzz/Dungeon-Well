@@ -11,7 +11,7 @@ public class SeedManager : MonoBehaviour
   public GameObject stage1Prefab;
   public GameObject stage2Prefab;
   public GameObject stage3Prefab;
-  public GameObject havestPrefab;
+  public ItemData harvestItem;
   private bool initialized = false;
   private bool hasChanged = false;
   public void Init(ItemData seed)
@@ -30,7 +30,7 @@ public class SeedManager : MonoBehaviour
     stage1Prefab = seed.firstPhasePrefab;
     stage2Prefab = seed.secondPhasePrefab;
     stage3Prefab = seed.thirdPhasePrefab;
-    havestPrefab = seed.harvestPrefab;
+    harvestItem = seed.harvestItem;
 
     initialized = true;
     Debug.Log("SeedManager 初始化完成");
@@ -51,7 +51,17 @@ public class SeedManager : MonoBehaviour
       if (seedInstance != null)
       {
         SwitchPrefab(stage3Prefab);
-        OnMouseDown();
+        // OnMouseDown();
+        if (Input.GetMouseButtonDown(0))
+        {
+          Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+          RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+          
+          if (hit.collider != null && hit.collider.gameObject == currentStageObj)
+          {
+            OnMouseDown();
+          }
+        }
       }
     }
   }
@@ -94,21 +104,31 @@ public class SeedManager : MonoBehaviour
       Vector3 pos = HarvestItem.Instance.GetNextBagPosition();
       Debug.Log(pos);
 
-      // 生成一个新的 ItemDisplay和grid（收获物品图标）
+      // 生成一个新的 ItemDisplay和grid（收获物品的itemdata 和图标）
       GameObject gridGo = Instantiate(HarvestItem.Instance.gridPrefab, HarvestItem.Instance.bagPanel);
       gridGo.transform.localPosition = pos;
       HarvestItem.Instance.gridObjs.Add(gridGo);
+      
       GameObject newItem = Instantiate(HarvestItem.Instance.itemDisplayPrefab, HarvestItem.Instance.bagPanel);
       newItem.transform.localPosition = pos;
 
       // 设置 ItemDisplay 的内容（比如收获的物品数据）
       ItemDisplay itemDisplay = newItem.GetComponent<ItemDisplay>();
-      Sprite icon = seedInstance.harvestPrefab.GetComponent<SpriteRenderer>().sprite;
-      itemDisplay.SetItem(icon, 1, seedInstance);
+      ItemData harvestData = seedInstance.harvestItem;
 
-      // 存入背包 slot 列表
-      HarvestItem.Instance.bagSlots.Add(itemDisplay);
-      // HarvestItem.Instance.AddOneToBag(seedInstance);
+      Sprite icon = null;
+      if (harvestData.prefab != null)
+      {
+        var sr = harvestData.prefab.GetComponent<SpriteRenderer>();
+        if (sr != null) icon = sr.sprite;
+      }
+
+      itemDisplay.SetItem(icon, 1, harvestData);
+
+      // 同时更新 playerBag 数据（用 AddItemsInBag）
+      Dictionary<ItemData, int> newItems = new Dictionary<ItemData, int>();
+      newItems[harvestData] = 1;
+      HarvestItem.Instance.AddItemsInBag(newItems);
 
       Debug.Log("收获物品放入背包");
       hasChanged = true;
