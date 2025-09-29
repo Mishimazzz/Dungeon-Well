@@ -33,6 +33,8 @@ public class ItemManager : MonoBehaviour
 
     private List<GameObject> DestroyItems = new List<GameObject>();// 之后instanitiate物品之后需要删除的
 
+    public Vector3 coinPosition = new Vector3(-5, -85, 0);
+
     public void SpawItem()
     {
         /*

@@ -7,7 +7,6 @@ public class ItemDisplay : MonoBehaviour
     public Image itemIcon;
     public TextMeshProUGUI itemText;
     public ItemData itemData;
-    public Image seedIcon;
 
     void Awake()
     {
@@ -21,6 +20,17 @@ public class ItemDisplay : MonoBehaviour
     public void SetItem(Sprite icon, int count, ItemData itemdata)
     {
         itemIcon.sprite = icon;
+        itemText.text = count.ToString();
+        itemData = itemdata;
+    }
+}
+
+public class CoinDisplay
+{
+    public TextMeshProUGUI itemText;
+    public ItemData itemData;
+    public void SetCoin(int count, ItemData itemdata)
+    {
         itemText.text = count.ToString();
         itemData = itemdata;
     }
