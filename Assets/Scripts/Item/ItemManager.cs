@@ -247,7 +247,7 @@ public class ItemManager : MonoBehaviour
                     var sr = kv.Key.prefab.GetComponent<SpriteRenderer>();
                     if (sr != null) icon = sr.sprite;
                 }
-                itemSlots[i].SetItem(icon, kv.Value);
+                itemSlots[i].SetItem(icon, kv.Value,kv.Key);
                 itemSlots[i].gameObject.SetActive(true);
                 // 只在第一次遇到该物品时生成 grid
                 if (!spawnedItems.Contains(kv.Key.name))

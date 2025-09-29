@@ -10,10 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e13985b6d679048b9f0b667a94c82b, type: 3}
-  m_Name: ChineseYamSeed
+  m_Name: ChineseYum
   m_EditorClassIdentifier: 
-  prefab: {fileID: 45885501074092247, guid: 1523c2cbb6aad0f4c895f36b60bad06a, type: 3}
-  probability: 0.6
+  prefab: {fileID: 8762699518558944159, guid: 1a74b078edfefa842b9203808b55b657, type: 3}
+  probability: 0
   rareLevel: 0
   itemLevel: 0
-  isSeed: 1
+  isSeed: 0
+  firstPhase: 0
+  secondPhase: 0
+  thirdPhase: 0
+  firstPhasePrefab: {fileID: 0}
+  secondPhasePrefab: {fileID: 0}
+  thirdPhasePrefab: {fileID: 0}
+  harvestPrefab: {fileID: 0}
+  emptyPrefab: {fileID: 0}
+  seedManagerScript: {fileID: 0}
