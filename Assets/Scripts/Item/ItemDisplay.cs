@@ -24,14 +24,3 @@ public class ItemDisplay : MonoBehaviour
         itemData = itemdata;
     }
 }
-
-public class CoinDisplay
-{
-    public TextMeshProUGUI itemText;
-    public ItemData itemData;
-    public void SetCoin(int count, ItemData itemdata)
-    {
-        itemText.text = count.ToString();
-        itemData = itemdata;
-    }
-}

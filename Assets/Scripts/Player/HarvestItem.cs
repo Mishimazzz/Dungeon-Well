@@ -8,7 +8,6 @@ public class HarvestItem : MonoBehaviour
 
   public GameObject gridPrefab;           // 拖你的背包格子Prefab
   public GameObject itemDisplayPrefab;    // 拖你的物品显示Prefab
-  public GameObject coinText; //coin的数量的text
   public Transform bagPanel;              // 拖你的背包Panel（父物体）
   public GameObject BagPanel;
   public bool needRefreshBag = false;
@@ -41,6 +40,7 @@ public class HarvestItem : MonoBehaviour
 
   public Vector3 coinPosition = new Vector3(-425, -260, 0);
   public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-63, 57, 0) };
+  public CoinDisplay coinDisplay;
 
   void Update()
   {
@@ -92,8 +92,8 @@ public class HarvestItem : MonoBehaviour
 
       if (kv.Key.name == "Coin") // 硬币单独处理，不占用 i
       {
-        go = Instantiate(itemDisplayPrefab, bagPanel);
-        go.transform.localPosition = pos;
+        coinDisplay.SetCoin(kv.Value, kv.Key);
+        continue;
       }
       else // 普通物品
       {
