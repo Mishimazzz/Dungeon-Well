@@ -1,23 +1,24 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Canvas canvas;          
+    private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
     private Vector3 originalPosition;
     private Transform originalParent;
-
-    [SerializeField] private float snapBuffer = 30f;        // 容错范围，越大越容易“吸附”
+    private bool canDrag = false;
+    public bool isInSeedBox;
 
     private List<RectTransform> farmGridAreas = new List<RectTransform>();
 
     private void Start()
     {
-        // 自动收集所有带 "FarmCell" 标签的格子
+        // 自动收集所有带 "FarmGrid" 标签的格子
         GameObject[] cells = GameObject.FindGameObjectsWithTag("FarmGrid");
         foreach (var cell in cells)
         {
@@ -31,10 +32,27 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = gameObject.AddComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
+
+        Transform seedBoxPanelTransform = GameObject.Find("SeedBoxPanel")?.transform;
+
+        if (seedBoxPanelTransform != null)
+        {
+            // 正常情况，检查是否在 SeedBoxPanel 之下
+            isInSeedBox = transform.IsChildOf(seedBoxPanelTransform);
+        }
+        else
+        {
+            // 如果没找到 SeedBoxPanel，就认为不在里面
+            isInSeedBox = false;
+        }
+
+        //只有种子物品&在种子仓库里的物品才允许拖动
+        canDrag = isInSeedBox;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!CanDrag()) return;
         canvasGroup.blocksRaycasts = false;
         originalPosition = transform.localPosition;
         originalParent = transform.parent;
@@ -42,28 +60,52 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!CanDrag()) return;
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!CanDrag()) return;
         canvasGroup.blocksRaycasts = true;
-        
+
         bool insideAnyGrid = false;
         foreach (var farmGrid in farmGridAreas)
         {
             Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Debug.Log("World MousePos: " + worldMousePos);
             // Debug.Log("FarmGrid WorldPos: " + farmGrid.position);
-            Debug.Log("FarmGrid WorldPos: " + farmGrid.localPosition);
+            // Debug.Log("FarmGrid WorldPos: " + farmGrid.localPosition);
 
             if (IsInsideFarmGrid(farmGrid.position, worldMousePos))
             {
-                Debug.Log($"放进去了 {farmGrid.name} ");
-                rectTransform.localPosition = farmGrid.localPosition;
+                Debug.Log($"放进去了 {farmGrid.name}");
+
+                // 找到这个物品
+                ItemDisplay display = GetComponent<ItemDisplay>();
+                if (display != null && display.itemData != null)
+                {
+                    ItemData data = display.itemData;
+
+                    // 在 playerBag 里减少数量
+                    if (HarvestItem.Instance.HasItem(data))
+                    {
+
+                        HarvestItem.Instance.ConsumeItem(data, 1); // 消耗1个
+                        GameObject plantedSeed = Instantiate(data.emptyPrefab, farmGrid.position, Quaternion.identity);
+                        // 给它加上 SeedManager，并初始化
+                        Debug.Log("种子开始工作");
+                        SeedManager manager = plantedSeed.AddComponent<SeedManager>();
+                        manager.Init(data);
+                        HarvestItem.Instance.needRefreshSeedBox = true;
+                    }
+                }
+
+                rectTransform.localPosition = originalPosition;
                 insideAnyGrid = true;
                 break;
             }
+
         }
 
         if (!insideAnyGrid)
@@ -93,5 +135,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         return rangeWidthLeft <= screenPos.x && screenPos.x <= rangeWidthRight &&
         rangeHeightTop >= screenPos.y && rangeHeightBottom <= screenPos.y;
+    }
+
+    private bool CanDrag()
+    {
+        return isInSeedBox;
     }
 }

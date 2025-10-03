@@ -5,16 +5,13 @@ using UnityEngine;
 public class MouseController : MonoBehaviour
 {
     public Texture2D cursorTexture;
-    public Vector2 hotSpot = Vector2.zero;
+    public Vector2 hotspot = Vector2.zero;
+    public CursorMode cursorMode = CursorMode.Auto;
 
     void Start()
     {
-        // 设置鼠标皮肤
-        Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
-    }
-
-    void OnDisable()
-    {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

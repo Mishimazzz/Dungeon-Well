@@ -79,16 +79,4 @@ public class ButtonManage : MonoBehaviour
             HarvestItem.Instance.RefreshSeedBoxUI();
         }
     }
-
-    //退出游戏
-    public void QuitGame()
-    {
-        Application.Quit();
-        //unity play 退出
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-    }
-
-
 }

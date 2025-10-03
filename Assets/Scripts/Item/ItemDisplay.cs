@@ -6,6 +6,8 @@ public class ItemDisplay : MonoBehaviour
 {
     public Image itemIcon;
     public TextMeshProUGUI itemText;
+    public ItemData itemData;
+    public Image seedIcon;
 
     void Awake()
     {
@@ -16,9 +18,10 @@ public class ItemDisplay : MonoBehaviour
             itemText = transform.Find("ItemCountText").GetComponent<TextMeshProUGUI>();
     }
 
-    public void SetItem(Sprite icon, int count)
+    public void SetItem(Sprite icon, int count, ItemData itemdata)
     {
         itemIcon.sprite = icon;
         itemText.text = count.ToString();
+        itemData = itemdata;
     }
 }

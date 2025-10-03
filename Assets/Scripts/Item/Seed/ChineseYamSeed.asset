@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e13985b6d679048b9f0b667a94c82b, type: 3}
+  m_Name: ChineseYamSeed
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 45885501074092247, guid: 1523c2cbb6aad0f4c895f36b60bad06a, type: 3}
+  probability: 0.6
+  rareLevel: 0
+  itemLevel: 0
+  isSeed: 1
+  firstPhase: 0
+  secondPhase: 5
+  thirdPhase: 10
+  firstPhasePrefab: {fileID: 5499947497597004373, guid: 76552036caace61409d391267eade52a, type: 3}
+  secondPhasePrefab: {fileID: 729301695744601798, guid: 7fe8571460271844a8eb04f8da7f5aef, type: 3}
+  thirdPhasePrefab: {fileID: 1256287083910619193, guid: 1db8dc8b240ef134795e7ed87708eeaa, type: 3}
+  harvestItem: {fileID: 11400000, guid: 49e9a1554e859474ea42d6967e44b023, type: 2}
+  emptyPrefab: {fileID: 2744093365008630385, guid: 9eabbf7c5694d9c4e8951b98e37b10d1, type: 3}
+  seedManagerScript: {fileID: 0}
