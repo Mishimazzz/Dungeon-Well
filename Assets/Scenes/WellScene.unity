@@ -817,12 +817,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45274c3b17190914d994d6b4ab08eead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalTime: 0
-  currentTime: 0
   stage1Prefab: {fileID: 0}
   stage2Prefab: {fileID: 0}
   stage3Prefab: {fileID: 0}
   harvestItem: {fileID: 0}
+  isHavestItem: 0
+  TotalTime: 0
 --- !u!1 &202186466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seedBoxButton: {fileID: 1942891435}
+  seedBoxPlane: {fileID: 0}
 --- !u!4 &363873971
 Transform:
   m_ObjectHideFlags: 0
