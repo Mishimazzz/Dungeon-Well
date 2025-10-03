@@ -5,6 +5,7 @@ using UnityEngine;
 public class SeedManager : MonoBehaviour
 {
   public static ItemData seedInstance;
+  public static SeedManager Instance;
   public float TotalTime;
   public float currentTime = 0f;
   private GameObject currentStageObj;
@@ -14,6 +15,7 @@ public class SeedManager : MonoBehaviour
   public ItemData harvestItem;
   private bool initialized = false;
   private bool hasChanged = false;
+  public bool isHavestItem = false;
   public void Init(ItemData seed)
   {
     if (seed == null || seed.isSeed == Seed.No)
@@ -91,47 +93,31 @@ public class SeedManager : MonoBehaviour
   }
 
   //点击收获农作物，会变成收获物到背包里
+  // 点击收获农作物，会变成收获物到背包里
   void OnMouseDown()
   {
     if (hasChanged) return;
     if (currentStageObj != null && currentStageObj.name.Contains(stage3Prefab.name))
     {
+      isHavestItem = true;
       Destroy(gameObject);
       Destroy(currentStageObj);   // 删除当前阶段实例
       currentStageObj = null;
 
-      // 获取下一个可用的格子位置
-      Vector3 pos = HarvestItem.Instance.GetNextBagPosition();
-      Debug.Log(pos);
-
-      // 生成一个新的 ItemDisplay和grid（收获物品的itemdata 和图标）
-      GameObject gridGo = Instantiate(HarvestItem.Instance.gridPrefab, HarvestItem.Instance.bagPanel);
-      gridGo.transform.localPosition = pos;
-      HarvestItem.Instance.gridObjs.Add(gridGo);
-      
-      GameObject newItem = Instantiate(HarvestItem.Instance.itemDisplayPrefab, HarvestItem.Instance.bagPanel);
-      newItem.transform.localPosition = pos;
-
-      // 设置 ItemDisplay 的内容（比如收获的物品数据）
-      ItemDisplay itemDisplay = newItem.GetComponent<ItemDisplay>();
+      // 获取收获物数据
       ItemData harvestData = seedInstance.harvestItem;
 
-      Sprite icon = null;
-      if (harvestData.prefab != null)
-      {
-        var sr = harvestData.prefab.GetComponent<SpriteRenderer>();
-        if (sr != null) icon = sr.sprite;
-      }
-
-      itemDisplay.SetItem(icon, 1, harvestData);
-
-      // 同时更新 playerBag 数据（用 AddItemsInBag）
+      // 更新 playerBag 数据
       Dictionary<ItemData, int> newItems = new Dictionary<ItemData, int>();
       newItems[harvestData] = 1;
       HarvestItem.Instance.AddItemsInBag(newItems);
+
+      // 刷新 UI（交给 RefreshBagUI 处理）
+      HarvestItem.Instance.RefreshBagUI();
 
       Debug.Log("收获物品放入背包");
       hasChanged = true;
     }
   }
+
 }

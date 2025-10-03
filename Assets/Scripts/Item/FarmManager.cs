@@ -1,12 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class FarmManager : MonoBehaviour
 {
-    //保证所有的种子都不会随着切换场景而销毁
+    public static FarmManager Instance;   // 单例
+    public List<RectTransform> farmGridAreas = new List<RectTransform>();
+
     void Awake()
     {
-        DontDestroyOnLoad(gameObject); // 保留这个对象和它的所有子对象
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 每次换场景重新收集
+        farmGridAreas.Clear();
+
+        GameObject[] cells = GameObject.FindGameObjectsWithTag("FarmGrid");
+        foreach (var cell in cells)
+        {
+            RectTransform rt = cell.GetComponent<RectTransform>();
+            if (rt != null) farmGridAreas.Add(rt);
+        }
+
+        Debug.Log($"[{scene.name}] 收集到 {farmGridAreas.Count} 个 FarmGrid");
+    }
+
+    void OnDestroy()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

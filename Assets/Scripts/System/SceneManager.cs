@@ -8,6 +8,7 @@ public enum SceneType { Well, Farm }
 public class SceneManager : MonoBehaviour
 {
     public Button seedBoxButton;
+    public static SceneManager sceneManager;
     public void LoadSceneByName(SceneType type)
     {
         switch (type)
