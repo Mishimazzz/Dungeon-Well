@@ -24,6 +24,11 @@ public class FarmManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name == "FarmScene")
+        {
+            RestoreSeeds();
+        }
+
         // 每次换场景重新收集
         farmGridAreas.Clear();
 
@@ -60,22 +65,11 @@ public class FarmManager : MonoBehaviour
         }
     }
 
-    // 种下种子
-    // public void PlantSeed(string seedId, float growDuration)
-    // {
-    //     SeedSaveData seed = new SeedSaveData
-    //     {
-    //         seedId = seedId,
-    //         plantedDate = DateTime.Now.ToBinary().ToString(),
-    //         growDuration = growDuration
-    //     };
-    //     plantedSeeds.Add(seed);
-
-    //     Debug.Log($"种下种子 {seedId}, 生长需要 {growDuration} 秒");
-    // }
-
     public void RestoreSeeds()
     {
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "FarmScene")
+            return;
+
         foreach (var seedData in plantedSeeds)
         {
             ItemData item = GameManager.Instance.itemDatabase.GetItemByName(seedData.seedId);
@@ -92,4 +86,5 @@ public class FarmManager : MonoBehaviour
             manager.Restore(item, plantedTime, seedData.growDuration);
         }
     }
+
 }
