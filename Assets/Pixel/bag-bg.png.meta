@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60763e3cd56830f478a39d4ed2266c38
+guid: 05c9da00614defb4a86b715e3458cf14
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CEA7AC44F8DD8EAA1095770FB92499BE_0
+      name: bag-bg_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 14
-        height: 18
+        x: 37
+        y: 58
+        width: 1444
+        height: 1453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1fc7bed614ff9c498980be2e97a27c9
-      internalID: -1871339833
+      spriteID: 1fe766971b568534e97bef268583aa36
+      internalID: -696287678
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CEA7AC44F8DD8EAA1095770FB92499BE_0: -1871339833
+      bag-bg_0: -696287678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
