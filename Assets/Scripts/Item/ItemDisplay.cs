@@ -7,7 +7,6 @@ public class ItemDisplay : MonoBehaviour
     public Image itemIcon;
     public TextMeshProUGUI itemText;
     public ItemData itemData;
-    public Image seedIcon;
 
     void Awake()
     {

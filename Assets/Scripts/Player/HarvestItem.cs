@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class HarvestItem : MonoBehaviour
 {
@@ -21,7 +22,6 @@ public class HarvestItem : MonoBehaviour
   public List<ItemDisplay> seedSlots = new List<ItemDisplay>();
   public bool needRefreshSeedBox = false;
 
-
   public List<GameObject> gridObjs = new List<GameObject>();
   public List<ItemDisplay> bagSlots = new List<ItemDisplay>();
 
@@ -37,9 +37,10 @@ public class HarvestItem : MonoBehaviour
     new Vector3(-388, -210, 0),
     new Vector3(-304, -210, 0),
   };
-  public Vector3 currentBagPosition;
 
+  public Vector3 coinPosition = new Vector3(-425, -260, 0);
   public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-63, 57, 0) };
+  public CoinDisplay coinDisplay;
 
   void Update()
   {
@@ -80,55 +81,52 @@ public class HarvestItem : MonoBehaviour
   public void RefreshBagUI()
   {
     int i = 0;
+
     foreach (var kv in playerBag)
     {
-      // if (kv.Key.isSeed == Seed.Yes) continue;
-      if (kv.Key.isSeed == Seed.Yes)
+      if (kv.Key.isSeed == Seed.Yes) continue;
+      if (kv.Value <= 0) continue;
+
+      Vector3 pos = kv.Key.name == "Coin"
+          ? coinPosition
+          : itemPositions[currentBagPositionIndex % itemPositions.Count];
+
+      if (kv.Key.name == "Coin")
       {
-        Debug.Log($"[BagUI] 跳过种子物品: {kv.Key.name}, 数量={kv.Value}");
+        coinDisplay.SetCoin(kv.Value, kv.Key);
         continue;
       }
 
-      Debug.Log($"[BagUI] 显示普通物品: {kv.Key.name}, 数量={kv.Value}");
+      // 查找已有
+      ItemDisplay existingDisplay = bagSlots
+          .FirstOrDefault(d => d != null && d.itemData == kv.Key);
 
-      ItemDisplay display;
-      GameObject gridGo;
-      if (i < bagSlots.Count)
+      if (existingDisplay != null)
       {
-        display = bagSlots[i];
-        gridGo = gridObjs[i];
+        // 已有 → 更新
+        Sprite icon = kv.Key.prefab ? kv.Key.prefab.GetComponent<SpriteRenderer>()?.sprite : null;
+        existingDisplay.SetItem(icon, kv.Value, kv.Key);
       }
       else
       {
-        gridGo = Instantiate(gridPrefab, bagPanel);
-        gridGo.transform.localPosition = itemPositions[i % itemPositions.Count];
+        // 没有 → 新建
+        GameObject gridGo = Instantiate(gridPrefab, bagPanel);
+        gridGo.transform.localPosition = pos;
         gridObjs.Add(gridGo);
 
         GameObject go = Instantiate(itemDisplayPrefab, bagPanel);
-        go.transform.localPosition = itemPositions[i % itemPositions.Count];
-        display = go.GetComponent<ItemDisplay>();
-        bagSlots.Add(display);
-      }
+        go.transform.localPosition = pos;
 
-      // 设置icon和数量
-      Sprite icon = null;
-      if (kv.Key.prefab != null)
-      {
-        var sr = kv.Key.prefab.GetComponent<SpriteRenderer>();
-        if (sr != null) icon = sr.sprite;
+        ItemDisplay display = go.GetComponent<ItemDisplay>();
+        Sprite icon = kv.Key.prefab ? kv.Key.prefab.GetComponent<SpriteRenderer>()?.sprite : null;
+        display.SetItem(icon, kv.Value, kv.Key);
+
+        bagSlots.Add(display);
+
+        currentBagPositionIndex++; // 每新建一个物品，占用一个位置
       }
-      display.SetItem(icon, kv.Value, kv.Key);
-      display.gameObject.SetActive(true);
-      gridGo.SetActive(true);
 
       i++;
-      currentBagPositionIndex = i;
-    }
-    // 隐藏多余的格子
-    for (; i < bagSlots.Count; i++)
-    {
-      bagSlots[i].gameObject.SetActive(false);
-      gridObjs[i].SetActive(false);
     }
   }
 
