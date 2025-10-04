@@ -7,7 +7,6 @@ public class HarvestItem : MonoBehaviour
   private Dictionary<ItemData, int> playerBag = new Dictionary<ItemData, int>();
   public static HarvestItem Instance;
 
-  public GameObject gridPrefab;           // 拖你的背包格子Prefab
   public GameObject itemDisplayPrefab;    // 拖你的物品显示Prefab
   public Transform bagPanel;              // 拖你的背包Panel（父物体）
   public GameObject BagPanel;
@@ -21,8 +20,6 @@ public class HarvestItem : MonoBehaviour
   private List<GameObject> seedGridObjs = new List<GameObject>();
   public List<ItemDisplay> seedSlots = new List<ItemDisplay>();
   public bool needRefreshSeedBox = false;
-
-  public List<GameObject> gridObjs = new List<GameObject>();
   public List<ItemDisplay> bagSlots = new List<ItemDisplay>();
 
   public List<Vector3> itemPositions = new List<Vector3>
@@ -110,10 +107,6 @@ public class HarvestItem : MonoBehaviour
       else
       {
         // 没有 → 新建
-        GameObject gridGo = Instantiate(gridPrefab, bagPanel);
-        gridGo.transform.localPosition = pos;
-        gridObjs.Add(gridGo);
-
         GameObject go = Instantiate(itemDisplayPrefab, bagPanel);
         go.transform.localPosition = pos;
 
@@ -174,7 +167,7 @@ public class HarvestItem : MonoBehaviour
     for (; i < seedSlots.Count; i++)
     {
       seedSlots[i].gameObject.SetActive(false);
-      seedGridObjs[i].SetActive(false);
+      // seedGridObjs[i].SetActive(false);
     }
   }
 
@@ -189,11 +182,6 @@ public class HarvestItem : MonoBehaviour
   // 清空背包UI
   public void ClearBagUI()
   {
-    foreach (var grid in gridObjs)
-    {
-      Destroy(grid);
-    }
-    gridObjs.Clear();
     bagSlots.Clear();
     currentBagPositionIndex = 0;
   }
