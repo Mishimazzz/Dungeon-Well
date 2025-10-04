@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     // 背包
     foreach (var kv in HarvestItem.Instance.GetPlayerBag())
     {
+      // Debug.Log("kv name: "+kv.Key.name);
       data.bagItems.Add(new ItemSaveData { itemName = kv.Key.name, count = kv.Value });
     }
 
@@ -75,6 +76,7 @@ public class GameManager : MonoBehaviour
     HarvestItem.Instance.ClearBag();
     foreach (var it in data.bagItems)
     {
+      // Debug.Log("it name: " + it.itemName);
       var itemData = itemDatabase.GetItemByName(it.itemName);
       if (itemData != null)
         HarvestItem.Instance.AddOneToBag(itemData, it.count);
@@ -83,6 +85,6 @@ public class GameManager : MonoBehaviour
 
     // 农田
     FarmManager.Instance.plantedSeeds = data.plantedSeeds;
-    FarmManager.Instance.CheckGrowth();
+    FarmManager.Instance.RestoreSeeds();
   }
 }

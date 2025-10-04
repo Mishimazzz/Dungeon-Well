@@ -68,6 +68,7 @@ public class SeedManager : MonoBehaviour
       // 长到第三阶段
       if (seedInstance != null)
       {
+        // Debug.Log("1");
         SwitchPrefab(stage3Prefab);
 
         if (Input.GetMouseButtonDown(0))
@@ -90,21 +91,32 @@ public class SeedManager : MonoBehaviour
     float stage2Time = seedInstance.secondPhase;
 
     if (currentTime > stage2Time) SwitchPrefab(stage1Prefab);
-    else if (currentTime > stage1Time) SwitchPrefab(stage2Prefab);
+    else if (currentTime > stage1Time) SwitchPrefab(stage2Prefab); 
   }
 
-  void SwitchPrefab(GameObject newPrefab)
+  public void SwitchPrefab(GameObject newPrefab)
   {
     if (currentStageObj != null)
     {
-      if (currentStageObj.name.Contains(newPrefab.name))
+      if (currentStageObj.name.StartsWith(newPrefab.name))
+      {
+        //Debug.Log("已经是目标Prefab: " + newPrefab.name);
         return;
+      }
 
-      Destroy(currentStageObj);
+      DestroyImmediate(currentStageObj); // 立刻销毁
     }
 
-    currentStageObj = Instantiate(newPrefab, transform.position, Quaternion.identity);
+    //Debug.Log("切换Prefab为: " + newPrefab.name);
+    currentStageObj = Instantiate(newPrefab, transform.position, Quaternion.identity, transform);
+
+    var sr = currentStageObj.GetComponentInChildren<SpriteRenderer>();
+    if (sr == null)
+    {
+      //Debug.LogWarning("新Prefab没有SpriteRenderer: " + newPrefab.name);
+    }
   }
+
 
   void OnMouseDown()
   {
@@ -124,8 +136,46 @@ public class SeedManager : MonoBehaviour
 
       HarvestItem.Instance.RefreshBagUI();
 
-      Debug.Log("收获物品放入背包");
+      //点击收货后，从保存数据list里移出去
+      if (FarmManager.Instance != null)
+      {
+        FarmManager.Instance.plantedSeeds.RemoveAll(s =>
+            s.seedId == seedInstance.name &&
+            Mathf.Approximately(s.posX, transform.position.x) &&
+            Mathf.Approximately(s.posY, transform.position.y) &&
+            Mathf.Approximately(s.posZ, transform.position.z)
+        );
+      }
+
+      // Debug.Log("收获物品放入背包");
       hasChanged = true;
     }
   }
+
+  public void Restore(ItemData seed, DateTime plantedDate, float growDuration)
+  {
+    if (seed == null || seed.isSeed == Seed.No) return;
+
+    seedInstance = seed;
+    TotalTime = growDuration;
+
+    stage1Prefab = seed.firstPhasePrefab;
+    stage2Prefab = seed.secondPhasePrefab;
+    stage3Prefab = seed.thirdPhasePrefab;
+    harvestItem = seed.harvestItem;
+
+    // 关键：把 plantedTime 回填为“过去的 Time.time”
+    double elapsed = (DateTime.Now - plantedDate).TotalSeconds;    // 真实已过去的秒数
+    plantedTime = Time.time - Mathf.Max(0f, (float)elapsed);       // 回填
+
+    initialized = true;
+    hasChanged = false;
+
+    // 立刻刷新一次外观（可选，但建议）
+    float currentTime = TotalTime - (Time.time - plantedTime);
+    if (currentTime <= 0f) SwitchPrefab(stage3Prefab);
+    else UpdateStage(currentTime);
+  }
+
+
 }

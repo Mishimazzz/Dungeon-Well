@@ -33,19 +33,19 @@ public class FarmManager : MonoBehaviour
             RectTransform rt = cell.GetComponent<RectTransform>();
             if (rt != null) farmGridAreas.Add(rt);
         }
-
-        Debug.Log($"[{scene.name}] 收集到 {farmGridAreas.Count} 个 FarmGrid");
     }
 
     void OnDestroy()
     {
         UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
     // 检查生长状态
     public void CheckGrowth()
     {
         foreach (var seed in plantedSeeds)
         {
+
             DateTime plantedTime = DateTime.FromBinary(long.Parse(seed.plantedDate));
             double elapsed = (DateTime.Now - plantedTime).TotalSeconds;
 
@@ -61,16 +61,35 @@ public class FarmManager : MonoBehaviour
     }
 
     // 种下种子
-    public void PlantSeed(string seedId, float growDuration)
-    {
-        SeedSaveData seed = new SeedSaveData
-        {
-            seedId = seedId,
-            plantedDate = DateTime.Now.ToBinary().ToString(),
-            growDuration = growDuration
-        };
-        plantedSeeds.Add(seed);
+    // public void PlantSeed(string seedId, float growDuration)
+    // {
+    //     SeedSaveData seed = new SeedSaveData
+    //     {
+    //         seedId = seedId,
+    //         plantedDate = DateTime.Now.ToBinary().ToString(),
+    //         growDuration = growDuration
+    //     };
+    //     plantedSeeds.Add(seed);
 
-        Debug.Log($"种下种子 {seedId}, 生长需要 {growDuration} 秒");
+    //     Debug.Log($"种下种子 {seedId}, 生长需要 {growDuration} 秒");
+    // }
+
+    public void RestoreSeeds()
+    {
+        foreach (var seedData in plantedSeeds)
+        {
+            ItemData item = GameManager.Instance.itemDatabase.GetItemByName(seedData.seedId);
+            if (item == null) continue;
+
+            Vector3 pos = new Vector3(seedData.posX, seedData.posY, seedData.posZ);
+            GameObject plantedSeed = Instantiate(item.emptyPrefab, pos, Quaternion.identity);
+
+            SeedManager manager = plantedSeed.AddComponent<SeedManager>();
+
+            long binaryTime = long.Parse(seedData.plantedDate);
+            DateTime plantedTime = DateTime.FromBinary(binaryTime);
+
+            manager.Restore(item, plantedTime, seedData.growDuration);
+        }
     }
 }

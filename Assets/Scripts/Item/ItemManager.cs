@@ -131,9 +131,9 @@ public class ItemManager : MonoBehaviour
         {
             // 1. 随机一个向下兼容等级
             Level level = GetRandomLevel();
-            Debug.Log("Level: " + level);
-            Debug.Log("rareLevel: " + rareLevel);
-            Debug.Log("count: " + count);
+            // Debug.Log("Level: " + level);
+            // Debug.Log("rareLevel: " + rareLevel);
+            // Debug.Log("count: " + count);
 
             // 2. 根据等级 + 稀有度，从数据库抽物品
             SpawnItem(level, rareLevel);

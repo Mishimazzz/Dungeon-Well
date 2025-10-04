@@ -89,14 +89,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         foreach (var farmGrid in FarmManager.Instance.farmGridAreas)
         {
             Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log("World MousePos: " + worldMousePos);
-            Debug.Log("FarmGrid WorldPos: " + farmGrid.position);
+            // Debug.Log("World MousePos: " + worldMousePos);
+            // Debug.Log("FarmGrid WorldPos: " + farmGrid.position);
             // Debug.Log("FarmGrid WorldPos: " + farmGrid.localPosition);
 
             if (IsInsideFarmGrid(farmGrid.position, worldMousePos))
             {
-                Debug.Log($"放进去了 {farmGrid.name}");
-
                 // 找到这个物品
                 ItemDisplay display = GetComponent<ItemDisplay>();
                 if (display != null && display.itemData != null)
@@ -106,7 +104,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     // 在 playerBag 里减少数量
                     if (HarvestItem.Instance.HasItem(data))
                     {
-
                         HarvestItem.Instance.ConsumeItem(data, 1); // 消耗1个
                         GameObject plantedSeed = Instantiate(data.emptyPrefab, farmGrid.position, Quaternion.identity);
                         // 给它加上 SeedManager，并初始化
@@ -114,6 +111,18 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         SeedManager manager = plantedSeed.AddComponent<SeedManager>();
                         manager.Init(data);
                         HarvestItem.Instance.needRefreshSeedBox = true;
+
+                        //添加到FarmManager.Instance.plantedSeeds里，需要保存数据用
+                        Debug.Log("添加到FarmManager.Instance.plantedSeeds");
+                        SeedSaveData saveData = new SeedSaveData();
+                        saveData.seedId = data.name;
+                        saveData.plantedDate = System.DateTime.Now.ToBinary().ToString();
+                        saveData.growDuration = data.thirdPhase;
+                        saveData.posX = farmGrid.position.x;
+                        saveData.posY = farmGrid.position.y;
+                        saveData.posZ = farmGrid.position.z;
+                        
+                        FarmManager.Instance.plantedSeeds.Add(saveData);
                     }
                 }
 
