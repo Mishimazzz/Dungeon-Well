@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seedBoxButton: {fileID: 0}
+  seedBoxPlane: {fileID: 0}
 --- !u!4 &1578479793
 Transform:
   m_ObjectHideFlags: 0
@@ -597,23 +598,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2304.13
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1205.14
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.025
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_LocalPosition.x
@@ -645,11 +646,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 365
+      value: -111.5
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 248
+      value: 173.7
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -665,6 +666,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689673998992168242, guid: 08f4c859242118e4ab30184069c24588, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789577362248118035, guid: 08f4c859242118e4ab30184069c24588, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789577362248118035, guid: 08f4c859242118e4ab30184069c24588, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 34edabfc032368d42a1ab925f166a2de, type: 3}
+    - target: {fileID: 5789577362248118035, guid: 08f4c859242118e4ab30184069c24588, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789577362248118035, guid: 08f4c859242118e4ab30184069c24588, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789577362248118035, guid: 08f4c859242118e4ab30184069c24588, type: 3}
+      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
