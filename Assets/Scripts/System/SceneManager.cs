@@ -8,6 +8,8 @@ public enum SceneType { Well, Farm }
 public class SceneManager : MonoBehaviour
 {
     public Button seedBoxButton;
+    public GameObject seedBoxPlane;
+    public static SceneManager sceneManager;
     public void LoadSceneByName(SceneType type)
     {
         switch (type)
@@ -26,11 +28,13 @@ public class SceneManager : MonoBehaviour
     {
         LoadSceneByName(SceneType.Well);
         seedBoxButton.gameObject.SetActive(false);
+        seedBoxPlane.SetActive(false);
     }
     public void LoadFarm()
     {
         LoadSceneByName(SceneType.Farm);
         seedBoxButton.gameObject.SetActive(true);
+        seedBoxPlane.SetActive(false);
     }
 
     public void LoadScene()

@@ -50,7 +50,23 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         canDrag = isInSeedBox;
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    void Update()
+    {
+        //切换场景用
+        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (currentSceneName.Equals("FarmScene"))
+        {
+            // 自动收集所有带 "FarmGrid" 标签的格子
+            GameObject[] cells = GameObject.FindGameObjectsWithTag("FarmGrid");
+            foreach (var cell in cells)
+            {
+                RectTransform rt = cell.GetComponent<RectTransform>();
+                if (rt != null) farmGridAreas.Add(rt);
+            }
+        }
+    }
+
+  public void OnBeginDrag(PointerEventData eventData)
     {
         if (!CanDrag()) return;
         canvasGroup.blocksRaycasts = false;
@@ -70,11 +86,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         canvasGroup.blocksRaycasts = true;
 
         bool insideAnyGrid = false;
-        foreach (var farmGrid in farmGridAreas)
+        foreach (var farmGrid in FarmManager.Instance.farmGridAreas)
         {
             Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // Debug.Log("World MousePos: " + worldMousePos);
-            // Debug.Log("FarmGrid WorldPos: " + farmGrid.position);
+            Debug.Log("World MousePos: " + worldMousePos);
+            Debug.Log("FarmGrid WorldPos: " + farmGrid.position);
             // Debug.Log("FarmGrid WorldPos: " + farmGrid.localPosition);
 
             if (IsInsideFarmGrid(farmGrid.position, worldMousePos))
