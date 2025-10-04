@@ -2275,7 +2275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7448c5948464040a462a811ad087a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridPrefab: {fileID: 3474742832060698928, guid: 1c041c54ffddc424488d2005d0b39195, type: 3}
   itemDisplayPrefab: {fileID: 4225993256049203260, guid: 18c8f37e687c8e540ab0c86869ced094, type: 3}
   bagPanel: {fileID: 818529529}
   BagPanel: {fileID: 303178310}
@@ -2285,7 +2284,6 @@ MonoBehaviour:
   seedGridPrefab: {fileID: 4210189656688591717, guid: 6c9e8d0deb2a93b40840cb429093edab, type: 3}
   seedSlots: []
   needRefreshSeedBox: 0
-  gridObjs: []
   bagSlots: []
   itemPositions:
   - {x: -460, y: -5, z: 0}
