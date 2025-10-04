@@ -6,6 +6,7 @@ public class HarvestItem : MonoBehaviour
 {
   private Dictionary<ItemData, int> playerBag = new Dictionary<ItemData, int>();
   public static HarvestItem Instance;
+  public Dictionary<ItemData, int> GetPlayerBag() => playerBag;
 
   public GameObject itemDisplayPrefab;    // 拖你的物品显示Prefab
   public Transform bagPanel;              // 拖你的背包Panel（父物体）
@@ -214,4 +215,15 @@ public class HarvestItem : MonoBehaviour
     needRefreshBag = true;
     needRefreshSeedBox = true;
   }
+
+  // 清空背包（加载时用）
+  public void ClearBag()
+  {
+    playerBag.Clear();
+    bagSlots.Clear();                 // 你已有列表，用于 UI:contentReference[oaicite:7]{index=7}
+    currentBagPositionIndex = 0;      // 如果是 private 就把这行删掉/改成重置函数
+    needRefreshBag = true;            // 让 Update 里刷新 UI:contentReference[oaicite:8]{index=8}
+    needRefreshSeedBox = true;
+  }
+
 }

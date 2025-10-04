@@ -1,11 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 public class FarmManager : MonoBehaviour
 {
     public static FarmManager Instance;   // 单例
+    public List<SeedSaveData> plantedSeeds = new List<SeedSaveData>();//保存数据的list
     public List<RectTransform> farmGridAreas = new List<RectTransform>();
 
     void Awake()
@@ -39,5 +40,37 @@ public class FarmManager : MonoBehaviour
     void OnDestroy()
     {
         UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    // 检查生长状态
+    public void CheckGrowth()
+    {
+        foreach (var seed in plantedSeeds)
+        {
+            DateTime plantedTime = DateTime.FromBinary(long.Parse(seed.plantedDate));
+            double elapsed = (DateTime.Now - plantedTime).TotalSeconds;
+
+            if (elapsed >= seed.growDuration)
+            {
+                Debug.Log($"种子 {seed.seedId} 已成熟！");
+            }
+            else
+            {
+                Debug.Log($"种子 {seed.seedId} 还在生长，进度：{elapsed}/{seed.growDuration}");
+            }
+        }
+    }
+
+    // 种下种子
+    public void PlantSeed(string seedId, float growDuration)
+    {
+        SeedSaveData seed = new SeedSaveData
+        {
+            seedId = seedId,
+            plantedDate = DateTime.Now.ToBinary().ToString(),
+            growDuration = growDuration
+        };
+        plantedSeeds.Add(seed);
+
+        Debug.Log($"种下种子 {seedId}, 生长需要 {growDuration} 秒");
     }
 }
