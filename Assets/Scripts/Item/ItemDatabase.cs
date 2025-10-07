@@ -12,6 +12,7 @@ public class RareGroup
 [CreateAssetMenu(fileName = "ItemDatabase", menuName = "Item System/Item Database")]
 public class ItemDatabase : ScriptableObject
 {
+  public static ItemDatabase Instance;
   public RareGroup E;
   public RareGroup D;
   public RareGroup C;
@@ -45,4 +46,31 @@ public class ItemDatabase : ScriptableObject
 
     return null;
   }
+
+  public ItemData GetItemByName(string name)
+  {
+    // 遍历所有稀有度分组
+    List<ItemData>[] allGroups =
+    {
+        E.low, E.mid, E.high, E.ultra,
+        D.low, D.mid, D.high, D.ultra,
+        C.low, C.mid, C.high, C.ultra,
+        B.low, B.mid, B.high, B.ultra,
+        A.low, A.mid, A.high, A.ultra,
+        S.low, S.mid, S.high, S.ultra
+    };
+
+    foreach (var group in allGroups)
+    {
+      foreach (var item in group)
+      {
+        if (item != null && item.name == name)
+          return item;
+      }
+    }
+
+    Debug.LogWarning("未找到物品：" + name);
+    return null;
+  }
+
 }

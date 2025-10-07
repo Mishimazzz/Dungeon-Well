@@ -227,4 +227,6 @@ public class UIManager : MonoBehaviour
         else
             Debug.LogError("SceneManager missing");
     }
+
+    
 }

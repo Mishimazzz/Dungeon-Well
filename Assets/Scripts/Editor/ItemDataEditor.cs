@@ -58,6 +58,15 @@ public class ItemDataEditor : Editor
                 typeof(GameObject),
                 false
             );
+            itemData.secondPhase = EditorGUILayout.FloatField(
+            new GUIContent("Second Phase (Sec)"),
+            itemData.secondPhase
+        );
+
+            itemData.thirdPhase = EditorGUILayout.FloatField(
+                new GUIContent("Third Phase (Sec)"),
+                itemData.thirdPhase
+            );
 
         }
 
