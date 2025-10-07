@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public Level characterLevel = Level.E; // TODO: import主角的等级
+    public Level characterLevel = Level.D; // TODO: import主角的等级
     public ButtonManage buttonManage;
     public TimeStopController timeStopController;
     private float executeTime;
@@ -66,7 +66,7 @@ public class ItemManager : MonoBehaviour
             LowLevelCount = 1;
             GiveCoin(2);
         }
-        else if (executeTime <= 15)//15
+        else if (executeTime <= 0.1)//15
         {
             LowLevelCount = 2;
             MidLevelCount = 1;

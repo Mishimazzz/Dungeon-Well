@@ -2343,6 +2343,7 @@ MonoBehaviour:
   coinPosition: {x: -425, y: -260, z: 0}
   seedBoxPosition:
   - {x: -95, y: -53, z: 0}
+  - {x: 40, y: -53, z: 0}
   coinDisplay: {fileID: 202186467}
 --- !u!1 &711207454
 GameObject:
@@ -4022,7 +4023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a820ac313c88f774a9bdcbf5dfb0da12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterLevel: 0
+  characterLevel: 1
   buttonManage: {fileID: 410099228}
   timeStopController: {fileID: 75961065}
   itemSlots: []
