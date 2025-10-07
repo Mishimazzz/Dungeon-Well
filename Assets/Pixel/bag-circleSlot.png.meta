@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 13f264b57711f48419f9a0a5ea486328
+guid: 9cd276b6c3c99a3429b0b8a16bb3fd48
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 40EA428E803D68EF631811B629528320_0
+      name: bag-circleSlot_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 19
-        height: 15
+        x: 503
+        y: 525
+        width: 886
+        height: 908
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 932b8e27a77004a4e90aa21e03cd98a3
-      internalID: 1348717465
+      spriteID: 94f123ea0ba8ad142af88b83f25f1476
+      internalID: -800482776
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      40EA428E803D68EF631811B629528320_0: 1348717465
+      bag-circleSlot_0: -800482776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

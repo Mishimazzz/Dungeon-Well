@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 117667583626932150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8387940280089013651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2, y: 4.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7742159016613489308
@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -50}
+  m_AnchoredPosition: {x: 70, y: -4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7085725929355284232
@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 1942361505094744370}
   itemText: {fileID: 6466900558385655940}
+  itemData: {fileID: 0}
 --- !u!114 &-7054123526953768338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,5 +315,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ece0b106eb9dc542a6cb000665113e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  farmGridAreas:
-  - {fileID: 0}
+  isInSeedBox: 0
