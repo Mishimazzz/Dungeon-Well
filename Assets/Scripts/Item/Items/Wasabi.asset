@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e13985b6d679048b9f0b667a94c82b, type: 3}
-  m_Name: Coffee
+  m_Name: Wasabi
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5272944622519518521, guid: f2c6d7755874f2c4cb7de463ddf886b2, type: 3}
-  probability: 0.7
-  rareLevel: 0
-  itemLevel: 1
+  prefab: {fileID: 5318215908175628991, guid: 26e7974a990dce04baaa58a5c613b412, type: 3}
+  probability: 0.4
+  rareLevel: 1
+  itemLevel: 0
   isSeed: 0
   firstPhase: 0
   secondPhase: 0

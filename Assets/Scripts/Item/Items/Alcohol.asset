@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: Alcohol
   m_EditorClassIdentifier: 
   prefab: {fileID: 6531093847576355106, guid: edf59550a43d784488d3d3f0f935a873, type: 3}
-  probability: 0.8
-  rareLevel: 0
-  characterLevel: 0
+  probability: 0.4
+  rareLevel: 1
+  itemLevel: 2
+  isSeed: 0
+  firstPhase: 0
+  secondPhase: 0
+  thirdPhase: 0
+  firstPhasePrefab: {fileID: 0}
+  secondPhasePrefab: {fileID: 0}
+  thirdPhasePrefab: {fileID: 0}
+  harvestItem: {fileID: 0}
+  emptyPrefab: {fileID: 0}
+  seedManagerScript: {fileID: 0}
