@@ -2320,7 +2320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7448c5948464040a462a811ad087a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDisplayPrefab: {fileID: 4225993256049203260, guid: 18c8f37e687c8e540ab0c86869ced094, type: 3}
+  itemDisplayPrefab: {fileID: 4225993256049203260, guid: 31a2b74456f7e9c4ea4005f0641b37e7, type: 3}
   bagPanel: {fileID: 818529529}
   BagPanel: {fileID: 303178310}
   needRefreshBag: 0
@@ -4027,7 +4027,7 @@ MonoBehaviour:
   buttonManage: {fileID: 410099228}
   timeStopController: {fileID: 75961065}
   itemSlots: []
-  itemDisplayPrefab: {fileID: 4225993256049203260, guid: 18c8f37e687c8e540ab0c86869ced094, type: 3}
+  itemDisplayPrefab: {fileID: 4225993256049203260, guid: 31a2b74456f7e9c4ea4005f0641b37e7, type: 3}
   canvas: {fileID: 511539914}
   itemPositions:
   - {x: -5, y: -85, z: 0}
