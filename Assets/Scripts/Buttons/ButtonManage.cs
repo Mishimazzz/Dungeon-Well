@@ -33,12 +33,17 @@ public class ButtonManage : MonoBehaviour
     public void ExploreButton()
     {
         string text = exploreButtonText.text;
-        // Debug.Log(" Debug: You click the Explore button");
 
-        if (text.Equals("Explore")) timePanel.SetActive(true);
+        // Explore / Cancel 都可以控制面板开关
+        if (text.Equals("Explore"))
+        {
+            bool isActive = timePanel.activeSelf;
+            timePanel.SetActive(!isActive);
+        }
         else
         {
-            timeStopPanel.SetActive(true);
+            bool isActive = timeStopPanel.activeSelf;
+            timeStopPanel.SetActive(!isActive);
         }
     }
 

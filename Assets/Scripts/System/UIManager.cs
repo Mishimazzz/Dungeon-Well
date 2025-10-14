@@ -207,7 +207,6 @@ public class UIManager : MonoBehaviour
         var buttonManage = FindObjectOfType<ButtonManage>();
         if (buttonManage != null)
         {
-            // Debug.Log("you reach here2");
             buttonManage.ExploreButton();
         }
         else

@@ -4,9 +4,7 @@ using System;
 
 public class SeedManager : MonoBehaviour
 {
-  public static ItemData seedInstance;
-  public static SeedManager Instance;
-
+  public ItemData seedInstance;
   private GameObject currentStageObj;
   public GameObject stage1Prefab;
   public GameObject stage2Prefab;
