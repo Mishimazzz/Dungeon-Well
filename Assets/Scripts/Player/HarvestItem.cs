@@ -13,6 +13,8 @@ public class HarvestItem : MonoBehaviour
   public GameObject BagPanel;
   public bool needRefreshBag = false;
   private int currentBagPositionIndex = 0;
+  public int currentBagPage = 0;
+  public int totalPages = 20;//总共设置page 20页
 
 
   public Transform seedBoxPanel; // 拖你的种子仓库Panel（父物体）
@@ -78,51 +80,70 @@ public class HarvestItem : MonoBehaviour
   // 生成并刷新背包UI
   public void RefreshBagUI()
   {
-    int i = 0;
+    // 清空旧UI
+    foreach (var slot in bagSlots)
+      Destroy(slot.gameObject);
+    bagSlots.Clear();
+    currentBagPositionIndex = 0;
 
+    // 过滤要显示的物品
+    List<KeyValuePair<ItemData, int>> displayList = new List<KeyValuePair<ItemData, int>>();
     foreach (var kv in playerBag)
     {
-      if (kv.Key.isSeed == Seed.Yes) continue;
-      if (kv.Value <= 0) continue;
+      if (kv.Key.isSeed == Seed.No && kv.Value > 0)
+        displayList.Add(kv);
+    }
 
-      Vector3 pos = kv.Key.name == "Coin"
-          ? coinPosition
-          : itemPositions[currentBagPositionIndex % itemPositions.Count];
+    // 计算分页
+    int perPageCount = itemPositions.Count;  // 每页9个
+    totalPages = Mathf.CeilToInt((float)displayList.Count / perPageCount);
+
+    int start = currentBagPage * perPageCount;
+    int end = Mathf.Min(start + perPageCount, displayList.Count);
+    int shownCount = 0;
+    int nonCoinCount = 0;
+    int i = 0;
+
+    // 跳过前几页的非 coin 物品
+    while (i < displayList.Count && nonCoinCount < currentBagPage * itemPositions.Count)
+    {
+      if (displayList[i].Key.name != "Coin")
+        nonCoinCount++;
+      i++;
+    }
+
+    // 从这里开始显示本页内容
+    shownCount = 0;
+    while (i < displayList.Count && shownCount < itemPositions.Count)
+    {
+      var kv = displayList[i];
 
       if (kv.Key.name == "Coin")
       {
         coinDisplay.SetCoin(kv.Value, kv.Key);
+        i++;
         continue;
       }
 
-      // 查找已有
-      ItemDisplay existingDisplay = bagSlots
-          .FirstOrDefault(d => d != null && d.itemData == kv.Key);
+      // 非 coin：显示并计格
+      Vector3 pos = itemPositions[shownCount];
+      GameObject go = Instantiate(itemDisplayPrefab, bagPanel);
+      go.transform.localPosition = pos;
 
-      if (existingDisplay != null)
-      {
-        // 已有 → 更新
-        Sprite icon = kv.Key.prefab ? kv.Key.prefab.GetComponent<SpriteRenderer>()?.sprite : null;
-        existingDisplay.SetItem(icon, kv.Value, kv.Key);
-      }
-      else
-      {
-        // 没有 → 新建
-        GameObject go = Instantiate(itemDisplayPrefab, bagPanel);
-        go.transform.localPosition = pos;
+      ItemDisplay display = go.GetComponent<ItemDisplay>();
+      Sprite icon = kv.Key.prefab ? kv.Key.prefab.GetComponent<SpriteRenderer>()?.sprite : null;
+      display.SetItem(icon, kv.Value, kv.Key);
 
-        ItemDisplay display = go.GetComponent<ItemDisplay>();
-        Sprite icon = kv.Key.prefab ? kv.Key.prefab.GetComponent<SpriteRenderer>()?.sprite : null;
-        display.SetItem(icon, kv.Value, kv.Key);
+      bagSlots.Add(display);
 
-        bagSlots.Add(display);
-
-        currentBagPositionIndex++; // 每新建一个物品，占用一个位置
-      }
-
+      shownCount++;
       i++;
     }
+
+    // Debug.Log($"当前第 {currentBagPage + 1}/{totalPages} 页");
+
   }
+
 
   public void RefreshSeedBoxUI()
   {
@@ -133,18 +154,12 @@ public class HarvestItem : MonoBehaviour
         continue; // 跳过普通物品
 
       ItemDisplay display;
-      GameObject gridGo;
       if (i < seedSlots.Count)
       {
         display = seedSlots[i];
-        // gridGo = seedGridObjs[i];
       }
       else
       {
-        // gridGo = Instantiate(seedGridPrefab, seedBoxPanel);
-        // gridGo.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
-        // seedGridObjs.Add(gridGo);
-
         GameObject go = Instantiate(itemDisplayPrefab, seedBoxPanel);
         go.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
         display = go.GetComponent<ItemDisplay>();
@@ -160,7 +175,6 @@ public class HarvestItem : MonoBehaviour
       }
       display.SetItem(icon, kv.Value, kv.Key);
       display.gameObject.SetActive(true);
-      // gridGo.SetActive(true);
 
       i++;
     }
@@ -168,7 +182,6 @@ public class HarvestItem : MonoBehaviour
     for (; i < seedSlots.Count; i++)
     {
       seedSlots[i].gameObject.SetActive(false);
-      // seedGridObjs[i].SetActive(false);
     }
   }
 
@@ -226,4 +239,24 @@ public class HarvestItem : MonoBehaviour
     needRefreshSeedBox = true;
   }
 
+  //背包翻页系统
+  public void NextPage()
+  {
+    if (currentBagPage < totalPages - 1)
+    {
+      currentBagPage++;
+      RefreshBagUI();
+    }
+  }
+
+  public void PrevPage()
+  {
+    if (currentBagPage > 0)
+    {
+      currentBagPage--;
+      RefreshBagUI();
+    }
+  }
+
 }
+

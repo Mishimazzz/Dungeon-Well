@@ -129,11 +129,11 @@ public class SeedManager : MonoBehaviour
       currentStageObj = null;
 
       ItemData harvestData = seedInstance.harvestItem;
+      Debug.Log("harvestData: " + harvestData);
 
       Dictionary<ItemData, int> newItems = new Dictionary<ItemData, int>();
       newItems[harvestData] = 1;
       HarvestItem.Instance.AddItemsInBag(newItems);
-
       HarvestItem.Instance.RefreshBagUI();
 
       //点击收货后，从保存数据list里移出去

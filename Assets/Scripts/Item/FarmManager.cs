@@ -8,6 +8,7 @@ public class FarmManager : MonoBehaviour
     public static FarmManager Instance;   // 单例
     public List<SeedSaveData> plantedSeeds = new List<SeedSaveData>();//保存数据的list
     public List<RectTransform> farmGridAreas = new List<RectTransform>();
+    private Boolean restoreBool = true; // 只有一开始会恢复所有的植物
 
     void Awake()
     {
@@ -24,9 +25,10 @@ public class FarmManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "FarmScene")
+        if (scene.name == "FarmScene" && restoreBool == true)
         {
             RestoreSeeds();
+            restoreBool = false;
         }
 
         // 每次换场景重新收集
@@ -69,10 +71,11 @@ public class FarmManager : MonoBehaviour
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "FarmScene")
             return;
-
+        
         foreach (var seedData in plantedSeeds)
         {
             ItemData item = GameManager.Instance.itemDatabase.GetItemByName(seedData.seedId);
+            // Debug.Log("item name: " + item);
             if (item == null) continue;
 
             Vector3 pos = new Vector3(seedData.posX, seedData.posY, seedData.posZ);

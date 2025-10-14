@@ -6,7 +6,7 @@ public class SeedEmptyBehavior : MonoBehaviour
     
     void Awake()
     {
-        DontDestroyOnLoad(gameObject); // 保证不销毁
+        // DontDestroyOnLoad(gameObject); // 保证不销毁
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded; // 注册事件
     }
 
