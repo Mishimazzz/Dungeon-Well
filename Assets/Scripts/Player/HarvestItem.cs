@@ -17,8 +17,8 @@ public class HarvestItem : MonoBehaviour
 
   public Transform seedBoxPanel; // 拖你的种子仓库Panel（父物体）
   public GameObject SeedBoxPanel;
-  public GameObject seedGridPrefab;
-  private List<GameObject> seedGridObjs = new List<GameObject>();
+  // public GameObject seedGridPrefab;
+  // private List<GameObject> seedGridObjs = new List<GameObject>();
   public List<ItemDisplay> seedSlots = new List<ItemDisplay>();
   public bool needRefreshSeedBox = false;
   public List<ItemDisplay> bagSlots = new List<ItemDisplay>();
@@ -137,13 +137,13 @@ public class HarvestItem : MonoBehaviour
       if (i < seedSlots.Count)
       {
         display = seedSlots[i];
-        gridGo = seedGridObjs[i];
+        // gridGo = seedGridObjs[i];
       }
       else
       {
-        gridGo = Instantiate(seedGridPrefab, seedBoxPanel);
-        gridGo.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
-        seedGridObjs.Add(gridGo);
+        // gridGo = Instantiate(seedGridPrefab, seedBoxPanel);
+        // gridGo.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
+        // seedGridObjs.Add(gridGo);
 
         GameObject go = Instantiate(itemDisplayPrefab, seedBoxPanel);
         go.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
@@ -160,7 +160,7 @@ public class HarvestItem : MonoBehaviour
       }
       display.SetItem(icon, kv.Value, kv.Key);
       display.gameObject.SetActive(true);
-      gridGo.SetActive(true);
+      // gridGo.SetActive(true);
 
       i++;
     }
