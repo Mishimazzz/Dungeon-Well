@@ -49,7 +49,7 @@ public class TransparentInteractiveWindow : MonoBehaviour
         // 初始状态：可交互但透明
         EnableTransparent(false);
 
-        // 全屏 + 置顶
+        // 右下角 + 置顶
         int sw = Screen.currentResolution.width;
         int sh = Screen.currentResolution.height;
         int x = sw - windowWidth - margin;

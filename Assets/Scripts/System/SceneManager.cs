@@ -9,7 +9,6 @@ public class SceneManager : MonoBehaviour
 {
     public Button seedBoxButton;
     // public GameObject seedBoxPlane;
-    public static SceneManager sceneManager;
     public void LoadSceneByName(SceneType type)
     {
         switch (type)
