@@ -106,8 +106,33 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     {
                         HarvestItem.Instance.ConsumeItem(data, 1); // 消耗1个
                         GameObject plantedSeed = Instantiate(data.emptyPrefab, farmGrid.position, Quaternion.identity);
-                        // 给它加上 SeedManager，并初始化
-                        Debug.Log("种子开始工作");
+
+                        //功能： 让第三行的植物图层永远在第一第二行上，其他的也一样
+                        float[] rowY = { 4.1125f, 3.15f, 2.1875f };//植物种植的y轴
+                        float[] rowZ = { 3f, 2f, 1f };  // 第一行=3f，以此类推
+
+                        float y = plantedSeed.transform.position.y;
+                        int closestIndex = 0;
+                        float minDist = Mathf.Abs(y - rowY[0]);
+                        for (int i = 1; i < rowY.Length; i++)
+                        {
+                            float dist = Mathf.Abs(y - rowY[i]);
+                            if (dist < minDist)
+                            {
+                                minDist = dist;
+                                closestIndex = i;
+                            }
+                        }
+
+                        //设置对应 Z 层
+                        Vector3 pos = plantedSeed.transform.position;
+                        pos.z = rowZ[closestIndex];
+                        plantedSeed.transform.position = pos;
+
+                        // Debug
+                        // Debug.Log($"植物Y={y}，最近行Y={rowY[closestIndex]}，设置Z={rowZ[closestIndex]}");
+
+                        // 初始化
                         SeedManager manager = plantedSeed.AddComponent<SeedManager>();
                         manager.Init(data);
                         HarvestItem.Instance.needRefreshSeedBox = true;
