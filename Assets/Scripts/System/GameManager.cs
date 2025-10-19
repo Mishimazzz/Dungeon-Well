@@ -72,12 +72,12 @@ public class GameManager : MonoBehaviour
   public void LoadGame()
   {
     SaveData data = SaveSystem.Instance.LoadGame();
+    Debug.Log("Loaded bag count: " + data.bagItems.Count);
 
     // 背包
     HarvestItem.Instance.ClearBag();
     foreach (var it in data.bagItems)
     {
-      // Debug.Log("it name: " + it.itemName);
       var itemData = itemDatabase.GetItemByName(it.itemName);
       if (itemData != null)
         HarvestItem.Instance.AddOneToBag(itemData, it.count);

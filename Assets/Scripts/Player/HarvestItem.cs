@@ -4,7 +4,7 @@ using System.Linq;
 
 public class HarvestItem : MonoBehaviour
 {
-  private Dictionary<ItemData, int> playerBag = new Dictionary<ItemData, int>();
+  public Dictionary<ItemData, int> playerBag = new Dictionary<ItemData, int>();
   public static HarvestItem Instance;
   public Dictionary<ItemData, int> GetPlayerBag() => playerBag;
 
@@ -15,16 +15,8 @@ public class HarvestItem : MonoBehaviour
   private int currentBagPositionIndex = 0;
   public int currentBagPage = 0;
   public int totalPages = 20;//总共设置page 20页
-
-
-  public Transform seedBoxPanel; // 拖你的种子仓库Panel（父物体）
-  public GameObject SeedBoxPanel;
-  // public GameObject seedGridPrefab;
-  // private List<GameObject> seedGridObjs = new List<GameObject>();
-  public List<ItemDisplay> seedSlots = new List<ItemDisplay>();
-  public bool needRefreshSeedBox = false;
+  public bool pendingSeedBoxRefresh = false;
   public List<ItemDisplay> bagSlots = new List<ItemDisplay>();
-
   public List<Vector3> itemPositions = new List<Vector3>
   {
     new Vector3(-470, -50, 0),
@@ -39,7 +31,6 @@ public class HarvestItem : MonoBehaviour
   };
 
   public Vector3 coinPosition = new Vector3(-425, -260, 0);
-  public List<Vector3> seedBoxPosition = new List<Vector3> { new Vector3(-63, 57, 0) };
   public CoinDisplay coinDisplay;
 
   void Update()
@@ -50,11 +41,6 @@ public class HarvestItem : MonoBehaviour
       needRefreshBag = false; // 刷新一次后重置
     }
 
-    if (needRefreshSeedBox && SeedBoxPanel.activeSelf)
-    {
-      RefreshSeedBoxUI();
-      needRefreshSeedBox = false; // 刷新一次后重置
-    }
   }
 
   private void Awake()
@@ -74,7 +60,7 @@ public class HarvestItem : MonoBehaviour
         playerBag[item.Key] = item.Value;
     }
     needRefreshBag = true;
-    needRefreshSeedBox = true;
+    SeedBoxManager.seedBoxManager.needRefreshSeedBox = true;
   }
 
   // 生成并刷新背包UI
@@ -144,47 +130,6 @@ public class HarvestItem : MonoBehaviour
 
   }
 
-
-  public void RefreshSeedBoxUI()
-  {
-    int i = 0;
-    foreach (var kv in playerBag)
-    {
-      if (kv.Key.isSeed == Seed.No)
-        continue; // 跳过普通物品
-
-      ItemDisplay display;
-      if (i < seedSlots.Count)
-      {
-        display = seedSlots[i];
-      }
-      else
-      {
-        GameObject go = Instantiate(itemDisplayPrefab, seedBoxPanel);
-        go.transform.localPosition = seedBoxPosition[i % seedBoxPosition.Count];
-        display = go.GetComponent<ItemDisplay>();
-        seedSlots.Add(display);
-      }
-
-      // 设置icon和数量
-      Sprite icon = null;
-      if (kv.Key.prefab != null)
-      {
-        var sr = kv.Key.prefab.GetComponent<SpriteRenderer>();
-        if (sr != null) icon = sr.sprite;
-      }
-      display.SetItem(icon, kv.Value, kv.Key);
-      display.gameObject.SetActive(true);
-
-      i++;
-    }
-    // 隐藏多余的格子
-    for (; i < seedSlots.Count; i++)
-    {
-      seedSlots[i].gameObject.SetActive(false);
-    }
-  }
-
   public Vector3 GetNextBagPosition()
   {
     if (currentBagPositionIndex >= itemPositions.Count)
@@ -226,17 +171,22 @@ public class HarvestItem : MonoBehaviour
       playerBag[data] = count;
 
     needRefreshBag = true;
-    needRefreshSeedBox = true;
+    if (SeedBoxManager.seedBoxManager != null)
+    SeedBoxManager.seedBoxManager.needRefreshSeedBox = true;
   }
 
   // 清空背包（加载时用）
   public void ClearBag()
   {
     playerBag.Clear();
-    bagSlots.Clear();                 // 你已有列表，用于 UI:contentReference[oaicite:7]{index=7}
-    currentBagPositionIndex = 0;      // 如果是 private 就把这行删掉/改成重置函数
-    needRefreshBag = true;            // 让 Update 里刷新 UI:contentReference[oaicite:8]{index=8}
-    needRefreshSeedBox = true;
+    bagSlots.Clear();
+    currentBagPositionIndex = 0;
+    needRefreshBag = true;
+
+    if (SeedBoxManager.seedBoxManager != null)
+      SeedBoxManager.seedBoxManager.needRefreshSeedBox = true;
+    else
+      pendingSeedBoxRefresh = true;
   }
 
   //背包翻页系统

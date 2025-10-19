@@ -135,7 +135,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         // 初始化
                         SeedManager manager = plantedSeed.AddComponent<SeedManager>();
                         manager.Init(data);
-                        HarvestItem.Instance.needRefreshSeedBox = true;
+                        SeedBoxManager.seedBoxManager.needRefreshSeedBox = true;
 
                         //添加到FarmManager.Instance.plantedSeeds里，需要保存数据用
                         Debug.Log("添加到FarmManager.Instance.plantedSeeds");

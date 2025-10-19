@@ -26,13 +26,13 @@ public class SceneManager : MonoBehaviour
     public void LoadWell()
     {
         LoadSceneByName(SceneType.Well);
-        seedBoxButton.gameObject.SetActive(false);
+        // seedBoxButton.gameObject.SetActive(false);
         // seedBoxPlane.SetActive(false);
     }
     public void LoadFarm()
     {
         LoadSceneByName(SceneType.Farm);
-        seedBoxButton.gameObject.SetActive(true);
+        // seedBoxButton.gameObject.SetActive(true);
         // seedBoxPlane.SetActive(false);
     }
 
