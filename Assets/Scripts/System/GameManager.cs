@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
     foreach (var it in data.bagItems)
     {
       var itemData = itemDatabase.GetItemByName(it.itemName);
+      // Debug.Log(it.itemName);
       if (itemData != null)
         HarvestItem.Instance.AddOneToBag(itemData, it.count);
     }

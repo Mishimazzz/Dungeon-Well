@@ -137,17 +137,25 @@ public class SeedManager : MonoBehaviour
       //点击收货后，从保存数据list里移出去
       if (FarmManager.Instance != null)
       {
-        FarmManager.Instance.plantedSeeds.RemoveAll(s =>
-            s.seedId == seedInstance.name &&
-            Mathf.Approximately(s.posX, transform.position.x) &&
-            Mathf.Approximately(s.posY, transform.position.y) &&
-            Mathf.Approximately(s.posZ, transform.position.z)
-        );
-        Debug.Log("移除了： " + seedInstance.name);
+          int beforeCount = FarmManager.Instance.plantedSeeds.Count;
+          // 执行移除
+          int removedCount = FarmManager.Instance.plantedSeeds.RemoveAll(s =>
+          {
+              bool sameId = s.seedId == seedInstance.name;
+              bool sameX = Mathf.Abs(s.posX - transform.position.x) < 0.01f;
+              bool sameY = Mathf.Abs(s.posY - transform.position.y) < 0.01f;
+              // 不比较 z
+              if (sameId && sameX && sameY)
+              {
+                  return true;
+              }
+              else
+              {
+                  return false;
+              }
+          });
+          int afterCount = FarmManager.Instance.plantedSeeds.Count;
       }
-
-      // Debug.Log("收获物品放入背包");
-      hasChanged = true;
     }
   }
 
@@ -163,14 +171,12 @@ public class SeedManager : MonoBehaviour
     stage3Prefab = seed.thirdPhasePrefab;
     harvestItem = seed.harvestItem;
 
-    // 关键：把 plantedTime 回填为“过去的 Time.time”
     double elapsed = (DateTime.Now - plantedDate).TotalSeconds;    // 真实已过去的秒数
     plantedTime = Time.time - Mathf.Max(0f, (float)elapsed);       // 回填
 
     initialized = true;
     hasChanged = false;
 
-    // 立刻刷新一次外观（可选，但建议）
     float currentTime = TotalTime - (Time.time - plantedTime);
     if (currentTime <= 0f) SwitchPrefab(stage3Prefab);
     else UpdateStage(currentTime);

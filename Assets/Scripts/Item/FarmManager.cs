@@ -75,7 +75,7 @@ public class FarmManager : MonoBehaviour
         foreach (var seedData in plantedSeeds)
         {
             ItemData item = GameManager.Instance.itemDatabase.GetItemByName(seedData.seedId);
-            // Debug.Log("item name: " + item);
+            Debug.Log("item name: " + item);
             if (item == null) continue;
 
             Vector3 pos = new Vector3(seedData.posX, seedData.posY, seedData.posZ);

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5ead5fc51b26ca14584ca82de337453a
+guid: 0e03653f3d0af61488d664bc6fb145a6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 26
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Timer_delete_0
+      name: "\u677F3_0"
       rect:
         serializedVersion: 2
-        x: 930
-        y: 899
-        width: 155
-        height: 155
+        x: 513
+        y: 969
+        width: 302
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 082dc7d10e05aaa469cdd2e1fbd9b587
-      internalID: -88546495
+      spriteID: 839f4424ff4935c4a926cc65ce3ee54d
+      internalID: -18377215
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Timer_delete_0: -88546495
+      "\u677F3_0": -18377215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -60,6 +60,7 @@ public class HarvestItem : MonoBehaviour
         playerBag[item.Key] = item.Value;
     }
     needRefreshBag = true;
+    if(SeedBoxManager.seedBoxManager != null)
     SeedBoxManager.seedBoxManager.needRefreshSeedBox = true;
   }
 
