@@ -143,6 +143,7 @@ public class SeedManager : MonoBehaviour
             Mathf.Approximately(s.posY, transform.position.y) &&
             Mathf.Approximately(s.posZ, transform.position.z)
         );
+        Debug.Log("移除了： " + seedInstance.name);
       }
 
       // Debug.Log("收获物品放入背包");

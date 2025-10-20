@@ -65,6 +65,10 @@ public class GameManager : MonoBehaviour
 
     // 农田
     data.plantedSeeds = FarmManager.Instance.plantedSeeds;
+    foreach (var seedData in data.plantedSeeds)
+    {
+      Debug.Log("seedData: " + seedData.seedId);
+    }
 
     SaveSystem.Instance.SaveGame(data);
   }
