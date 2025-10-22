@@ -5,6 +5,7 @@ using TMPro;
 
 public class TimeController : MonoBehaviour
 {
+    public static TimeController Instance;
     public TextMeshProUGUI hourText;
     public TextMeshProUGUI minuteText;
     public TextMeshProUGUI secondText;
@@ -12,7 +13,20 @@ public class TimeController : MonoBehaviour
     public int min { get; set; }
     public int sec { get; set; }
 
-    public void IncreaseHour()
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+  public void IncreaseHour()
     {
         hour++;
         if (hour == 24) hour = 0;

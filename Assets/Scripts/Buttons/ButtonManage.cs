@@ -84,4 +84,9 @@ public class ButtonManage : MonoBehaviour
             SeedBoxManager.seedBoxManager.RefreshSeedBoxUI();
         }
     }
+
+    public void SaveTimeButton()
+    {
+        SaveTimeController.Instance.SaveCurrentTime();
+    }
 }

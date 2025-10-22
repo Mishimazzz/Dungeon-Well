@@ -5,7 +5,6 @@ using TMPro;
 
 public class TimeCountDownController : MonoBehaviour
 {
-    public TimeController timeController;
     public GameObject timeCountDownPanel;
     public GameObject timeUpPanel;
     public TextMeshProUGUI exploreButtonText;
@@ -38,10 +37,10 @@ public class TimeCountDownController : MonoBehaviour
 
     private IEnumerator CountDown()
     {
-        timeController.RefreshTimeUI();
-        int hour = timeController.hour;
-        int min = timeController.min;
-        int sec = timeController.sec;
+        TimeController.Instance.RefreshTimeUI();
+        int hour = TimeController.Instance.hour;
+        int min = TimeController.Instance.min;
+        int sec = TimeController.Instance.sec;
         // copy setting time
         tempHour = hour;
         tempMin = min;
@@ -79,9 +78,9 @@ public class TimeCountDownController : MonoBehaviour
         timeCountDownPanel.SetActive(false);
         timeUpPanel.SetActive(true);
         exploreButtonText.text = "Explore";
-        timeController.hour = 0; timeController.min = 0; timeController.sec = 0;
+        TimeController.Instance.hour = 0; TimeController.Instance.min = 0; TimeController.Instance.sec = 0;
         RefreshTimeUI();
-        WindowsToastNotifier.ShowToast("探索完成", "探索时间结束！可以领取奖励了。");
+        // WindowsToastNotifier.ShowToast("探索完成", "探索时间结束！可以领取奖励了。");
 
         buttonManage.TotalFullExecuteTime = buttonManage.ComputeFullExecuteTime();
         executeHour.text = buttonManage.executeHour.ToString("D2");
@@ -92,8 +91,8 @@ public class TimeCountDownController : MonoBehaviour
 
     public void RefreshTimeUI()
     {
-        timeController.hourText.text = timeController.hour.ToString("D2");
-        timeController.minuteText.text = timeController.min.ToString("D2");
-        timeController.secondText.text = timeController.sec.ToString("D2");
+        TimeController.Instance.hourText.text = TimeController.Instance.hour.ToString("D2");
+        TimeController.Instance.minuteText.text = TimeController.Instance.min.ToString("D2");
+        TimeController.Instance.secondText.text = TimeController.Instance.sec.ToString("D2");
     }
 }
