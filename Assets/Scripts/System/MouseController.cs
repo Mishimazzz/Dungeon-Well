@@ -43,7 +43,7 @@ public class MouseController : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
         // 对齐位置与大小
         blankRect.position = targetRect.position;
-        blankRect.sizeDelta = targetRect.sizeDelta + new Vector2(10, 10); // 稍微比按钮大一点
+        blankRect.sizeDelta = targetRect.sizeDelta + new Vector2(20, 20); // 稍微比按钮大一点
         blankUIInstance.SetActive(true);
     }
     public void OnPointerExit(PointerEventData eventData)

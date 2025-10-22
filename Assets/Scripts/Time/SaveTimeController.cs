@@ -16,10 +16,18 @@ public class SaveTimeController : MonoBehaviour
 
   [Header("按钮")]
   public Button saveButton;
+  public Button[] deleteButtons = new Button[4];
 
   void Awake()
   {
     Instance = this;
+
+    // 注册删除按钮事件
+    for (int i = 0; i < deleteButtons.Length; i++)
+    {
+      int index = i;
+      deleteButtons[i].onClick.AddListener(() => DeleteTime(index));
+    }
   }
 
   public void SaveCurrentTime()
@@ -50,14 +58,39 @@ public class SaveTimeController : MonoBehaviour
       }
     }
 
-    Debug.LogWarning("⚠️ 没有空位可以保存！");
+    Debug.LogWarning("没有空位可以保存！");
 
   }
 
   //刷新（删除以后）
-  public void DeleteTime()
+  public void DeleteTime(int index)
   {
+    if (index < 0 || index >= saveSlots.Length)
+    {
+      Debug.LogWarning("无效的索引：" + index);
+      return;
+    }
 
+    if (saveSlots[index] != null)
+    {
+      Debug.Log($"删除槽位 {index} 的时间：{saveSlots[index].text}");
+      saveSlots[index].text = "00:00"; // 清空该槽
+    }
+
+    // 删除系统存储的数据
+    if (saveDataList != null && saveDataList.Count > 0)
+    {
+      var itemToRemove = saveDataList.Find(x => x.index == index);
+      if (itemToRemove != null)
+      {
+        saveDataList.Remove(itemToRemove);
+        Debug.Log($"已从 saveDataList 中删除 index={index} 的存档。");
+      }
+      else
+      {
+        Debug.Log($"saveDataList 中没有找到 index={index} 的数据。");
+      }
+    }
   }
 
   //restore the time function
