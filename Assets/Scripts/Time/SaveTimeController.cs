@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class SaveTimeController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class SaveTimeController : MonoBehaviour
 
   [Header("存档列表")]
   public TextMeshProUGUI[] saveSlots = new TextMeshProUGUI[4];
+  public List<TimeSaveData> saveDataList = new List<TimeSaveData>();//系统储存时间槽
 
   [Header("按钮")]
   public Button saveButton;
@@ -22,13 +24,6 @@ public class SaveTimeController : MonoBehaviour
 
   public void SaveCurrentTime()
   {
-
-    if (TimeController.Instance == null)
-    {
-      Debug.LogError("❌ 没有找到 TimeController.Instance！");
-      return;
-    }
-
     int hour = TimeController.Instance.hour;
     int min = TimeController.Instance.min;
     hourText.text = hour.ToString("D2");
@@ -40,18 +35,17 @@ public class SaveTimeController : MonoBehaviour
     //找第一个空位
     for (int i = 0; i < saveSlots.Length; i++)
     {
-      if (saveSlots[i] == null)
-      {
-        Debug.LogWarning($"saveSlots[{i}] 没有拖入对象！");
-        continue;
-      }
-
       string currentText = saveSlots[i].text.Trim();
 
       if (string.IsNullOrEmpty(currentText) || currentText == "00:00")
       {
         saveSlots[i].text = timeString;
-        Debug.Log($"✅ 存入时间 {timeString} 到槽位 {i}");
+        Debug.Log($"存入时间 {timeString} 到槽位 {i}");
+        //系统存入
+        TimeSaveData timeSaveData = new TimeSaveData();
+        timeSaveData.index = i;
+        timeSaveData.timeString = timeString;
+        saveDataList.Add(timeSaveData);
         return;
       }
     }
@@ -61,5 +55,18 @@ public class SaveTimeController : MonoBehaviour
   }
 
   //刷新（删除以后）
+  public void DeleteTime()
+  {
 
+  }
+
+  //restore the time function
+  public void TimeRestore()
+  {
+    foreach(var timeData in saveDataList)
+    {
+      int temp_index = timeData.index;
+      saveSlots[temp_index].text = timeData.timeString;
+    }
+  }
 }

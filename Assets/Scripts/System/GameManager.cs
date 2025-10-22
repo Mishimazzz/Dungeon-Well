@@ -69,6 +69,13 @@ public class GameManager : MonoBehaviour
     {
       Debug.Log("seedData: " + seedData.seedId);
     }
+    
+    //时间存储槽
+    data.timeSaveList = SaveTimeController.Instance.saveDataList;
+    foreach (var timeData in data.timeSaveList)
+    {
+      Debug.Log("timeData: " + timeData.timeString);
+    }
 
     SaveSystem.Instance.SaveGame(data);
   }
@@ -76,7 +83,7 @@ public class GameManager : MonoBehaviour
   public void LoadGame()
   {
     SaveData data = SaveSystem.Instance.LoadGame();
-    Debug.Log("Loaded bag count: " + data.bagItems.Count);
+    //Debug.Log("Loaded bag count: " + data.bagItems.Count);
 
     // 背包
     HarvestItem.Instance.ClearBag();
@@ -92,5 +99,13 @@ public class GameManager : MonoBehaviour
     // 农田
     FarmManager.Instance.plantedSeeds = data.plantedSeeds;
     FarmManager.Instance.RestoreSeeds();
+
+    //时间
+    SaveTimeController.Instance.saveDataList = data.timeSaveList;
+    // foreach (var timeData in SaveTimeController.Instance.saveDataList)
+    // {
+    //   Debug.Log("timeData: " + timeData.timeString);
+    // }
+    SaveTimeController.Instance.TimeRestore();
   }
 }
