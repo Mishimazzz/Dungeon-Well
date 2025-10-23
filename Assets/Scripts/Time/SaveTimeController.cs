@@ -15,18 +15,19 @@ public class SaveTimeController : MonoBehaviour
   public List<TimeSaveData> saveDataList = new List<TimeSaveData>();//系统储存时间槽
 
   [Header("按钮")]
-  public Button saveButton;
+  public Button[] setButtons = new Button[4];
   public Button[] deleteButtons = new Button[4];
 
   void Awake()
   {
     Instance = this;
 
-    // 注册删除按钮事件
+    // 注册删除按钮事件和set timer事件
     for (int i = 0; i < deleteButtons.Length; i++)
     {
       int index = i;
       deleteButtons[i].onClick.AddListener(() => DeleteTime(index));
+      setButtons[i].onClick.AddListener(() => SetTimer(index));
     }
   }
 
@@ -71,11 +72,7 @@ public class SaveTimeController : MonoBehaviour
       return;
     }
 
-    if (saveSlots[index] != null)
-    {
-      Debug.Log($"删除槽位 {index} 的时间：{saveSlots[index].text}");
-      saveSlots[index].text = "00:00"; // 清空该槽
-    }
+    if (saveSlots[index] != null) saveSlots[index].text = "00:00"; // 清空该槽
 
     // 删除系统存储的数据
     if (saveDataList != null && saveDataList.Count > 0)
@@ -86,20 +83,41 @@ public class SaveTimeController : MonoBehaviour
         saveDataList.Remove(itemToRemove);
         Debug.Log($"已从 saveDataList 中删除 index={index} 的存档。");
       }
-      else
-      {
-        Debug.Log($"saveDataList 中没有找到 index={index} 的数据。");
-      }
     }
   }
 
   //restore the time function
   public void TimeRestore()
   {
-    foreach(var timeData in saveDataList)
+    foreach (var timeData in saveDataList)
     {
       int temp_index = timeData.index;
       saveSlots[temp_index].text = timeData.timeString;
+    }
+  }
+  
+  //一键放置时间槽的时间到timer里
+  public void SetTimer(int index)
+  {
+    if (index < 0 || index >= saveSlots.Length)
+    {
+      Debug.LogWarning($"⚠️ SetTimer：索引 {index} 超出范围 (0~{saveSlots.Length - 1})");
+      return;
+    }
+    string timeString = saveSlots[index].text;
+
+    if(!string.IsNullOrEmpty(timeString))
+    {
+      string[] parts = timeString.Split(":");
+      string hour = parts[0];
+      string min = parts[1];
+
+      TimeController.Instance.hourText.text = hour;
+      TimeController.Instance.minuteText.text = min;
+      TimeController.Instance.hour = int.Parse(hour);
+      TimeController.Instance.min = int.Parse(min);
+
+      Debug.Log($"✅ 已从槽 {index} 载入时间 {hour}:{min}");
     }
   }
 }
