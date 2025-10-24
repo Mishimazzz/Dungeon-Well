@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
     FarmManager.Instance.RestoreSeeds();
 
     //时间
+    Debug.Log(SaveTimeController.Instance == null);
     SaveTimeController.Instance.saveDataList = data.timeSaveList;
     // foreach (var timeData in SaveTimeController.Instance.saveDataList)
     // {

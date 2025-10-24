@@ -48,7 +48,7 @@ public class MouseController : MonoBehaviour, IPointerEnterHandler, IPointerExit
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("鼠标离开！");
+        // Debug.Log("鼠标离开！");
         if (blankUIInstance != null) blankUIInstance.SetActive(false);
     }
 

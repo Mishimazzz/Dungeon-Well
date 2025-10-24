@@ -6,7 +6,6 @@ public class ItemManager : MonoBehaviour
 {
     public Level characterLevel = Level.D; // TODO: import主角的等级
     public ButtonManage buttonManage;
-    public TimeStopController timeStopController;
     private float executeTime;
 
     // items UI
@@ -176,19 +175,9 @@ public class ItemManager : MonoBehaviour
         go.transform.SetSiblingIndex(8);//second layer,你得数一下Time里头的层数
     }
 
-    public float GetTime()
+    public int GetTime()
     {
-        float returnTime = 0f;
-        if (buttonManage.TotalFullExecuteTime != 0f)
-        {
-            returnTime = buttonManage.TotalFullExecuteTime;
-        }
-        else if (timeStopController.TotalExecuteTime != 0f)
-        {
-            returnTime = timeStopController.TotalExecuteTime;
-        }
-
-        return returnTime;
+        return TimeManager.Instance.executedTime;
     }
 
     public void GiveCoin(int amount)

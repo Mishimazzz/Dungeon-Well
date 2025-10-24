@@ -1681,8 +1681,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1565211228}
-        m_TargetAssemblyTypeName: ButtonManage, Assembly-CSharp
+      - m_Target: {fileID: 1565211230}
+        m_TargetAssemblyTypeName: FarmUIManager, Assembly-CSharp
         m_MethodName: ToggleSeedBox
         m_Mode: 1
         m_Arguments:
@@ -2594,41 +2594,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1565211229}
-  - component: {fileID: 1565211228}
+  - component: {fileID: 1565211230}
   m_Layer: 0
-  m_Name: ButtonFarmManager
+  m_Name: FarmUIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1565211228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565211227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3378dd0363b2f5f419ffdd9913dff94e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timePanel: {fileID: 0}
-  timeStopPanel: {fileID: 0}
-  timeUpPanel: {fileID: 0}
-  BagPanel: {fileID: 0}
-  SeedPanel: {fileID: 2069393987}
-  harvestItem: {fileID: 0}
-  itemManager: {fileID: 0}
-  exploreButton: {fileID: 0}
-  exploreButtonText: {fileID: 0}
-  timeCountDownPanel: {fileID: 0}
-  TotalFullExecuteTime: 0
-  executeHour: 0
-  executeMin: 0
-  executeSec: 0
-  timeCountDownController: {fileID: 0}
 --- !u!4 &1565211229
 Transform:
   m_ObjectHideFlags: 0
@@ -2644,6 +2617,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565211230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565211227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d803fc48d6f99d74f9aaa61cd9d792b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SeedPanel: {fileID: 2069393987}
 --- !u!1 &1578479791
 GameObject:
   m_ObjectHideFlags: 0

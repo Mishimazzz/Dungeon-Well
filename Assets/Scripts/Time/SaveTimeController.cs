@@ -30,60 +30,48 @@ public class SaveTimeController : MonoBehaviour
       setButtons[i].onClick.AddListener(() => SetTimer(index));
     }
   }
+  private void Start()
+  {
+    TimeManager.Instance.OnTimeChanged += OnTimeChanged;
+  }
+
+  void OnDestroy()
+  {
+    if (TimeManager.Instance != null)
+      TimeManager.Instance.OnTimeChanged -= OnTimeChanged;
+  }
+
+  void OnTimeChanged(TimeData data)
+  {
+    hourText.text = data.hour.ToString("D2");
+    minuteText.text = data.min.ToString("D2");
+  }
 
   public void SaveCurrentTime()
   {
-    int hour = TimeController.Instance.hour;
-    int min = TimeController.Instance.min;
-    hourText.text = hour.ToString("D2");
-    minuteText.text = min.ToString("D2");
-
-    string timeString = $"{hour:D2}:{min:D2}";
-    Debug.Log("当前时间: " + timeString);
+    string timeString = $"{TimeManager.Instance.currentTime.hour:D2}:{TimeManager.Instance.currentTime.min:D2}";
 
     //找第一个空位
     for (int i = 0; i < saveSlots.Length; i++)
     {
-      string currentText = saveSlots[i].text.Trim();
-
-      if (string.IsNullOrEmpty(currentText) || currentText == "00:00")
+      if (string.IsNullOrEmpty(saveSlots[i].text) || saveSlots[i].text == "00:00")
       {
         saveSlots[i].text = timeString;
-        Debug.Log($"存入时间 {timeString} 到槽位 {i}");
+        // Debug.Log($"存入时间 {timeString} 到槽位 {i}");
         //系统存入
-        TimeSaveData timeSaveData = new TimeSaveData();
-        timeSaveData.index = i;
-        timeSaveData.timeString = timeString;
-        saveDataList.Add(timeSaveData);
+        saveDataList.Add(new TimeSaveData { index = i, timeString = timeString });
         return;
       }
     }
-
     Debug.LogWarning("没有空位可以保存！");
-
   }
 
   //刷新（删除以后）
   public void DeleteTime(int index)
   {
-    if (index < 0 || index >= saveSlots.Length)
-    {
-      Debug.LogWarning("无效的索引：" + index);
-      return;
-    }
-
-    if (saveSlots[index] != null) saveSlots[index].text = "00:00"; // 清空该槽
-
-    // 删除系统存储的数据
-    if (saveDataList != null && saveDataList.Count > 0)
-    {
-      var itemToRemove = saveDataList.Find(x => x.index == index);
-      if (itemToRemove != null)
-      {
-        saveDataList.Remove(itemToRemove);
-        Debug.Log($"已从 saveDataList 中删除 index={index} 的存档。");
-      }
-    }
+    if (index < 0 || index >= saveSlots.Length) return;
+    saveSlots[index].text = "00:00";
+    saveDataList.RemoveAll(x => x.index == index);
   }
 
   //restore the time function
@@ -99,25 +87,13 @@ public class SaveTimeController : MonoBehaviour
   //一键放置时间槽的时间到timer里
   public void SetTimer(int index)
   {
-    if (index < 0 || index >= saveSlots.Length)
-    {
-      Debug.LogWarning($"⚠️ SetTimer：索引 {index} 超出范围 (0~{saveSlots.Length - 1})");
-      return;
-    }
-    string timeString = saveSlots[index].text;
+    if (index < 0 || index >= saveSlots.Length) return;
+    if (string.IsNullOrEmpty(saveSlots[index].text)) return;
 
-    if(!string.IsNullOrEmpty(timeString))
-    {
-      string[] parts = timeString.Split(":");
-      string hour = parts[0];
-      string min = parts[1];
+    string[] parts = saveSlots[index].text.Split(':');
+    int hour = int.Parse(parts[0]);
+    int min = int.Parse(parts[1]);
 
-      TimeController.Instance.hourText.text = hour;
-      TimeController.Instance.minuteText.text = min;
-      TimeController.Instance.hour = int.Parse(hour);
-      TimeController.Instance.min = int.Parse(min);
-
-      Debug.Log($"✅ 已从槽 {index} 载入时间 {hour}:{min}");
-    }
+    TimeManager.Instance.SetTime(hour, min, 0);
   }
 }

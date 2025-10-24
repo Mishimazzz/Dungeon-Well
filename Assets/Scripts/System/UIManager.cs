@@ -194,7 +194,7 @@ public class UIManager : MonoBehaviour
         var buttonManage = FindObjectOfType<ButtonManage>();
         if (buttonManage != null)
         {
-            buttonManage.StartButton();
+            // buttonManage.StartButton();
         }
         else
         {

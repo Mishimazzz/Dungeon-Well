@@ -7,28 +7,33 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManage : MonoBehaviour
 {
+    public static ButtonManage Instance;
     public GameObject timePanel;
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
+    public GameObject timeCountDownPanel;
     public GameObject BagPanel;
-    public GameObject SeedPanel;
     public HarvestItem harvestItem;
     public ItemManager itemManager;
     public Button exploreButton;
     public TextMeshProUGUI exploreButtonText;
-    public GameObject timeCountDownPanel;
     public float TotalFullExecuteTime;
     public int executeHour; public int executeMin; public int executeSec;
-
-    public TimeCountDownController timeCountDownController;
-
-  public void StartButton()
+    private void Awake()
     {
-        // Debug.Log(" Debug: You click the start button");
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    public void StartButton()
+    {
         timePanel.SetActive(false);
         timeCountDownPanel.SetActive(true);
         exploreButtonText.text = "Cancel";
-        timeCountDownController.isCounting = false;
+        TimeManager.Instance.isCounting = false;
+        TimeManager.Instance.StartCountDown();
     }
     public void ExploreButton()
     {
@@ -47,21 +52,32 @@ public class ButtonManage : MonoBehaviour
         }
     }
 
+    public void TimePanelYes()
+    {
+        TimeManager.Instance.StopCountDown();
+        timeCountDownPanel.SetActive(false);
+        timeStopPanel.SetActive(false);
+        timeUpPanel.SetActive(true);
+
+        TimeManager.Instance.CalculatedExecuteTime();
+        FindObjectOfType<TimeUI>().UpdateExecutedUI(TimeManager.Instance.executedTimeData);
+
+        itemManager.SpawItem();
+        exploreButtonText.text = "Explore";
+        TimeManager.Instance.SetTime(0,0,0);
+    }
+
+    public void TimePanelNo()
+    {
+        timeStopPanel.SetActive(false);
+    }
+
     public void TimeUpButtom()
     {
         //clean all the items in time up panel and save in player's bag
         harvestItem.AddItemsInBag(itemManager.itemDict);
         itemManager.ClearAllItemDisplays();
         timeUpPanel.SetActive(false);
-    }
-
-    public float ComputeFullExecuteTime()
-    {
-        executeHour = timeCountDownController.tempHour;
-        executeMin = timeCountDownController.tempMin;
-        executeSec = timeCountDownController.tempSec;
-        float tempTotalFullExecuteTime = executeHour * 60 + executeMin + executeSec / 60f;
-        return tempTotalFullExecuteTime;
     }
     public void TogglePlayerBag()
     {
@@ -71,17 +87,6 @@ public class ButtonManage : MonoBehaviour
         if (isActive) // 如果是刚打开
         {
             HarvestItem.Instance.RefreshBagUI();
-        }
-    }
-
-    public void ToggleSeedBox()
-    {
-        bool isActive = SeedPanel.activeSelf;
-        SeedPanel.SetActive(!isActive);
-
-        if (isActive) // 如果是刚打开
-        {
-            SeedBoxManager.seedBoxManager.RefreshSeedBoxUI();
         }
     }
 
