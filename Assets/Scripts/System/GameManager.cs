@@ -69,14 +69,10 @@ public class GameManager : MonoBehaviour
     {
       Debug.Log("seedData: " + seedData.seedId);
     }
-    
-    //时间存储槽
-    data.timeSaveList = SaveTimeController.Instance.saveDataList;
-    foreach (var timeData in data.timeSaveList)
-    {
-      Debug.Log("timeData: " + timeData.timeString);
-    }
 
+    //时间存储槽
+    SaveTimeController.Instance.SaveInDataList();
+    data.timeSaveList = SaveTimeController.Instance.saveDataList;
     SaveSystem.Instance.SaveGame(data);
   }
 
@@ -101,7 +97,7 @@ public class GameManager : MonoBehaviour
     FarmManager.Instance.RestoreSeeds();
 
     //时间
-    Debug.Log(SaveTimeController.Instance == null);
+    // Debug.Log(SaveTimeController.Instance == null);
     SaveTimeController.Instance.saveDataList = data.timeSaveList;
     // foreach (var timeData in SaveTimeController.Instance.saveDataList)
     // {

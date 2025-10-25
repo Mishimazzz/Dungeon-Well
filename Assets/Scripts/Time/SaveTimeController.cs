@@ -63,7 +63,6 @@ public class SaveTimeController : MonoBehaviour
         return;
       }
     }
-    Debug.LogWarning("没有空位可以保存！");
   }
 
   //刷新（删除以后）
@@ -81,6 +80,14 @@ public class SaveTimeController : MonoBehaviour
     {
       int temp_index = timeData.index;
       saveSlots[temp_index].text = timeData.timeString;
+    }
+  }
+
+  public void SaveInDataList()
+  {
+    for(int i = 0; i < saveSlots.Length; i++)
+    {
+      saveDataList.Add(new TimeSaveData { index = i, timeString = saveSlots[i].text });
     }
   }
   
