@@ -66,9 +66,11 @@ public class TimeManager : MonoBehaviour
     }
 
     ButtonManage.Instance.TimePanelYes();
-    // OnTimeUp?.Invoke();
   }
 
+  /// <summary>
+  /// 停止计时
+  /// </summary>
   public void StopCountDown()
   {
     if (!isCounting) return;
@@ -77,6 +79,9 @@ public class TimeManager : MonoBehaviour
     isCounting = false;
   }
 
+  /// <summary>
+  /// 给hourup调整时间的button用的function
+  /// </summary>
   public void IncreaseHour()
   {
     currentTime.hour++;
@@ -84,6 +89,9 @@ public class TimeManager : MonoBehaviour
     OnTimeChanged?.Invoke(currentTime);
   }
 
+  /// <summary>
+  /// 给hourDown调整时间的button用的function
+  /// </summary>
   public void DecreaseHour()
   {
     currentTime.hour--;
@@ -91,6 +99,9 @@ public class TimeManager : MonoBehaviour
     OnTimeChanged?.Invoke(currentTime);
   }
 
+  /// <summary>
+  /// 给Minup调整时间的button用的function
+  /// </summary>
   public void IncreaseMinute()
   {
     currentTime.min++;
@@ -98,6 +109,9 @@ public class TimeManager : MonoBehaviour
     OnTimeChanged?.Invoke(currentTime);
   }
 
+  /// <summary>
+  /// 给MinDown调整时间的button用的function
+  /// </summary>
   public void DecreaseMinute()
   {
     currentTime.min--;
@@ -105,6 +119,9 @@ public class TimeManager : MonoBehaviour
     OnTimeChanged?.Invoke(currentTime);
   }
 
+  /// <summary>
+  /// 算总共运行了多少时间(秒)
+  /// </summary>
   public void CalculatedExecuteTime()
   {
     executedTime = startTotal - total;

@@ -41,12 +41,20 @@ public class SaveTimeController : MonoBehaviour
       TimeManager.Instance.OnTimeChanged -= OnTimeChanged;
   }
 
+  /// <summary>
+  /// 将被观察者们update ui
+  /// </summary>
+  /// <param name="data"></param>
   void OnTimeChanged(TimeData data)
   {
     hourText.text = data.hour.ToString("D2");
     minuteText.text = data.min.ToString("D2");
   }
 
+  /// <summary>
+  /// 添加timer上的时间到时间槽
+  /// 并且系统存入
+  /// </summary>
   public void SaveCurrentTime()
   {
     string timeString = $"{TimeManager.Instance.currentTime.hour:D2}:{TimeManager.Instance.currentTime.min:D2}";
@@ -57,15 +65,17 @@ public class SaveTimeController : MonoBehaviour
       if (string.IsNullOrEmpty(saveSlots[i].text) || saveSlots[i].text == "00:00")
       {
         saveSlots[i].text = timeString;
-        // Debug.Log($"存入时间 {timeString} 到槽位 {i}");
-        //系统存入
         saveDataList.Add(new TimeSaveData { index = i, timeString = timeString });
         return;
       }
     }
   }
 
-  //刷新（删除以后）
+  /// <summary>
+  /// 从saveSlots里跟改成00:00
+  /// 从saveDataList移除
+  /// </summary>
+  /// <param name="index"></param>
   public void DeleteTime(int index)
   {
     if (index < 0 || index >= saveSlots.Length) return;
@@ -73,7 +83,9 @@ public class SaveTimeController : MonoBehaviour
     saveDataList.RemoveAll(x => x.index == index);
   }
 
-  //restore the time function
+  /// <summary>
+  /// 在loadGame的时候将saveDataList里面的数据都放进saveSlots
+  /// </summary>
   public void TimeRestore()
   {
     foreach (var timeData in saveDataList)
@@ -83,6 +95,10 @@ public class SaveTimeController : MonoBehaviour
     }
   }
 
+  /// <summary>
+  /// 在游戏保存之前,重新将数据全部存入saveDataList
+  /// 因为saveDataList会在每次游戏一开始的时候全部重置
+  /// </summary>
   public void SaveInDataList()
   {
     for(int i = 0; i < saveSlots.Length; i++)
@@ -90,8 +106,11 @@ public class SaveTimeController : MonoBehaviour
       saveDataList.Add(new TimeSaveData { index = i, timeString = saveSlots[i].text });
     }
   }
-  
-  //一键放置时间槽的时间到timer里
+
+  /// <summary>
+  /// 一键放置时间槽的时间到timer里
+  /// </summary>
+  /// <param name="index"></param>
   public void SetTimer(int index)
   {
     if (index < 0 || index >= saveSlots.Length) return;
