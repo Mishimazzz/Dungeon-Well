@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
   public static GameManager Instance;
   public ItemDatabase itemDatabase; // 在 Inspector 里拖你的 ItemDatabase.asset
+  public TMP_Dropdown dropdown;
 
   void Awake()
   {
@@ -24,6 +26,13 @@ public class GameManager : MonoBehaviour
       go.AddComponent<SaveSystem>();
       DontDestroyOnLoad(go);
     }
+
+    //DEBUG LOG
+    string logPath = System.IO.Path.Combine(Application.dataPath, "../game_log.txt");
+    Application.logMessageReceived += (log, stack, type) =>
+    {
+      System.IO.File.AppendAllText(logPath, $"[{type}] {log}\n");
+    };
   }
 
   void Start()
@@ -97,12 +106,7 @@ public class GameManager : MonoBehaviour
     FarmManager.Instance.RestoreSeeds();
 
     //时间
-    // Debug.Log(SaveTimeController.Instance == null);
     SaveTimeController.Instance.saveDataList = data.timeSaveList;
-    // foreach (var timeData in SaveTimeController.Instance.saveDataList)
-    // {
-    //   Debug.Log("timeData: " + timeData.timeString);
-    // }
     SaveTimeController.Instance.TimeRestore();
   }
 }

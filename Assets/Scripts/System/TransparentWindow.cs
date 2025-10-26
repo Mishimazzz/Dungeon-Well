@@ -2,7 +2,8 @@ using UnityEngine;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine.EventSystems;
-
+using System.Collections;
+using UnityEngine.AI;
 public class TransparentInteractiveWindow : MonoBehaviour
 {
     [DllImport("user32.dll")] static extern IntPtr GetActiveWindow();
@@ -32,6 +33,21 @@ public class TransparentInteractiveWindow : MonoBehaviour
 
     IntPtr hWnd;
 
+    struct MonitorInfo
+    {
+        public Vector2Int origin;   // 屏幕左上角虚拟坐标
+        public Vector2Int size;     // 分辨率
+    }
+
+    MonitorInfo[] monitors = new MonitorInfo[]
+    {
+    new MonitorInfo { origin = new Vector2Int(-2560, 0), size = new Vector2Int(2560, 1440) }, // 左
+    new MonitorInfo { origin = new Vector2Int(0, 0),     size = new Vector2Int(3440, 1440) }, // 主
+    new MonitorInfo { origin = new Vector2Int(3440, 0),  size = new Vector2Int(1920, 1080) }  // 右
+    };
+
+    int currentMonitor = 1;
+
     void Start()
     {
 #if !UNITY_EDITOR
@@ -50,11 +66,7 @@ public class TransparentInteractiveWindow : MonoBehaviour
         EnableTransparent(false);
 
         // 右下角 + 置顶
-        int sw = Screen.currentResolution.width;
-        int sh = Screen.currentResolution.height;
-        int x = sw - windowWidth - margin;
-        int y = sh - windowHeight - margin;
-        SetWindowPos(hWnd, HWND_TOPMOST, x, y, windowWidth, windowHeight, SWP_SHOWWINDOW);
+        MoveToMonitor(currentMonitor);
 #endif
     }
 
@@ -64,6 +76,28 @@ public class TransparentInteractiveWindow : MonoBehaviour
             EnableTransparent(false); // UI上 → 可交互
         else
             EnableTransparent(true);  // 无UI → 穿透
+
+        // 快捷键模拟 “Shift+Win+左右箭头”
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            MoveToMonitor(1);
+            MoveToMonitor(1);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentMonitor--;
+            if (currentMonitor < 0) currentMonitor = 0;
+            MoveToMonitor(currentMonitor);
+            MoveToMonitor(currentMonitor);
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentMonitor++;
+            if (currentMonitor > 2) currentMonitor = 2;
+            MoveToMonitor(currentMonitor);
+            MoveToMonitor(currentMonitor);
+        }
+            
     }
 
     void EnableTransparent(bool enable)
@@ -75,7 +109,23 @@ public class TransparentInteractiveWindow : MonoBehaviour
         else
             SetWindowLong(hWnd, GWL_EXSTYLE, (exStyle | (int)WS_EX_LAYERED) & ~(int)WS_EX_TRANSPARENT);
 
-        // ✅ 关键：修改样式后重新置顶，防止失焦或掉层
         SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW);
     }
+
+    void MoveToMonitor(int index)
+    {
+        if (index < 0 || index >= monitors.Length) index = 0;
+
+        var m = monitors[index];
+        int sw = m.size.x;
+        int sh = m.size.y;
+
+        // 根据每个显示器自己的分辨率计算右下角
+        int x = m.origin.x + sw - windowWidth - margin;
+        int y = m.origin.y + sh - windowHeight - margin;
+
+        SetWindowPos(hWnd, HWND_TOPMOST, x, y, windowWidth, windowHeight, SWP_SHOWWINDOW);
+        Debug.Log($"✅ 窗口已移动到显示器 {index + 1} 右下角 ({x},{y}) 分辨率=({sw},{sh})"); 
+    }
+
 }
