@@ -8,3 +8,72 @@
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
 [Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] The character with Unicode value \u5207 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u6362 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u663E was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u793A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u5668 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \uFF1A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u5207 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u6362 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u663E was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u793A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u5668 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \uFF1A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u5207 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u6362 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u663E was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u793A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u5668 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \uFF1A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Log] total executeTime:9
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 没放到地里, 回到原位
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:3
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:4
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] harvestData: Tomato (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:3
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

@@ -15,7 +15,7 @@ public class ButtonManage : MonoBehaviour
     public GameObject BagPanel;
     public HarvestItem harvestItem;
     public ItemManager itemManager;
-    public Button exploreButton;
+    public GameObject settingMenu;
     public TextMeshProUGUI exploreButtonText;
     private bool timerOn;
     public float TotalFullExecuteTime;
@@ -88,6 +88,12 @@ public class ButtonManage : MonoBehaviour
         {
             HarvestItem.Instance.RefreshBagUI();
         }
+    }
+
+    public void ToggleSettingMenu()
+    {
+        bool isActive = settingMenu.activeSelf;
+        settingMenu.SetActive(!isActive);
     }
 
     public void SaveTimeButton()
