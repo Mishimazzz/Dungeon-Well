@@ -77,3 +77,124 @@
 [Log] seedData: ChineseYamSeed
 [Log] seedData: ChineseYamSeed
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] The character with Unicode value \u5207 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u6362 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u663E was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u793A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u5668 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \uFF1A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] index: 0
+[Log] timeData.timeString: 01:00
+[Log] index: 1
+[Log] timeData.timeString: 01:04
+[Log] index: 0
+[Log] timeData.timeString: 01:00
+[Log] index: 1
+[Log] timeData.timeString: 01:04
+[Log] index: 2
+[Log] timeData.timeString: 00:00
+[Log] index: 3
+[Log] timeData.timeString: 00:00
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] index: 0
+[Log] timeData.timeString: 01:00
+[Log] index: 1
+[Log] timeData.timeString: 01:04
+[Log] index: 2
+[Log] timeData.timeString: 00:00
+[Log] index: 3
+[Log] timeData.timeString: 00:00
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] index: 0
+[Log] timeData.timeString: 01:00
+[Log] index: 1
+[Log] timeData.timeString: 01:04
+[Log] index: 2
+[Log] timeData.timeString: 00:00
+[Log] index: 3
+[Log] timeData.timeString: 00:00
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] The character with Unicode value \u5207 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u6362 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u663E was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u793A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \u5668 was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Warning] The character with Unicode value \uFF1A was not found in the [LiberationSans SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [SwitchMonitorText].
+[Log] total executeTime:5
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] index: 0
+[Log] timeData.timeString: 01:00
+[Log] index: 1
+[Log] timeData.timeString: 01:04
+[Log] index: 2
+[Log] timeData.timeString: 00:00
+[Log] index: 3
+[Log] timeData.timeString: 00:00
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] index: 0
+[Log] timeData.timeString: 01:00
+[Log] index: 1
+[Log] timeData.timeString: 01:04
+[Log] index: 2
+[Log] timeData.timeString: 00:00
+[Log] index: 3
+[Log] timeData.timeString: 00:00
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] index: 0
+[Log] timeData.timeString: 00:00
+[Log] index: 1
+[Log] timeData.timeString: 00:00
+[Log] index: 2
+[Log] timeData.timeString: 00:00
+[Log] index: 3
+[Log] timeData.timeString: 00:00
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] harvestData: Tomato (ItemData)
+[Log] harvestData: ChineseYum (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] total executeTime:8
+[Log] total executeTime:6
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

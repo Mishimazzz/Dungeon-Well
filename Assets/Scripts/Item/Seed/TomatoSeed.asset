@@ -1,28 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e13985b6d679048b9f0b667a94c82b, type: 3}
-  m_Name: TomatoSeed
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 7600149190320472051, guid: 7ab79433877be194db3fc7b6d1fd0efa, type: 3}
-  probability: 0.5
-  rareLevel: 0
-  itemLevel: 1
-  isSeed: 1
-  firstPhase: 0
-  secondPhase: 5
-  thirdPhase: 10
-  firstPhasePrefab: {fileID: 7569620125400214549, guid: bcb5570f3e9abaf4581f5dcb7ddd210a, type: 3}
-  secondPhasePrefab: {fileID: 8671115754920803487, guid: 42b77721c812aec4084ab36c10686716, type: 3}
-  thirdPhasePrefab: {fileID: 6270221579598771544, guid: 65611882cca093c4f8914137237979c5, type: 3}
-  harvestItem: {fileID: 11400000, guid: 693b25ef5f0f8114ea58a2ef3fc4fa71, type: 2}
-  emptyPrefab: {fileID: 2744093365008630385, guid: 9eabbf7c5694d9c4e8951b98e37b10d1, type: 3}
-  seedManagerScript: {fileID: 0}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7470709ed410afcf19421800ef751d86d01cf68ea7cf01a5c6e2917df1ed47a
+size 1135

@@ -82,6 +82,11 @@ public class GameManager : MonoBehaviour
     //时间存储槽
     SaveTimeController.Instance.SaveInDataList();
     data.timeSaveList = SaveTimeController.Instance.saveDataList;
+    // foreach(var timeData in SaveTimeController.Instance.saveDataList)
+    // {
+    //   Debug.Log("index: " + timeData.index);
+    //   Debug.Log("timeData.timeString: " + timeData.timeString);
+    // }
     SaveSystem.Instance.SaveGame(data);
   }
 
