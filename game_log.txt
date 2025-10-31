@@ -198,3 +198,66 @@
 [Log] seedData: ChineseYamSeed
 [Log] seedData: TomatoSeed
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] total executeTime:17
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

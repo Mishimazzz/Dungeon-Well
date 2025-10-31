@@ -142,14 +142,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e163f7e31f53fbe41a9606e9fff1f090, type: 2}
+  m_sharedMaterial: {fileID: 7440101350135228910, guid: e163f7e31f53fbe41a9606e9fff1f090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4291886848
   m_fontColor: {r: 0, g: 1, b: 0.8165014, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
