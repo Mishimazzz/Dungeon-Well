@@ -14,11 +14,11 @@ public class ItemManager : MonoBehaviour
     public GameObject itemDisplayPrefab;
     public Transform canvas;
     //bag position
-    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-5, -85, 0), new Vector3(85, -85, 0), new Vector3(175, -85, 0), new Vector3(265, -85, 0),
-                                                            new Vector3(-5, -185, 0), new Vector3(85, -185, 0), new Vector3(175, -185, 0), new Vector3(265, -185, 0) };
+    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(120, -40, 0), new Vector3(220, -40, 0), new Vector3(320, -40, 0),
+                                                            new Vector3(120, -125, 0), new Vector3(220, -125, 0), new Vector3(320, -125, 0) };
 
-    private int currentItemPositionIndex = 1;
-    private Vector3 firstPosition = new Vector3(-5, -85, 0);
+    private int currentItemPositionIndex = 0;
+    private Vector3 firstPosition = new Vector3(120, -40, 0);
 
     // seedbox position
     public GameObject GridPrefab;
@@ -32,7 +32,7 @@ public class ItemManager : MonoBehaviour
 
     private List<GameObject> DestroyItems = new List<GameObject>();// 之后instanitiate物品之后需要删除的
 
-    public Vector3 coinPosition = new Vector3(-5, -85, 0);
+    public Vector3 coinPosition = new Vector3(120, -40, 0);
 
     public void SpawItem()
     {
@@ -172,7 +172,7 @@ public class ItemManager : MonoBehaviour
         GameObject go = Instantiate(GridPrefab, canvas);
         DestroyItems.Add(go);
         go.transform.localPosition = position;
-        go.transform.SetSiblingIndex(8);//second layer,你得数一下Time里头的层数
+        go.transform.SetSiblingIndex(canvas.childCount - 9);//second layer,你得数一下Time里头的层数
     }
 
     public int GetTime()
@@ -193,8 +193,8 @@ public class ItemManager : MonoBehaviour
         */
         GameObject go = Instantiate(itemDisplayPrefab, canvas);
         DestroyItems.Add(go);
-        go.transform.localPosition = firstPosition;
-        SpawnGrid(firstPosition);
+        // go.transform.localPosition = firstPosition;
+        // SpawnGrid(firstPosition);
         ItemDisplay display = go.GetComponent<ItemDisplay>();
         if (display == null)
         {
@@ -296,6 +296,6 @@ public class ItemManager : MonoBehaviour
         itemSlots.Clear();
         itemDict.Clear();
         spawnedItems.Clear();
-        currentItemPositionIndex = 1;
+        currentItemPositionIndex = 0;
     }
 }

@@ -157,7 +157,7 @@ public class UIManager : MonoBehaviour
             return;
         }
 
-        Transform btnTransform = timeUpPanelTransform.Find("Button");
+        Transform btnTransform = timeUpPanelTransform.Find("confirmButton");
         if (btnTransform == null)
         {
             Debug.LogError("BindTimeUpButton: 在 TimeUpPanel 下找不到 Button");
