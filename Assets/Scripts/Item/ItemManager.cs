@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ItemManager : MonoBehaviour
 {
@@ -13,12 +14,11 @@ public class ItemManager : MonoBehaviour
     public Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
     public Transform canvas;
-    //bag position
+    //timeup item's position
     public List<Vector3> itemPositions = new List<Vector3> { new Vector3(120, -40, 0), new Vector3(220, -40, 0), new Vector3(320, -40, 0),
                                                             new Vector3(120, -125, 0), new Vector3(220, -125, 0), new Vector3(320, -125, 0) };
 
     private int currentItemPositionIndex = 0;
-    private Vector3 firstPosition = new Vector3(120, -40, 0);
 
     // seedbox position
     public GameObject GridPrefab;
@@ -29,10 +29,9 @@ public class ItemManager : MonoBehaviour
     private HashSet<string> spawnedItems = new HashSet<string>();
 
     public ItemDatabase itemDatabase;//item大列表
-
     private List<GameObject> DestroyItems = new List<GameObject>();// 之后instanitiate物品之后需要删除的
-
-    public Vector3 coinPosition = new Vector3(120, -40, 0);
+    public TextMeshProUGUI coinText;
+    private int coinCount = 0;
 
     public void SpawItem()
     {
@@ -54,36 +53,37 @@ public class ItemManager : MonoBehaviour
         int MidLevelCount = 0;
         int HighLevelCount = 0;
         int UltraRareCount = 0;
+        int CoinAmount = 0;
         Debug.Log("total executeTime:" + executeTime);
 
         if (executeTime <= 0.01)//1
         {
-            GiveCoin(1);
+            CoinAmount = 1;
         }
         else if (executeTime <= 0.08)//5
         {
             LowLevelCount = 1;
-            GiveCoin(2);
+            CoinAmount = 2;
         }
         else if (executeTime <= 0.1)//15
         {
             LowLevelCount = 2;
             MidLevelCount = 1;
-            GiveCoin(3);
+            CoinAmount = 3;
         }
         else if (executeTime <= 30)
         {
             LowLevelCount = 4;
             MidLevelCount = 2;
             HighLevelCount = 1;
-            GiveCoin(4);
+            CoinAmount = 4;
         }
         else if (executeTime <= 45)
         {
             LowLevelCount = 7;
             MidLevelCount = 3;
             HighLevelCount = 2;
-            GiveCoin(5);
+            CoinAmount = 5;
         }
         else if (executeTime <= 60)
         {
@@ -91,7 +91,7 @@ public class ItemManager : MonoBehaviour
             MidLevelCount = 4;
             HighLevelCount = 3;
             UltraRareCount = 1;
-            GiveCoin(5);
+            CoinAmount = 5;
         }
         else
         {
@@ -100,7 +100,7 @@ public class ItemManager : MonoBehaviour
             MidLevelCount = 4;
             HighLevelCount = 3;
             UltraRareCount = hourCount;
-            GiveCoin(5 * hourCount);
+            CoinAmount = (5 * hourCount);
         }
 
         totalItemHavest = LowLevelCount + MidLevelCount + HighLevelCount + UltraRareCount;
@@ -108,10 +108,9 @@ public class ItemManager : MonoBehaviour
         for (int i = 0; i < totalItemHavest; i++)
         {
             Vector3 position = GetNextItemPosition();
-            // SpawnGrid(position);
             GameObject go = Instantiate(itemDisplayPrefab, canvas);
             DestroyItems.Add(go);
-            go.transform.localPosition = position;
+            go.transform.localPosition = position + new Vector3(-6f, -7f, 0);
 
             ItemDisplay display = go.GetComponent<ItemDisplay>();
             itemSlots.Add(display);
@@ -122,6 +121,7 @@ public class ItemManager : MonoBehaviour
         SpawnItemsByRarity(Rare.MidLevel, MidLevelCount);
         SpawnItemsByRarity(Rare.HighLevel, HighLevelCount);
         SpawnItemsByRarity(Rare.UltraRare, UltraRareCount);
+        GiveCoin(CoinAmount);
     }
 
     public void SpawnItemsByRarity(Rare rareLevel, int count)
@@ -191,25 +191,13 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 600 coins x per hour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
-        GameObject go = Instantiate(itemDisplayPrefab, canvas);
-        DestroyItems.Add(go);
-        // go.transform.localPosition = firstPosition;
-        // SpawnGrid(firstPosition);
-        ItemDisplay display = go.GetComponent<ItemDisplay>();
-        if (display == null)
-        {
-            Debug.LogError("itemDisplayPrefab 上没有 ItemDisplay 脚本！");
-            return;
-        }
-        // Debug.Log("add");
-        itemSlots.Add(display);
-        go.SetActive(false);
+        coinCount = amount;
         while (amount > 0)
         {
-            // Debug.Log("amount:" + amount);
             AddItem(coinItemData, 1);
             amount--;
         }
+        ShowCoinText(coinCount);
     }
 
     // 添加物品
@@ -221,15 +209,23 @@ public class ItemManager : MonoBehaviour
         RefreshUI();
     }
 
+    private void ShowCoinText(int totalCoins)
+    {
+        if (coinText != null)
+            coinText.text = totalCoins.ToString();
+    }
+
     public void RefreshUI()
     {
         //Debug.Log("itemDict count: " + itemDict.Count);
         int i = 0;
         foreach (var kv in itemDict)
         {
-            //Debug.Log($"显示物品: {kv.Key.name}, 数量: {kv.Value}");
-            // if(itemSlots[0] == null) Debug.Log("itemSlots[0] = ", itemSlots[0]);
-
+            if (kv.Key == coinItemData)
+            {
+                ShowCoinText(kv.Value);
+                continue;
+            }
             if (i < itemSlots.Count)
             {
                 Sprite icon = null;
@@ -243,7 +239,8 @@ public class ItemManager : MonoBehaviour
                 // 只在第一次遇到该物品时生成 grid
                 if (!spawnedItems.Contains(kv.Key.name))
                 {
-                    SpawnGrid(itemSlots[i].transform.localPosition);
+                    Vector3 basePos = itemPositions[i];
+                    SpawnGrid(basePos);
                     spawnedItems.Add(kv.Key.name);
                 }
                 i++;
@@ -255,12 +252,8 @@ public class ItemManager : MonoBehaviour
 
     private Vector3 GetNextItemPosition()
     {
-        // Debug.Log(currentItemPositionIndex);
-        // Debug.Log(itemPositions.Count);
         if (currentItemPositionIndex >= itemPositions.Count)
             currentItemPositionIndex = 0;
-
-        // Debug.Log("get"+ itemPositions[currentItemPositionIndex]);
         return itemPositions[currentItemPositionIndex++];
     }
 

@@ -12,6 +12,7 @@ public class ButtonManage : MonoBehaviour
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
     public GameObject timeCountDownPanel;
+    public GameObject TodoList;
     public GameObject BagPanel;
     public HarvestItem harvestItem;
     public ItemManager itemManager;
@@ -99,5 +100,11 @@ public class ButtonManage : MonoBehaviour
     public void SaveTimeButton()
     {
         SaveTimeController.Instance.SaveCurrentTime();
+    }
+
+    public void ToggleTodoList()
+    {
+        bool isActive = TodoList.activeSelf;
+        TodoList.SetActive(!isActive);
     }
 }
