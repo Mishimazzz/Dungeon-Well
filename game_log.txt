@@ -6103,3 +6103,152 @@ Parameter name: index
 [Log] seedData: TomatoSeed
 [Log] seedData: WheadySeed
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:60
+[Exception] ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:60
+[Exception] ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:60
+[Exception] ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:3
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:1
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:3
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:2
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:2
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:1
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:1
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:1
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:1
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:3
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:3
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:60
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

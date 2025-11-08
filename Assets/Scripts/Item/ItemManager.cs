@@ -106,19 +106,20 @@ public class ItemManager : MonoBehaviour
         }
 
         totalItemHavest = LowLevelCount + MidLevelCount + HighLevelCount + UltraRareCount;
+        ClearAllItemDisplays();
         //load item prefab and UI, icon
-        for (int i = 0; i < totalItemHavest; i++)
-        {
-            Vector3 position = GetNextItemPosition();
-            GameObject go = Instantiate(itemDisplayPrefab, scrollContent);
-            go.transform.localScale = Vector3.one * 4.0f;
-            DestroyItems.Add(go);
-            go.transform.localPosition = position + new Vector3(-6f, -7f, 0);
+        // for (int i = 0; i < totalItemHavest; i++)
+        // {
+        //     Vector3 position = GetNextItemPosition();
+        //     GameObject go = Instantiate(itemDisplayPrefab, scrollContent);
+        //     go.transform.localScale = Vector3.one * 4.0f;
+        //     DestroyItems.Add(go);
+        //     go.transform.localPosition = position + new Vector3(-6f, -7f, 0);
 
-            ItemDisplay display = go.GetComponent<ItemDisplay>();
-            itemSlots.Add(display);
-            go.SetActive(false);
-        }
+        //     ItemDisplay display = go.GetComponent<ItemDisplay>();
+        //     itemSlots.Add(display);
+        //     go.SetActive(false);
+        // }
 
         SpawnItemsByRarity(Rare.LowLevel, LowLevelCount);
         SpawnItemsByRarity(Rare.MidLevel, MidLevelCount);
@@ -169,13 +170,15 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    public void SpawnGrid(Vector3 position)
+    public void SpawnGrid(Vector3 position, Transform parent)
     {
         //generate grid
-        GameObject go = Instantiate(GridPrefab, canvas);
+        GameObject go = Instantiate(GridPrefab, parent);
         DestroyItems.Add(go);
         go.transform.localPosition = position;
-        go.transform.SetSiblingIndex(canvas.childCount - 9);//second layer,你得数一下Time里头的层数
+        go.transform.localScale = Vector3.one;
+        go.transform.SetAsFirstSibling();
+        // go.transform.SetSiblingIndex(canvas.childCount - 9);//second layer,你得数一下Time里头的层数
     }
 
     public int GetTime()
@@ -206,9 +209,39 @@ public class ItemManager : MonoBehaviour
     // 添加物品
     public void AddItem(ItemData data, int amount)
     {
-        if (!itemDict.ContainsKey(data))
-            itemDict[data] = 0;
-        itemDict[data] += amount;
+        // if (!itemDict.ContainsKey(data))
+        //     itemDict[data] = 0;
+        // itemDict[data] += amount;
+        // RefreshUI();
+        // 已存在：直接叠加数量
+        if (itemDict.ContainsKey(data))
+        {
+            itemDict[data] += amount;
+            RefreshUI();
+            return;
+        }
+
+        // 新物品：第一次加入 → Instantiate UI
+        itemDict[data] = amount;
+
+        GameObject go = Instantiate(itemDisplayPrefab, scrollContent);
+        go.transform.localScale = Vector3.one * 4.0f;
+        DestroyItems.Add(go);
+
+        ItemDisplay display = go.GetComponent<ItemDisplay>();
+        itemSlots.Add(display);
+
+        // 设置图标
+        Sprite icon = null;
+        if (data.prefab != null)
+        {
+            var sr = data.prefab.GetComponent<SpriteRenderer>();
+            if (sr != null) icon = sr.sprite;
+        }
+
+        display.SetItem(icon, amount, data);
+        go.SetActive(true);
+
         RefreshUI();
     }
 
@@ -242,8 +275,9 @@ public class ItemManager : MonoBehaviour
                 // 只在第一次遇到该物品时生成 grid
                 if (!spawnedItems.Contains(kv.Key.name))
                 {
-                    Vector3 basePos = itemPositions[i];
-                    SpawnGrid(basePos);
+                    Transform parent = itemSlots[i].transform;
+                    Vector3 basePos = Vector3.zero; // 相对 itemDisplay 自己居中即可
+                    SpawnGrid(basePos, parent);
                     spawnedItems.Add(kv.Key.name);
                 }
                 i++;
