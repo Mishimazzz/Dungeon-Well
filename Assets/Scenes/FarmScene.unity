@@ -3705,6 +3705,8 @@ MonoBehaviour:
   seedBoxPosition:
   - {x: -35, y: -55, z: 0}
   - {x: 62, y: -55, z: 0}
+  - {x: -35, y: -153, z: 0}
+  - {x: 62, y: -153, z: 0}
 --- !u!4 &1970432894
 Transform:
   m_ObjectHideFlags: 0

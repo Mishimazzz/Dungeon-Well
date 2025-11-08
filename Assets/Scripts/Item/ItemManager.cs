@@ -16,7 +16,8 @@ public class ItemManager : MonoBehaviour
     public Transform canvas;
     //timeup item's position
     public List<Vector3> itemPositions = new List<Vector3> { new Vector3(120, -40, 0), new Vector3(220, -40, 0), new Vector3(320, -40, 0),
-                                                            new Vector3(120, -125, 0), new Vector3(220, -125, 0), new Vector3(320, -125, 0) };
+                                                            new Vector3(120, -125, 0), new Vector3(220, -125, 0), new Vector3(320, -125, 0),
+                                                            new Vector3(120, -210, 0) };
 
     private int currentItemPositionIndex = 0;
 
@@ -32,6 +33,7 @@ public class ItemManager : MonoBehaviour
     private List<GameObject> DestroyItems = new List<GameObject>();// 之后instanitiate物品之后需要删除的
     public TextMeshProUGUI coinText;
     private int coinCount = 0;
+    public Transform scrollContent;// 滑块功能
 
     public void SpawItem()
     {
@@ -108,7 +110,8 @@ public class ItemManager : MonoBehaviour
         for (int i = 0; i < totalItemHavest; i++)
         {
             Vector3 position = GetNextItemPosition();
-            GameObject go = Instantiate(itemDisplayPrefab, canvas);
+            GameObject go = Instantiate(itemDisplayPrefab, scrollContent);
+            go.transform.localScale = Vector3.one * 4.0f;
             DestroyItems.Add(go);
             go.transform.localPosition = position + new Vector3(-6f, -7f, 0);
 
