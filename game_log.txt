@@ -26963,3 +26963,51 @@ You probably need to assign the thirdPhasePrefab variable of the ItemData script
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
 [Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] total executeTime:15
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] harvestData: Wheady (ItemData)
+[Log] harvestData: ChineseYum (ItemData)
+[Log] harvestData: Tomato (ItemData)
+[Log] harvestData: ChineseYum (ItemData)
+[Log] harvestData: ChineseYum (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
