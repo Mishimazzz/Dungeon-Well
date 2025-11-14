@@ -95,8 +95,19 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
             if (IsInsideFarmGrid(farmGrid.position, worldMousePos))
             {
-                // 找到这个物品
+                // 找到这个物品 + 土地
                 ItemDisplay display = GetComponent<ItemDisplay>();
+                FarmGridCell cell = farmGrid.GetComponent<FarmGridCell>();
+
+                // 如果土地已经被占用，就会回到原位
+                if (cell != null && cell.occupied)
+                {
+                    Debug.Log("土地已被占用");
+                    rectTransform.localPosition = originalPosition;
+                    insideAnyGrid = true;
+                    break;
+                }
+
                 if (display != null && display.itemData != null)
                 {
                     ItemData data = display.itemData;
@@ -106,6 +117,15 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     {
                         HarvestItem.Instance.ConsumeItem(data, 1); // 消耗1个
                         GameObject plantedSeed = Instantiate(data.emptyPrefab, farmGrid.position, Quaternion.identity);
+
+                        SeedManager manager = plantedSeed.AddComponent<SeedManager>();
+                        manager.Init(data);
+
+                        if (cell != null)
+                        {
+                            cell.occupied = true;
+                            manager.ownerCell = cell;   // ← 用 manager，不要再次 GetComponent
+                        }
 
                         //功能： 让第三行的植物图层永远在第一第二行上，其他的也一样
                         float[] rowY = { 4.1125f, 3.15f, 2.1875f };//植物种植的y轴
@@ -133,8 +153,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         // Debug.Log($"植物Y={y}，最近行Y={rowY[closestIndex]}，设置Z={rowZ[closestIndex]}");
 
                         // 初始化
-                        SeedManager manager = plantedSeed.AddComponent<SeedManager>();
-                        manager.Init(data);
+                        // SeedManager manager = plantedSeed.AddComponent<SeedManager>();
+                        // manager.Init(data);
                         SeedBoxManager.seedBoxManager.needRefreshSeedBox = true;
 
                         //添加到FarmManager.Instance.plantedSeeds里，需要保存数据用

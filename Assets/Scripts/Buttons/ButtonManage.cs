@@ -17,7 +17,6 @@ public class ButtonManage : MonoBehaviour
     public HarvestItem harvestItem;
     public ItemManager itemManager;
     public GameObject settingMenu;
-    public TextMeshProUGUI exploreButtonText;
     private bool timerOn;
     public float TotalFullExecuteTime;
     public int executeHour; public int executeMin; public int executeSec;

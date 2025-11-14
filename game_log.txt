@@ -27063,3 +27063,273 @@ You probably need to assign the thirdPhasePrefab variable of the ItemData script
 [Log] seedData: WheadySeed
 [Log] seedData: ChineseYamSeed
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] harvestData: ChineseYum (ItemData)
+[Log] harvestData: Tomato (ItemData)
+[Log] harvestData: Wheady (ItemData)
+[Log] harvestData: ChineseYum (ItemData)
+[Log] harvestData: Wheady (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已被占用
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: WheadySeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] harvestData: Wheady (ItemData)
+[Log] 准备释放土地，占用点 = (0.00, 3.36, 2.00)
+[Warning] OverlapPoint 没检测到任何碰撞器！可能原因：
+1. 土地格子没有 Collider2D
+2. 植物位置不在格子 Collider 范围内
+3. 植物 Z 轴与格子不一致导致检测不到
+[Log] harvestData: Wheady (ItemData)
+[Log] 准备释放土地，占用点 = (0.00, 3.36, 2.00)
+[Warning] OverlapPoint 没检测到任何碰撞器！可能原因：
+1. 土地格子没有 Collider2D
+2. 植物位置不在格子 Collider 范围内
+3. 植物 Z 轴与格子不一致导致检测不到
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 准备释放土地，占用点 = (0.00, 2.33, 1.00)
+[Warning] OverlapPoint 没检测到任何碰撞器！可能原因：
+1. 土地格子没有 Collider2D
+2. 植物位置不在格子 Collider 范围内
+3. 植物 Z 轴与格子不一致导致检测不到
+[Log] 土地已被占用
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] plantedSeed: EmptyGraph(Clone) (UnityEngine.GameObject)
+[Log] SeedManager: 
+[Log] cell: FarmGrid (FarmGridCell)
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:3
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: WheadySeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 没放到地里, 回到原位
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Wheady (ItemData)
+[Warning] ownerCell 为空，无法释放土地！
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] seedData: WheadySeed
+[Log] seedData: ChineseYamSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] harvestData: ChineseYum (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 没放到地里, 回到原位
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: ChineseYamSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: ChineseYum (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:3
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] harvestData: ChineseYum (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] seedData: WheadySeed
+[Log] seedData: WheadySeed
+[Log] seedData: WheadySeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

@@ -25,13 +25,7 @@ public class FarmManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "FarmScene" && restoreBool == true)
-        {
-            RestoreSeeds();
-            restoreBool = false;
-        }
-
-        // 每次换场景重新收集
+        // 先收集格子
         farmGridAreas.Clear();
 
         GameObject[] cells = GameObject.FindGameObjectsWithTag("FarmGrid");
@@ -39,6 +33,13 @@ public class FarmManager : MonoBehaviour
         {
             RectTransform rt = cell.GetComponent<RectTransform>();
             if (rt != null) farmGridAreas.Add(rt);
+        }
+
+        // 再恢复种子 —— 必须在格子收集之后
+        if (scene.name == "FarmScene" && restoreBool == true)
+        {
+            RestoreSeeds();
+            restoreBool = false;
         }
     }
 
@@ -67,6 +68,25 @@ public class FarmManager : MonoBehaviour
         }
     }
 
+    private RectTransform FindNearestCell(Vector3 pos)
+    {
+        RectTransform nearest = null;
+        float minDist = float.MaxValue;
+
+        foreach (var cell in farmGridAreas)
+        {
+            float d = Vector2.Distance(cell.position, pos);
+            if (d < minDist)
+            {
+                minDist = d;
+                nearest = cell;
+            }
+        }
+
+        return nearest;
+    }
+
+
     public void RestoreSeeds()
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "FarmScene")
@@ -82,6 +102,31 @@ public class FarmManager : MonoBehaviour
             GameObject plantedSeed = Instantiate(item.emptyPrefab, pos, Quaternion.identity);
 
             SeedManager manager = plantedSeed.AddComponent<SeedManager>();
+
+            // 找最近的格子
+            RectTransform nearest = null;
+            float minDist = float.MaxValue;
+
+            foreach (var cell in farmGridAreas)
+            {
+                float d = Vector2.Distance(cell.position, pos);
+                if (d < minDist)
+                {
+                    minDist = d;
+                    nearest = cell;
+                }
+            }
+
+            // 配置 ownerCell
+            if (nearest != null)
+            {
+                FarmGridCell cell = nearest.GetComponent<FarmGridCell>();
+                if (cell != null)
+                {
+                    cell.occupied = true;
+                    manager.ownerCell = cell;
+                }
+            }
 
             long binaryTime = long.Parse(seedData.plantedDate);
             DateTime plantedTime = DateTime.FromBinary(binaryTime);
