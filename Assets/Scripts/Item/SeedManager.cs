@@ -132,13 +132,25 @@ public class SeedManager : MonoBehaviour
       // 释放土地
       if (ownerCell != null)
       {
+        Debug.Log("[SeedManager] 收获，准备释放 cellId = " + ownerCell.cellId);
+
         ownerCell.occupied = false;
+
+        if (FarmManager.Instance != null)
+        {
+          bool removed = FarmManager.Instance.plantedCells.Remove(ownerCell.cellId);
+          Debug.Log("[SeedManager] 从 plantedCells 移除 cellId = " + ownerCell.cellId +
+                    ", removed=" + removed +
+                    ", 剩余数量 = " + FarmManager.Instance.plantedCells.Count);
+        }
+
         Debug.Log("土地已释放（ownerCell），可再次种植");
       }
       else
       {
         Debug.LogWarning("ownerCell 为空，无法释放土地！");
       }
+
 
 
       Dictionary<ItemData, int> newItems = new Dictionary<ItemData, int>();

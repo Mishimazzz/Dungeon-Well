@@ -27333,3 +27333,908 @@ You probably need to assign the thirdPhasePrefab variable of the ItemData script
 [Log] harvestData: Wheady (ItemData)
 [Log] 土地已释放（ownerCell），可再次种植
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] harvestData: Wheady (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 没放到地里, 回到原位
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 已分配 cellId 数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 已分配 cellId 数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 17
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 17, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 17
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 17, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 4, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 已分配 cellId 数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 已分配 cellId 数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=4, occupied=True
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 6, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 已分配 cellId 数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 已分配 cellId 数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 8
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 8, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 8
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 8, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 8, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 已分配 cellId 数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 已分配 cellId 数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=8, occupied=True
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 13, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=True, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 16, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 17, plantedCells.Count = 3
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 3
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 3
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=17, occupied=True
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=16, occupied=True
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: Tomato (ItemData)
+[Warning] ownerCell 为空，无法释放土地！
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] OnSceneLoaded: WellScene
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] OnSceneLoaded: FarmScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 16, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 17, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 16
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 16, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 17
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 17, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 17
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 17, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: ChineseYum (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 16
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 16, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 16, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 16, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 16
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 16, removed=True, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] total executeTime:13
+[Log] harvestData: Tomato (ItemData)
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 调用 RestoreSeeds()
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] total executeTime:60
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] 土地已被占用
+[Log] total executeTime:3
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] total executeTime:2
+[Warning] Assets\Scripts\Time\TimeManager.cs(10,23): warning CS0067: The event 'TimeManager.OnTimeUp' is never used
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 先恢复 plantedCells
+[Log] [FarmManager] 恢复出 plantedCells.Count: 1
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=True, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=False, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 没放到地里, 回到原位
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 先恢复 plantedCells
+[Log] [FarmManager] 恢复出 plantedCells.Count: 1
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 1
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 16, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 2
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 2
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=16, occupied=True
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 先恢复 plantedCells
+[Log] [FarmManager] 恢复出 plantedCells.Count: 2
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 2
+[Log] [FarmManager] cellId=16, occupied=True
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=True
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 16
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 16, removed=True, 剩余数量 = 1
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 16, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] total executeTime:9
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 16
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 16, removed=True, 剩余数量 = 1
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] harvestData: Tomato (ItemData)
+[Log] [SeedManager] 收获，准备释放 cellId = 15
+[Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=True, 剩余数量 = 0
+[Log] 土地已释放（ownerCell），可再次种植
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

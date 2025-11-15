@@ -124,8 +124,16 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         if (cell != null)
                         {
                             cell.occupied = true;
-                            manager.ownerCell = cell;   // ← 用 manager，不要再次 GetComponent
+                            manager.ownerCell = cell;
+
+                            if (FarmManager.Instance != null)
+                            {
+                                FarmManager.Instance.plantedCells.Add(cell.cellId);
+                                Debug.Log("[DraggableItem] 种植成功, 记录占用 cellId = " + cell.cellId +
+                                          ", plantedCells.Count = " + FarmManager.Instance.plantedCells.Count);
+                            }
                         }
+
 
                         //功能： 让第三行的植物图层永远在第一第二行上，其他的也一样
                         float[] rowY = { 4.1125f, 3.15f, 2.1875f };//植物种植的y轴
