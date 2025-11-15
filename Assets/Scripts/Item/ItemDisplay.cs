@@ -19,6 +19,7 @@ public class ItemDisplay : MonoBehaviour
 
     public void SetItem(Sprite icon, int count, ItemData itemdata)
     {
+        itemIcon.preserveAspect = true;
         itemIcon.sprite = icon;
         itemText.text = count.ToString();
         itemData = itemdata;

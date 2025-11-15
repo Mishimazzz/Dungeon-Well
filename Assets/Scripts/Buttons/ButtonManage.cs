@@ -12,11 +12,13 @@ public class ButtonManage : MonoBehaviour
     public GameObject timeStopPanel;
     public GameObject timeUpPanel;
     public GameObject timeCountDownPanel;
+    public GameObject TodoList;
     public GameObject BagPanel;
     public HarvestItem harvestItem;
     public ItemManager itemManager;
-    public Button exploreButton;
+    public GameObject settingMenu;
     public TextMeshProUGUI exploreButtonText;
+    private bool timerOn;
     public float TotalFullExecuteTime;
     public int executeHour; public int executeMin; public int executeSec;
     private void Awake()
@@ -31,16 +33,14 @@ public class ButtonManage : MonoBehaviour
     {
         timePanel.SetActive(false);
         timeCountDownPanel.SetActive(true);
-        exploreButtonText.text = "Cancel";
+        timerOn = true;
         TimeManager.Instance.isCounting = false;
         TimeManager.Instance.StartCountDown();
     }
     public void ExploreButton()
     {
-        string text = exploreButtonText.text;
-
         // Explore / Cancel 都可以控制面板开关
-        if (text.Equals("Explore"))
+        if (!timerOn)
         {
             bool isActive = timePanel.activeSelf;
             timePanel.SetActive(!isActive);
@@ -63,7 +63,7 @@ public class ButtonManage : MonoBehaviour
         FindObjectOfType<TimeUI>().UpdateExecutedUI(TimeManager.Instance.executedTimeData);
 
         itemManager.SpawItem();
-        exploreButtonText.text = "Explore";
+        timerOn = false;
         TimeManager.Instance.SetTime(0,0,0);
     }
 
@@ -75,6 +75,7 @@ public class ButtonManage : MonoBehaviour
     public void TimeUpButtom()
     {
         //clean all the items in time up panel and save in player's bag
+        timerOn = false;
         harvestItem.AddItemsInBag(itemManager.itemDict);
         itemManager.ClearAllItemDisplays();
         timeUpPanel.SetActive(false);
@@ -90,8 +91,20 @@ public class ButtonManage : MonoBehaviour
         }
     }
 
+    public void ToggleSettingMenu()
+    {
+        bool isActive = settingMenu.activeSelf;
+        settingMenu.SetActive(!isActive);
+    }
+
     public void SaveTimeButton()
     {
         SaveTimeController.Instance.SaveCurrentTime();
+    }
+
+    public void ToggleTodoList()
+    {
+        bool isActive = TodoList.activeSelf;
+        TodoList.SetActive(!isActive);
     }
 }

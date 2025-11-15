@@ -13,6 +13,9 @@ public class TimeUI : MonoBehaviour
   public TextMeshProUGUI executedMin;
   public TextMeshProUGUI executedSec;
 
+  /// <summary>
+  /// 订阅事件
+  /// </summary>
   void Start()
   {
     TimeManager.Instance.OnTimeChanged += UpdateCountdownUI;
@@ -30,19 +33,27 @@ public class TimeUI : MonoBehaviour
     }
   }
 
-  // 用于更新倒计时 Text
+  /// <summary>
+  /// 用于更新倒计时 Text
+  /// </summary>
+  /// <param name="timeData"></param>
   void UpdateCountdownUI(TimeData timeData)
   {
     UpdateUIText(hourText, minuteText, secondText, timeData);
   }
 
-  // 用于更新执行时间 Text
+  /// <summary>
+  /// 用于更新执行时间 Text
+  /// </summary>
+  /// <param name="executed"></param>
   public void UpdateExecutedUI(TimeData executed)
   {
     UpdateUIText(executedHour, executedMin, executedSec, executed);
   }
 
-  // 通用函数：给任意三组 Text 和 TimeData 更新
+  /// <summary>
+  /// 通用函数：给任意三组 Text 和 TimeData 更新
+  /// </summary>
   void UpdateUIText(TextMeshProUGUI h, TextMeshProUGUI m, TextMeshProUGUI s, TimeData time)
   {
     h.text = time.hour.ToString("D2");
@@ -50,6 +61,9 @@ public class TimeUI : MonoBehaviour
     s.text = time.sec.ToString("D2");
   }
 
+  /// <summary>
+  /// timeUP的函数
+  /// </summary>
   void OnTimeUp()
   {
     TimeManager.Instance.CalculatedExecuteTime();  // 计算执行时间

@@ -145,8 +145,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         saveData.growDuration = data.thirdPhase;
                         saveData.posX = farmGrid.position.x;
                         saveData.posY = farmGrid.position.y;
-                        saveData.posZ = farmGrid.position.z;
-                        
+                        saveData.posZ = pos.z;
+                        Debug.Log("posZ:" + saveData.posZ);
                         FarmManager.Instance.plantedSeeds.Add(saveData);
                     }
                 }

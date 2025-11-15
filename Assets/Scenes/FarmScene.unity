@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 26
+  m_ReferencePixelsPerUnit: 64
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1250, y: 800}
   m_ScreenMatchMode: 0
@@ -3597,7 +3597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 64
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1250, y: 800}
   m_ScreenMatchMode: 0
@@ -3705,6 +3705,8 @@ MonoBehaviour:
   seedBoxPosition:
   - {x: -35, y: -55, z: 0}
   - {x: 62, y: -55, z: 0}
+  - {x: -35, y: -153, z: 0}
+  - {x: 62, y: -153, z: 0}
 --- !u!4 &1970432894
 Transform:
   m_ObjectHideFlags: 0

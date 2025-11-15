@@ -66,7 +66,6 @@ public class SeedManager : MonoBehaviour
       // 长到第三阶段
       if (seedInstance != null)
       {
-        // Debug.Log("1");
         SwitchPrefab(stage3Prefab);
 
         if (Input.GetMouseButtonDown(0))

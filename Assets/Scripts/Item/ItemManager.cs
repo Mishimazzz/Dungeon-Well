@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ItemManager : MonoBehaviour
 {
@@ -13,12 +14,12 @@ public class ItemManager : MonoBehaviour
     public Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
     public GameObject itemDisplayPrefab;
     public Transform canvas;
-    //bag position
-    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(-5, -85, 0), new Vector3(85, -85, 0), new Vector3(175, -85, 0), new Vector3(265, -85, 0),
-                                                            new Vector3(-5, -185, 0), new Vector3(85, -185, 0), new Vector3(175, -185, 0), new Vector3(265, -185, 0) };
+    //timeup item's position
+    public List<Vector3> itemPositions = new List<Vector3> { new Vector3(120, -40, 0), new Vector3(220, -40, 0), new Vector3(320, -40, 0),
+                                                            new Vector3(120, -125, 0), new Vector3(220, -125, 0), new Vector3(320, -125, 0),
+                                                            new Vector3(120, -210, 0) };
 
-    private int currentItemPositionIndex = 1;
-    private Vector3 firstPosition = new Vector3(-5, -85, 0);
+    private int currentItemPositionIndex = 0;
 
     // seedbox position
     public GameObject GridPrefab;
@@ -29,10 +30,10 @@ public class ItemManager : MonoBehaviour
     private HashSet<string> spawnedItems = new HashSet<string>();
 
     public ItemDatabase itemDatabase;//item大列表
-
     private List<GameObject> DestroyItems = new List<GameObject>();// 之后instanitiate物品之后需要删除的
-
-    public Vector3 coinPosition = new Vector3(-5, -85, 0);
+    public TextMeshProUGUI coinText;
+    private int coinCount = 0;
+    public Transform scrollContent;// 滑块功能
 
     public void SpawItem()
     {
@@ -54,36 +55,37 @@ public class ItemManager : MonoBehaviour
         int MidLevelCount = 0;
         int HighLevelCount = 0;
         int UltraRareCount = 0;
+        int CoinAmount = 0;
         Debug.Log("total executeTime:" + executeTime);
 
         if (executeTime <= 0.01)//1
         {
-            GiveCoin(1);
+            CoinAmount = 1;
         }
         else if (executeTime <= 0.08)//5
         {
             LowLevelCount = 1;
-            GiveCoin(2);
+            CoinAmount = 2;
         }
         else if (executeTime <= 0.1)//15
         {
             LowLevelCount = 2;
             MidLevelCount = 1;
-            GiveCoin(3);
+            CoinAmount = 3;
         }
         else if (executeTime <= 30)
         {
             LowLevelCount = 4;
             MidLevelCount = 2;
             HighLevelCount = 1;
-            GiveCoin(4);
+            CoinAmount = 4;
         }
         else if (executeTime <= 45)
         {
             LowLevelCount = 7;
             MidLevelCount = 3;
             HighLevelCount = 2;
-            GiveCoin(5);
+            CoinAmount = 5;
         }
         else if (executeTime <= 60)
         {
@@ -91,7 +93,7 @@ public class ItemManager : MonoBehaviour
             MidLevelCount = 4;
             HighLevelCount = 3;
             UltraRareCount = 1;
-            GiveCoin(5);
+            CoinAmount = 5;
         }
         else
         {
@@ -100,28 +102,30 @@ public class ItemManager : MonoBehaviour
             MidLevelCount = 4;
             HighLevelCount = 3;
             UltraRareCount = hourCount;
-            GiveCoin(5 * hourCount);
+            CoinAmount = (5 * hourCount);
         }
 
         totalItemHavest = LowLevelCount + MidLevelCount + HighLevelCount + UltraRareCount;
+        ClearAllItemDisplays();
         //load item prefab and UI, icon
-        for (int i = 0; i < totalItemHavest; i++)
-        {
-            Vector3 position = GetNextItemPosition();
-            // SpawnGrid(position);
-            GameObject go = Instantiate(itemDisplayPrefab, canvas);
-            DestroyItems.Add(go);
-            go.transform.localPosition = position;
+        // for (int i = 0; i < totalItemHavest; i++)
+        // {
+        //     Vector3 position = GetNextItemPosition();
+        //     GameObject go = Instantiate(itemDisplayPrefab, scrollContent);
+        //     go.transform.localScale = Vector3.one * 4.0f;
+        //     DestroyItems.Add(go);
+        //     go.transform.localPosition = position + new Vector3(-6f, -7f, 0);
 
-            ItemDisplay display = go.GetComponent<ItemDisplay>();
-            itemSlots.Add(display);
-            go.SetActive(false);
-        }
+        //     ItemDisplay display = go.GetComponent<ItemDisplay>();
+        //     itemSlots.Add(display);
+        //     go.SetActive(false);
+        // }
 
         SpawnItemsByRarity(Rare.LowLevel, LowLevelCount);
         SpawnItemsByRarity(Rare.MidLevel, MidLevelCount);
         SpawnItemsByRarity(Rare.HighLevel, HighLevelCount);
         SpawnItemsByRarity(Rare.UltraRare, UltraRareCount);
+        GiveCoin(CoinAmount);
     }
 
     public void SpawnItemsByRarity(Rare rareLevel, int count)
@@ -166,13 +170,15 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    public void SpawnGrid(Vector3 position)
+    public void SpawnGrid(Vector3 position, Transform parent)
     {
         //generate grid
-        GameObject go = Instantiate(GridPrefab, canvas);
+        GameObject go = Instantiate(GridPrefab, parent);
         DestroyItems.Add(go);
         go.transform.localPosition = position;
-        go.transform.SetSiblingIndex(8);//second layer,你得数一下Time里头的层数
+        go.transform.localScale = Vector3.one;
+        go.transform.SetAsFirstSibling();
+        // go.transform.SetSiblingIndex(canvas.childCount - 9);//second layer,你得数一下Time里头的层数
     }
 
     public int GetTime()
@@ -191,34 +197,58 @@ public class ItemManager : MonoBehaviour
             -> after 1 hour, 600 coins x per hour
             *后续可以根据分钟，秒数的变化去改，这里只是写了逻辑,看看生成能不能work
         */
-        GameObject go = Instantiate(itemDisplayPrefab, canvas);
-        DestroyItems.Add(go);
-        go.transform.localPosition = firstPosition;
-        SpawnGrid(firstPosition);
-        ItemDisplay display = go.GetComponent<ItemDisplay>();
-        if (display == null)
-        {
-            Debug.LogError("itemDisplayPrefab 上没有 ItemDisplay 脚本！");
-            return;
-        }
-        // Debug.Log("add");
-        itemSlots.Add(display);
-        go.SetActive(false);
+        coinCount = amount;
         while (amount > 0)
         {
-            // Debug.Log("amount:" + amount);
             AddItem(coinItemData, 1);
             amount--;
         }
+        ShowCoinText(coinCount);
     }
 
     // 添加物品
     public void AddItem(ItemData data, int amount)
     {
-        if (!itemDict.ContainsKey(data))
-            itemDict[data] = 0;
-        itemDict[data] += amount;
+        // if (!itemDict.ContainsKey(data))
+        //     itemDict[data] = 0;
+        // itemDict[data] += amount;
+        // RefreshUI();
+        // 已存在：直接叠加数量
+        if (itemDict.ContainsKey(data))
+        {
+            itemDict[data] += amount;
+            RefreshUI();
+            return;
+        }
+
+        // 新物品：第一次加入 → Instantiate UI
+        itemDict[data] = amount;
+
+        GameObject go = Instantiate(itemDisplayPrefab, scrollContent);
+        go.transform.localScale = Vector3.one * 4.0f;
+        DestroyItems.Add(go);
+
+        ItemDisplay display = go.GetComponent<ItemDisplay>();
+        itemSlots.Add(display);
+
+        // 设置图标
+        Sprite icon = null;
+        if (data.prefab != null)
+        {
+            var sr = data.prefab.GetComponent<SpriteRenderer>();
+            if (sr != null) icon = sr.sprite;
+        }
+
+        display.SetItem(icon, amount, data);
+        go.SetActive(true);
+
         RefreshUI();
+    }
+
+    private void ShowCoinText(int totalCoins)
+    {
+        if (coinText != null)
+            coinText.text = totalCoins.ToString();
     }
 
     public void RefreshUI()
@@ -227,9 +257,11 @@ public class ItemManager : MonoBehaviour
         int i = 0;
         foreach (var kv in itemDict)
         {
-            //Debug.Log($"显示物品: {kv.Key.name}, 数量: {kv.Value}");
-            // if(itemSlots[0] == null) Debug.Log("itemSlots[0] = ", itemSlots[0]);
-
+            if (kv.Key == coinItemData)
+            {
+                ShowCoinText(kv.Value);
+                continue;
+            }
             if (i < itemSlots.Count)
             {
                 Sprite icon = null;
@@ -243,7 +275,9 @@ public class ItemManager : MonoBehaviour
                 // 只在第一次遇到该物品时生成 grid
                 if (!spawnedItems.Contains(kv.Key.name))
                 {
-                    SpawnGrid(itemSlots[i].transform.localPosition);
+                    Transform parent = itemSlots[i].transform;
+                    Vector3 basePos = Vector3.zero; // 相对 itemDisplay 自己居中即可
+                    SpawnGrid(basePos, parent);
                     spawnedItems.Add(kv.Key.name);
                 }
                 i++;
@@ -255,12 +289,8 @@ public class ItemManager : MonoBehaviour
 
     private Vector3 GetNextItemPosition()
     {
-        // Debug.Log(currentItemPositionIndex);
-        // Debug.Log(itemPositions.Count);
         if (currentItemPositionIndex >= itemPositions.Count)
             currentItemPositionIndex = 0;
-
-        // Debug.Log("get"+ itemPositions[currentItemPositionIndex]);
         return itemPositions[currentItemPositionIndex++];
     }
 
@@ -296,6 +326,6 @@ public class ItemManager : MonoBehaviour
         itemSlots.Clear();
         itemDict.Clear();
         spawnedItems.Clear();
-        currentItemPositionIndex = 1;
+        currentItemPositionIndex = 0;
     }
 }
