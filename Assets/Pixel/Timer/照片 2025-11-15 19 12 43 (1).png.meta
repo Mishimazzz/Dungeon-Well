@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27549f3ca7c1bd94faebe83c74fe57bb
+guid: 5e4561dc535ac3f4283cbca6dd9382b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,43 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: F_Timer_Slots_0
+      name: "\u7167\u7247 2025-11-15 19 12 43 (1)_0"
       rect:
         serializedVersion: 2
-        x: 983
-        y: 594
-        width: 501
-        height: 333
+        x: 809
+        y: 288
+        width: 1163
+        height: 1112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d5174f717771c94b882d4f859df8787
-      internalID: -712586850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: F_Timer_Slots_1
-      rect:
-        serializedVersion: 2
-        x: 1650
-        y: 422
-        width: 150
-        height: 810
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 696fc7867e9b7cd40a755b451236c90a
-      internalID: -1366102048
+      spriteID: f7dfad5f6cc0e784fbc321a830d5c916
+      internalID: -790262219
       vertices: []
       indices: 
       edges: []
@@ -162,8 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      F_Timer_Slots_0: -712586850
-      F_Timer_Slots_1: -1366102048
+      "\u7167\u7247 2025-11-15 19 12 43 (1)_0": -790262219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
