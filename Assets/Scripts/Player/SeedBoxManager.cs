@@ -27,7 +27,6 @@ public class SeedBoxManager : MonoBehaviour
     }
     void Update()
     {
-
         if (needRefreshSeedBox && SeedBoxPanel.activeSelf)
         {
             RefreshSeedBoxUI();

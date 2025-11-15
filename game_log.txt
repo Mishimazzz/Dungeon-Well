@@ -28238,3 +28238,140 @@ You probably need to assign the thirdPhasePrefab variable of the ItemData script
 [Log] [SeedManager] 从 plantedCells 移除 cellId = 15, removed=True, 剩余数量 = 0
 [Log] 土地已释放（ownerCell），可再次种植
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 先恢复 plantedCells
+[Log] [FarmManager] 恢复出 plantedCells.Count: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 先恢复 plantedCells
+[Log] [FarmManager] 恢复出 plantedCells.Count: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [FarmManager] 收集到格子数量: 0
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] WellScene
+[Log] [FarmManager] 收集到格子数量: 18
+[Log] [FarmManager] 恢复格子占用, plantedCells.Count = 0
+[Log] [FarmManager] cellId=12, occupied=False
+[Log] [FarmManager] cellId=15, occupied=False
+[Log] [FarmManager] cellId=5, occupied=False
+[Log] [FarmManager] cellId=13, occupied=False
+[Log] [FarmManager] cellId=17, occupied=False
+[Log] [FarmManager] cellId=9, occupied=False
+[Log] [FarmManager] cellId=14, occupied=False
+[Log] [FarmManager] cellId=3, occupied=False
+[Log] [FarmManager] cellId=11, occupied=False
+[Log] [FarmManager] cellId=0, occupied=False
+[Log] [FarmManager] cellId=7, occupied=False
+[Log] [FarmManager] cellId=6, occupied=False
+[Log] [FarmManager] cellId=1, occupied=False
+[Log] [FarmManager] cellId=8, occupied=False
+[Log] [FarmManager] cellId=10, occupied=False
+[Log] [FarmManager] cellId=4, occupied=False
+[Log] [FarmManager] cellId=16, occupied=False
+[Log] [FarmManager] cellId=2, occupied=False
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] here2
+[Log] here11
+[Log] here11
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] here11
+[Log] here11
+[Log] here11
+[Log] here11
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] here2
+[Log] here11
+[Log] here11
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] here11
+[Log] here11
+[Log] here11
+[Log] here11
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] here11
+[Log] here11
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

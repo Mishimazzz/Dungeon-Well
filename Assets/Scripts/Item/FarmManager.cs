@@ -34,12 +34,10 @@ public class FarmManager : MonoBehaviour
             RectTransform rt = cell.GetComponent<RectTransform>();
             if (rt != null) farmGridAreas.Add(rt);
         }
-        Debug.Log("[FarmManager] 收集到格子数量: " + farmGridAreas.Count);
 
         // 3. 恢复种子（只第一次）
         if (scene.name == "FarmScene" && restoreBool)
         {
-            Debug.Log("[FarmManager] 先恢复 plantedCells");
             plantedCells.Clear();
             foreach (var seedData in plantedSeeds)
             {
@@ -49,7 +47,6 @@ public class FarmManager : MonoBehaviour
                     FarmGridCell fg = cell.GetComponent<FarmGridCell>();
                     if (fg != null)
                     {
-                        // 精准匹配位置（你保存了 posX posY posZ）
                         if (Mathf.Abs(seedData.posX - cell.position.x) < 0.01f &&
                             Mathf.Abs(seedData.posY - cell.position.y) < 0.01f)
                         {
@@ -60,15 +57,12 @@ public class FarmManager : MonoBehaviour
                 }
             }
 
-            Debug.Log("[FarmManager] 恢复出 plantedCells.Count: " + plantedCells.Count);
-
             // 再恢复种子
             RestoreSeeds();
             restoreBool = false;
         }
 
         // 4. 恢复格子占用
-        Debug.Log("[FarmManager] 恢复格子占用, plantedCells.Count = " + plantedCells.Count);
         foreach (var cell in farmGridAreas)
         {
             FarmGridCell fg = cell.GetComponent<FarmGridCell>();
@@ -76,7 +70,6 @@ public class FarmManager : MonoBehaviour
             {
                 bool isPlanted = plantedCells.Contains(fg.cellId);
                 fg.occupied = isPlanted;
-                Debug.Log($"[FarmManager] cellId={fg.cellId}, occupied={fg.occupied}");
             }
         }
     }
