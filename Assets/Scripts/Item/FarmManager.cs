@@ -9,6 +9,7 @@ public class FarmManager : MonoBehaviour
     public List<SeedSaveData> plantedSeeds = new List<SeedSaveData>();//保存数据的list
     public List<RectTransform> farmGridAreas = new List<RectTransform>();
     private Boolean restoreBool = true; // 只有一开始会恢复所有的植物
+    public HashSet<int> plantedCells = new HashSet<int>();
 
     void Awake()
     {
@@ -25,20 +26,51 @@ public class FarmManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "FarmScene" && restoreBool == true)
-        {
-            RestoreSeeds();
-            restoreBool = false;
-        }
-
-        // 每次换场景重新收集
+        // 1. 收集格子
         farmGridAreas.Clear();
-
         GameObject[] cells = GameObject.FindGameObjectsWithTag("FarmGrid");
         foreach (var cell in cells)
         {
             RectTransform rt = cell.GetComponent<RectTransform>();
             if (rt != null) farmGridAreas.Add(rt);
+        }
+
+        // 3. 恢复种子（只第一次）
+        if (scene.name == "FarmScene" && restoreBool)
+        {
+            plantedCells.Clear();
+            foreach (var seedData in plantedSeeds)
+            {
+                // 找出位置最近的格子
+                foreach (var cell in farmGridAreas)
+                {
+                    FarmGridCell fg = cell.GetComponent<FarmGridCell>();
+                    if (fg != null)
+                    {
+                        if (Mathf.Abs(seedData.posX - cell.position.x) < 0.01f &&
+                            Mathf.Abs(seedData.posY - cell.position.y) < 0.01f)
+                        {
+                            plantedCells.Add(fg.cellId);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // 再恢复种子
+            RestoreSeeds();
+            restoreBool = false;
+        }
+
+        // 4. 恢复格子占用
+        foreach (var cell in farmGridAreas)
+        {
+            FarmGridCell fg = cell.GetComponent<FarmGridCell>();
+            if (fg != null)
+            {
+                bool isPlanted = plantedCells.Contains(fg.cellId);
+                fg.occupied = isPlanted;
+            }
         }
     }
 
@@ -67,6 +99,25 @@ public class FarmManager : MonoBehaviour
         }
     }
 
+    private RectTransform FindNearestCell(Vector3 pos)
+    {
+        RectTransform nearest = null;
+        float minDist = float.MaxValue;
+
+        foreach (var cell in farmGridAreas)
+        {
+            float d = Vector2.Distance(cell.position, pos);
+            if (d < minDist)
+            {
+                minDist = d;
+                nearest = cell;
+            }
+        }
+
+        return nearest;
+    }
+
+
     public void RestoreSeeds()
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "FarmScene")
@@ -82,6 +133,31 @@ public class FarmManager : MonoBehaviour
             GameObject plantedSeed = Instantiate(item.emptyPrefab, pos, Quaternion.identity);
 
             SeedManager manager = plantedSeed.AddComponent<SeedManager>();
+
+            // 找最近的格子
+            RectTransform nearest = null;
+            float minDist = float.MaxValue;
+
+            foreach (var cell in farmGridAreas)
+            {
+                float d = Vector2.Distance(cell.position, pos);
+                if (d < minDist)
+                {
+                    minDist = d;
+                    nearest = cell;
+                }
+            }
+
+            // 配置 ownerCell
+            if (nearest != null)
+            {
+                FarmGridCell cell = nearest.GetComponent<FarmGridCell>();
+                if (cell != null)
+                {
+                    cell.occupied = true;
+                    manager.ownerCell = cell;
+                }
+            }
 
             long binaryTime = long.Parse(seedData.plantedDate);
             DateTime plantedTime = DateTime.FromBinary(binaryTime);

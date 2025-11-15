@@ -10,7 +10,7 @@ public class FarmUIManager : MonoBehaviour
         bool isActive = SeedPanel.activeSelf;
         SeedPanel.SetActive(!isActive);
 
-        if (isActive) // 如果是刚打开
+        if (!isActive) // 如果是刚打开
         {
             SeedBoxManager.seedBoxManager.RefreshSeedBoxUI();
         }

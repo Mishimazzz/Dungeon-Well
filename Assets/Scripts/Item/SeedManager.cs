@@ -17,6 +17,7 @@ public class SeedManager : MonoBehaviour
 
   public float TotalTime;
   private float plantedTime; // 记录种下时间
+  public FarmGridCell ownerCell;
 
   public void Init(ItemData seed)
   {
@@ -126,7 +127,17 @@ public class SeedManager : MonoBehaviour
       currentStageObj = null;
 
       ItemData harvestData = seedInstance.harvestItem;
-      Debug.Log("harvestData: " + harvestData);
+
+      // 释放土地
+      if (ownerCell != null)
+      {
+        ownerCell.occupied = false;
+
+        if (FarmManager.Instance != null)
+        {
+          bool removed = FarmManager.Instance.plantedCells.Remove(ownerCell.cellId);
+        }
+      }
 
       Dictionary<ItemData, int> newItems = new Dictionary<ItemData, int>();
       newItems[harvestData] = 1;
@@ -153,7 +164,7 @@ public class SeedManager : MonoBehaviour
                   return false;
               }
           });
-          int afterCount = FarmManager.Instance.plantedSeeds.Count;
+        int afterCount = FarmManager.Instance.plantedSeeds.Count;
       }
     }
   }
