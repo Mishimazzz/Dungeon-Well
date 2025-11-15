@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     private Button exploreButton;
     private Button startButton;
     private Button timeUpButton;
+    public GameObject farmSkin;
+    public GameObject wellSkin;
 
     public SceneManager sceneManager;
 
@@ -109,6 +111,13 @@ public class UIManager : MonoBehaviour
 
     public void BindStartButton()
     {
+        Transform activeSkin = null;
+
+        if (farmSkin.activeSelf)
+            activeSkin = farmSkin.transform;
+        else if (wellSkin.activeSelf)
+            activeSkin = wellSkin.transform;
+
         GameObject timeObject = GameObject.Find("Time");
         if (timeObject == null)
         {
@@ -123,14 +132,14 @@ public class UIManager : MonoBehaviour
             return;
         }
 
-        Transform btnTransform = timePanelTransform.Find("StartButton");
-        if (btnTransform == null)
+        Transform btn = activeSkin.Find("StartButton");
+        if (btn == null)
         {
-            Debug.LogError("BindStartButton: 在 TimePanel 下找不到 StartButton");
+            Debug.LogError("BindStartButton: 在皮肤下找不到 StartButton");
             return;
         }
 
-        startButton = btnTransform.GetComponent<Button>();
+        startButton = btn.GetComponent<Button>();
         if (startButton == null)
         {
             Debug.LogError("BindStartButton: StartButton 没有 Button 组件");

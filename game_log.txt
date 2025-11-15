@@ -28506,3 +28506,200 @@ You probably need to assign the thirdPhasePrefab variable of the ItemData script
 [Log] seedData: TomatoSeed
 [Log] seedData: TomatoSeed
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] total executeTime:5
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] total executeTime:2
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] UnassignedReferenceException: The variable timePanel of ButtonManage has not been assigned.
+You probably need to assign the timePanel variable of the ButtonManage script in the inspector.
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:5
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
