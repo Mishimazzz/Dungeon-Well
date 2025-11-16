@@ -28703,3 +28703,18 @@ You probably need to assign the timePanel variable of the ButtonManage script in
 [Log] seedData: TomatoSeed
 [Log] seedData: TomatoSeed
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] total executeTime:15
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

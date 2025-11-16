@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06e8c55b0c12d824cbe01fafe2b98515
+guid: 20a56ba4709b3ea4a818bbe87bbc258f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: W_Slider_Box_0
+      name: w slider box_0
       rect:
         serializedVersion: 2
-        x: 1499
-        y: 589
-        width: 12
-        height: 342
+        x: 1496
+        y: 577
+        width: 37
+        height: 369
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,50 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c4b64ed23eb31542883f763c6775e24
-      internalID: 699133147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: W_Slider_Box_1
-      rect:
-        serializedVersion: 2
-        x: 1519
-        y: 589
-        width: 12
-        height: 342
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 002e6f50281f29540b2bc712d7c360b9
-      internalID: -1938612385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: W_Slider_Box_2
-      rect:
-        serializedVersion: 2
-        x: 1495
-        y: 585
-        width: 41
-        height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45208eb2581c57b4cb2acc3de6f164d1
-      internalID: 3513555
+      spriteID: 375a1f2a9a5022047aec8ce7b15380d7
+      internalID: 1645382870
       vertices: []
       indices: 
       edges: []
@@ -183,9 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      W_Slider_Box_0: 699133147
-      W_Slider_Box_1: -1938612385
-      W_Slider_Box_2: 3513555
+      w slider box_0: 1645382870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
