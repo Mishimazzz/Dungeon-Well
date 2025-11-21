@@ -13,6 +13,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Transform originalParent;
     private bool canDrag = false;
     public bool isInSeedBox;
+
+    //sounds
     [SerializeField] private AudioClip plantSound;
     private AudioSource audioSource;
 

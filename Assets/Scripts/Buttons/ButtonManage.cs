@@ -19,9 +19,15 @@ public class ButtonManage : MonoBehaviour
     public GameObject settingMenu;
     private bool timerOn;
     public float TotalFullExecuteTime;
+
+    //sounds zone
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip clockDown;
     public int executeHour; public int executeMin; public int executeSec;
+
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         if (Instance == null)
             Instance = this;
         else
@@ -81,6 +87,7 @@ public class ButtonManage : MonoBehaviour
     }
     public void TogglePlayerBag()
     {
+
         bool isActive = BagPanel.activeSelf;
         BagPanel.SetActive(!isActive);
 

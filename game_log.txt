@@ -28838,3 +28838,33 @@ You probably need to assign the timePanel variable of the ButtonManage script in
 [Log] seedData: ChineseYamSeed
 [Log] seedData: TomatoSeed
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
