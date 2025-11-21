@@ -121,6 +121,7 @@ public class SeedManager : MonoBehaviour
     if (hasChanged) return;
     if (currentStageObj != null && currentStageObj.name.Contains(stage3Prefab.name))
     {
+      SoundManager.Instance.PlayHarvest();
       isHavestItem = true;
       Destroy(gameObject);
       Destroy(currentStageObj);

@@ -28868,3 +28868,90 @@ You probably need to add a AudioSource to the game object "TimeSystem". Or your 
 [Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
 [Log] WellScene
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:7
+[Log] total executeTime:6
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:1
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] item name: TomatoSeed (ItemData)
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:3
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1

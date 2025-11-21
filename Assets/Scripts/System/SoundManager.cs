@@ -7,6 +7,12 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private AudioClip clockUp;
     [SerializeField] private AudioClip clockDown;
+    [SerializeField] private AudioClip planted;
+    [SerializeField] private AudioClip harvest;
+    [SerializeField] private AudioClip bagButton;
+    [SerializeField] private AudioClip StartTime;
+    [SerializeField] private AudioClip ToDoList;
+    [SerializeField] private AudioClip SwitchScene;
 
     private void Awake()
     {
@@ -23,4 +29,10 @@ public class SoundManager : MonoBehaviour
 
     public void PlayClockUp() => PlaySound(clockUp);
     public void PlayClockDown() => PlaySound(clockDown);
+    public void PlayPlanted() => PlaySound(planted);
+    public void PlayHarvest() => PlaySound(harvest);
+    public void PlayBagButton() => PlaySound(bagButton);
+    public void PlayStartTime() => PlaySound(StartTime);
+    public void PlayToDoList() => PlaySound(ToDoList);
+    public void PlaySwitchScene() => PlaySound(SwitchScene);
 }

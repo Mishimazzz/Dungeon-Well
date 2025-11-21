@@ -14,10 +14,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private bool canDrag = false;
     public bool isInSeedBox;
 
-    //sounds
-    [SerializeField] private AudioClip plantSound;
-    private AudioSource audioSource;
-
     private List<RectTransform> farmGridAreas = new List<RectTransform>();
 
     private void Start()
@@ -29,12 +25,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             RectTransform rt = cell.GetComponent<RectTransform>();
             if (rt != null) farmGridAreas.Add(rt);
         }
-        audioSource.clip = plantSound;
     }
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = gameObject.AddComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
@@ -135,8 +129,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                             if (FarmManager.Instance != null)
                             {
                                 FarmManager.Instance.plantedCells.Add(cell.cellId);
-                                audioSource.clip = plantSound;
-                                audioSource.Play();
+                                SoundManager.Instance.PlayPlanted();
                             }
                         }
 

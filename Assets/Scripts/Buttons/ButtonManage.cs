@@ -36,6 +36,7 @@ public class ButtonManage : MonoBehaviour
 
     public void StartButton()
     {
+        SoundManager.Instance.PlayStartTime();
         timePanel.SetActive(false);
         timeCountDownPanel.SetActive(true);
         timerOn = true;
@@ -87,7 +88,7 @@ public class ButtonManage : MonoBehaviour
     }
     public void TogglePlayerBag()
     {
-
+        SoundManager.Instance.PlayBagButton();
         bool isActive = BagPanel.activeSelf;
         BagPanel.SetActive(!isActive);
 
@@ -110,6 +111,7 @@ public class ButtonManage : MonoBehaviour
 
     public void ToggleTodoList()
     {
+        SoundManager.Instance.PlayToDoList();
         bool isActive = TodoList.activeSelf;
         TodoList.SetActive(!isActive);
     }
