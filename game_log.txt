@@ -28955,3 +28955,15 @@ You probably need to add a AudioSource to the game object "TimeSystem". Or your 
 [Log] SeedManager 初始化完成
 [Log] 添加到FarmManager.Instance.plantedSeeds
 [Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] item name: TomatoSeed (ItemData)
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:2
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
