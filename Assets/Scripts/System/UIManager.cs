@@ -83,12 +83,7 @@ public class UIManager : MonoBehaviour
 
     public void BindExploreButton()
     {
-        GameObject timeObject = GameObject.Find("Time");
-        if (timeObject == null)
-        {
-            Debug.LogError("BindExploreButton: 找不到 Time 对象");
-            return;
-        }
+        GameObject timeObject = GameObject.Find("Button");
 
         Transform btnTransform = timeObject.transform.Find("Explore Button");
         if (btnTransform == null)

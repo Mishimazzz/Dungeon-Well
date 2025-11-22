@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManage : MonoBehaviour
 {
+    public FoldButtonBehavior foldButtonBehavior;
     public static ButtonManage Instance;
     public GameObject timePanel;
     public GameObject timeStopPanel;
@@ -42,6 +43,7 @@ public class ButtonManage : MonoBehaviour
         timerOn = true;
         TimeManager.Instance.isCounting = false;
         TimeManager.Instance.StartCountDown();
+        foldButtonBehavior.StartFoldFlow();
     }
     public void ExploreButton()
     {
