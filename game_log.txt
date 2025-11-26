@@ -28375,3 +28375,1035 @@ You probably need to assign the thirdPhasePrefab variable of the ItemData script
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
 [Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 8, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] total executeTime:7
+[Log] total executeTime:2
+[Log] total executeTime:9
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 没放到地里, 回到原位
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 没放到地里, 回到原位
+[Log] 没放到地里, 回到原位
+[Log] 没放到地里, 回到原位
+[Log] 没放到地里, 回到原位
+[Log] 没放到地里, 回到原位
+[Log] 没放到地里, 回到原位
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 15, plantedCells.Count = 1
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] [DraggableItem] 种植成功, 记录占用 cellId = 16, plantedCells.Count = 2
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] total executeTime:5
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] total executeTime:2
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] UnassignedReferenceException: The variable timePanel of ButtonManage has not been assigned.
+You probably need to assign the timePanel variable of the ButtonManage script in the inspector.
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] WellScene
+[Error] BindStartButton: 在 TimePanel 下找不到 StartButton
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:5
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] total executeTime:15
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:3
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] total executeTime:4
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] seedData: ChineseYamSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] item name: WheadySeed (ItemData)
+[Log] item name: ChineseYamSeed (ItemData)
+[Log] item name: TomatoSeed (ItemData)
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] 土地已被占用
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] seedData: TomatoSeed
+[Log] seedData: TomatoSeed
+[Log] seedData: WheadySeed
+[Log] seedData: ChineseYamSeed
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Exception] MissingComponentException: There is no 'AudioSource' attached to the "TimeSystem" game object, but a script is trying to access it.
+You probably need to add a AudioSource to the game object "TimeSystem". Or your script needs to check if the component is attached before using it.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:7
+[Log] total executeTime:6
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:1
+[Log] WellScene
+[Log] item name: TomatoSeed (ItemData)
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] WellScene
+[Log] FarmScene
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] item name: TomatoSeed (ItemData)
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:3
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:2
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: TomatoSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] item name: TomatoSeed (ItemData)
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:2
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] total executeTime:2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] total executeTime:25
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] NullReferenceException: Object reference not set to an instance of an object
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'PlayIcon' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'PlayIcon' does not exist.
+[Warning] Parameter 'PlayIcon' does not exist.
+[Warning] Parameter 'PlayIcon' does not exist.
+[Warning] Parameter 'PlayIcon' does not exist.
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] total executeTime:43
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] total executeTime:37
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Warning] Assets\Scripts\Time\TimeManager.cs(10,23): warning CS0067: The event 'TimeManager.OnTimeUp' is never used
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 2
+[Log] 3
+[Log] 4
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 2
+[Log] 3
+[Log] 4
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 2
+[Log] 3
+[Log] 4
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Warning] Assets\Scripts\Time\TimeManager.cs(10,23): warning CS0067: The event 'TimeManager.OnTimeUp' is never used
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Error] BindExploreButton: 在 Time 下找不到 ExploreButton
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] Assets\Scripts\Time\TimeManager.cs(10,23): warning CS0067: The event 'TimeManager.OnTimeUp' is never used
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] total executeTime:52
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] 未找到物品：MoonWeed
+[Warning] Parameter 'Show' does not exist.
+[Log] total executeTime:5
+[Warning] Parameter 'Show' does not exist.
+[Log] total executeTime:8
+[Warning] Parameter 'Show' does not exist.
+[Log] total executeTime:2
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Log] seedData: MoonPlantSeed
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] item name: MoonPlantSeed (ItemData)
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] total executeTime:15
+[Warning] Parameter 'Show' does not exist.
+[Log] total executeTime:2
+[Warning] Parameter 'Show' does not exist.
+[Log] total executeTime:1
+[Warning] Parameter 'Show' does not exist.
+[Log] total executeTime:2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] 未找到物品：MoonWeed
+[Log] 进入了
+[Log] SeedManager 初始化完成
+[Log] 添加到FarmManager.Instance.plantedSeeds
+[Log] posZ:1
+[Warning] Parameter 'Show' does not exist.
+[Log] total executeTime:2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] 未找到物品：MoonWeed
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json

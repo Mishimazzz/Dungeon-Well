@@ -84,6 +84,7 @@ public class TimeManager : MonoBehaviour
   /// </summary>
   public void IncreaseHour()
   {
+    SoundManager.Instance.PlayClockUp();
     currentTime.hour++;
     if (currentTime.hour == 24) currentTime.hour = 0;
     OnTimeChanged?.Invoke(currentTime);
@@ -94,6 +95,7 @@ public class TimeManager : MonoBehaviour
   /// </summary>
   public void DecreaseHour()
   {
+    SoundManager.Instance.PlayClockDown();
     currentTime.hour--;
     if (currentTime.hour < 0) currentTime.hour = 23;
     OnTimeChanged?.Invoke(currentTime);
@@ -104,6 +106,7 @@ public class TimeManager : MonoBehaviour
   /// </summary>
   public void IncreaseMinute()
   {
+    SoundManager.Instance.PlayClockUp();
     currentTime.min++;
     if (currentTime.min == 60) currentTime.min = 0;
     OnTimeChanged?.Invoke(currentTime);
@@ -114,6 +117,7 @@ public class TimeManager : MonoBehaviour
   /// </summary>
   public void DecreaseMinute()
   {
+    SoundManager.Instance.PlayClockDown();
     currentTime.min--;
     if (currentTime.min == -1) currentTime.min = 59;
     OnTimeChanged?.Invoke(currentTime);

@@ -26,20 +26,16 @@ public class SceneManager : MonoBehaviour
     public void LoadWell()
     {
         LoadSceneByName(SceneType.Well);
-        // seedBoxButton.gameObject.SetActive(false);
-        // seedBoxPlane.SetActive(false);
     }
     public void LoadFarm()
     {
         LoadSceneByName(SceneType.Farm);
-        // seedBoxButton.gameObject.SetActive(true);
-        // seedBoxPlane.SetActive(false);
     }
 
     public void LoadScene()
     {
         string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        Debug.Log(currentSceneName);
+        SoundManager.Instance.PlaySwitchScene();
         if (currentSceneName.Equals("WellScene")) LoadFarm();
         else if (currentSceneName.Equals("FarmScene")) LoadWell();
     }
@@ -47,6 +43,5 @@ public class SceneManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Quit Game");
     }
 }

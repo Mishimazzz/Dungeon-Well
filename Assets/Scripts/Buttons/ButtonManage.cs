@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManage : MonoBehaviour
 {
+    public FoldButtonBehavior foldButtonBehavior;
     public static ButtonManage Instance;
     public GameObject timePanel;
     public GameObject timeStopPanel;
@@ -19,9 +20,15 @@ public class ButtonManage : MonoBehaviour
     public GameObject settingMenu;
     private bool timerOn;
     public float TotalFullExecuteTime;
+
+    //sounds zone
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip clockDown;
     public int executeHour; public int executeMin; public int executeSec;
+
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         if (Instance == null)
             Instance = this;
         else
@@ -30,11 +37,13 @@ public class ButtonManage : MonoBehaviour
 
     public void StartButton()
     {
+        SoundManager.Instance.PlayStartTime();
         timePanel.SetActive(false);
         timeCountDownPanel.SetActive(true);
         timerOn = true;
         TimeManager.Instance.isCounting = false;
         TimeManager.Instance.StartCountDown();
+        foldButtonBehavior.StartFoldFlow();
     }
     public void ExploreButton()
     {
@@ -81,6 +90,7 @@ public class ButtonManage : MonoBehaviour
     }
     public void TogglePlayerBag()
     {
+        SoundManager.Instance.PlayBagButton();
         bool isActive = BagPanel.activeSelf;
         BagPanel.SetActive(!isActive);
 
@@ -103,6 +113,7 @@ public class ButtonManage : MonoBehaviour
 
     public void ToggleTodoList()
     {
+        SoundManager.Instance.PlayToDoList();
         bool isActive = TodoList.activeSelf;
         TodoList.SetActive(!isActive);
     }

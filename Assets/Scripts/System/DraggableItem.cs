@@ -129,8 +129,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                             if (FarmManager.Instance != null)
                             {
                                 FarmManager.Instance.plantedCells.Add(cell.cellId);
-                                Debug.Log("[DraggableItem] 种植成功, 记录占用 cellId = " + cell.cellId +
-                                          ", plantedCells.Count = " + FarmManager.Instance.plantedCells.Count);
+                                SoundManager.Instance.PlayPlanted();
                             }
                         }
 
