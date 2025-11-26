@@ -26,6 +26,8 @@ public class FoldButtonBehavior : MonoBehaviour
         state = 1;  // 显示动画板（状态1）
 
         animationPanel.SetActive(true);
+        RectTransform rt = animationPanel.GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2(200f, 210f);
         iconPanel.SetActive(false);
         if (mainCanvas != null) mainCanvas.SetActive(true);
         if (buttons != null) buttons.SetActive(true);
@@ -43,12 +45,14 @@ public class FoldButtonBehavior : MonoBehaviour
 
         state++;
         Debug.Log(state);
+        RectTransform rt = animationPanel.GetComponent<RectTransform>();
 
         switch (state)
         {
             case 2:
                 // 第 1 次按 → 只显示动画板
                 animationPanel.SetActive(true);
+                rt.anchoredPosition = new Vector2(200f, -210f);
                 iconPanel.SetActive(false);
                 if (mainCanvas != null) mainCanvas.SetActive(false);
                 if (buttons != null) buttons.SetActive(false);
@@ -71,6 +75,7 @@ public class FoldButtonBehavior : MonoBehaviour
             case 4:
                 // 第 3 次按 → 主板 + 动画板
                 animationPanel.SetActive(true);
+                rt.anchoredPosition = new Vector2(200f, 210f);
                 iconPanel.SetActive(false);
                 if (mainCanvas != null) mainCanvas.SetActive(true);
                 if (buttons != null) buttons.SetActive(true);

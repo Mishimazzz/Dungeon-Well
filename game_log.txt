@@ -29291,3 +29291,119 @@ You probably need to add a AudioSource to the game object "TimeSystem". Or your 
 [Warning] Parameter 'Show' does not exist.
 [Log] total executeTime:2
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] 未找到物品：MoonWeed
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
