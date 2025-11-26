@@ -52,7 +52,7 @@ public class FoldButtonBehavior : MonoBehaviour
             case 2:
                 // 第 1 次按 → 只显示动画板
                 animationPanel.SetActive(true);
-                rt.anchoredPosition = new Vector2(200f, -210f);
+                rt.anchoredPosition = new Vector2(200f, -228f);
                 iconPanel.SetActive(false);
                 if (mainCanvas != null) mainCanvas.SetActive(false);
                 if (buttons != null) buttons.SetActive(false);

@@ -29407,3 +29407,31 @@ You probably need to add a AudioSource to the game object "TimeSystem". Or your 
 [Warning] Parameter 'PlayIcon' does not exist.
 [Log] 4
 [Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Exception] MissingComponentException: There is no 'RectTransform' attached to the "CaveAnimation" game object, but a script is trying to access it.
+You probably need to add a RectTransform to the game object "CaveAnimation". Or your script needs to check if the component is attached before using it.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
+[Warning] DontDestroyOnLoad only works for root GameObjects or components on root GameObjects.
+[Warning] Parameter 'Show' does not exist.
+[Log] 2
+[Log] total executeTime:60
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] 2
+[Log] 3
+[Warning] Parameter 'PlayIcon' does not exist.
+[Log] 4
+[Log] [Save] C:/Users/16039/AppData/LocalLow/DefaultCompany/Dungeon-Well\save.json
