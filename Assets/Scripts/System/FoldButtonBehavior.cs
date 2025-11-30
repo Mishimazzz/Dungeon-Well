@@ -49,10 +49,12 @@ public class FoldButtonBehavior : MonoBehaviour
         animationPanel.SetActive(true);
         CountTimePanel.SetActive(true);
         state3Button.SetActive(false);
+
         RectTransform rt = animationPanel.GetComponent<RectTransform>();
         RectTransform ct = CountTimePanel.GetComponent<RectTransform>();
         RectTransform ft = foldButton.GetComponent<RectTransform>();
-        UnityEngine.UI.Image image = GetComponent<UnityEngine.UI.Image>();
+        UnityEngine.UI.Image image = mainButton.GetComponent<UnityEngine.UI.Image>();
+
         ct.anchoredPosition = new Vector2(200f, -185f);
         rt.anchoredPosition = new Vector2(200f, 210f);
         ft.anchoredPosition = new Vector2(530f, -65f);
@@ -95,7 +97,10 @@ public class FoldButtonBehavior : MonoBehaviour
         RectTransform ct = CountTimePanel.GetComponent<RectTransform>();
         RectTransform ft = foldButton.GetComponent<RectTransform>();
         Transform dt = DragParent.GetComponent<Transform>();
-        UnityEngine.UI.Image image = GetComponent<UnityEngine.UI.Image>();
+        RectTransform tt = state3Button.GetComponent<RectTransform>();
+        RectTransform mt = mainButton.GetComponent<RectTransform>();
+        UnityEngine.UI.Image image = mainButton.GetComponent<UnityEngine.UI.Image>();
+        UnityEngine.UI.Image image3 = state3Button.GetComponent<UnityEngine.UI.Image>();
 
         switch (state)
         {
@@ -129,7 +134,8 @@ public class FoldButtonBehavior : MonoBehaviour
                 animationPanel.SetActive(false);
                 CountTimePanel.SetActive(false);
                 iconPanel.SetActive(true);
-                image.sprite = transparentSkin;
+                image3.sprite = transparentSkin;
+                tt.anchoredPosition = new Vector2(385, -340);
                 if (iconAnimator != null)
                     iconAnimator.SetTrigger("PlayIcon");
                 if (mainCanvas != null) mainCanvas.SetActive(false);
@@ -148,6 +154,7 @@ public class FoldButtonBehavior : MonoBehaviour
                 rt.anchoredPosition = new Vector2(200f, 210f);
                 ct.anchoredPosition = new Vector2(200f, -185f);
                 ft.anchoredPosition = new Vector2(530f, -65f);
+                mt.anchoredPosition = new Vector2(530f, -65f);
                 dt.position = Vector3.zero;
 
                 image.sprite = normalSkin;
@@ -165,14 +172,19 @@ public class FoldButtonBehavior : MonoBehaviour
 
     private void CheckTimeUpState()
     {
-        RectTransform ft = foldButton.GetComponent<RectTransform>();
+        RectTransform mt = mainButton.GetComponent<RectTransform>();
+        RectTransform tt = state3Button.GetComponent<RectTransform>();
+        Transform dt = DragParent.GetComponent<Transform>();
         UnityEngine.UI.Image image = GetComponent<UnityEngine.UI.Image>();
         string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         if (!TimeManager.Instance.isCounting && currentSceneName.Equals("WellScene"))
         {
             animationPanel.SetActive(false);
             iconPanel.SetActive(false);
-            ft.anchoredPosition = new Vector2(530f, -65f);
+            state3Button.SetActive(false);
+            mainButton.SetActive(true);
+            mt.anchoredPosition = new Vector2(530f, -65f);
+            dt.position = Vector3.zero;
             image.sprite = normalSkin;
             if (mainCanvas != null) mainCanvas.SetActive(true);
             if (buttons != null) buttons.SetActive(true);
