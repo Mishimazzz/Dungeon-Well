@@ -9,6 +9,9 @@ public class FoldButtonBehavior : MonoBehaviour
 {
     public GameObject animationPanel;   // 动画板
     public GameObject iconPanel;        // Icon 动画
+
+    public GameObject mainButton;      // 主按钮
+    public GameObject state3Button;    // state3 专用按钮
     // 主板
     public GameObject mainCanvas;
     public GameObject foldButton;
@@ -45,6 +48,7 @@ public class FoldButtonBehavior : MonoBehaviour
 
         animationPanel.SetActive(true);
         CountTimePanel.SetActive(true);
+        state3Button.SetActive(false);
         RectTransform rt = animationPanel.GetComponent<RectTransform>();
         RectTransform ct = CountTimePanel.GetComponent<RectTransform>();
         RectTransform ft = foldButton.GetComponent<RectTransform>();
@@ -63,12 +67,29 @@ public class FoldButtonBehavior : MonoBehaviour
             animationAnimator.SetTrigger("Show");
     }
 
-    public void OnFoldButtonClick()
+    // 主按钮点击
+    public void OnMainButtonClick()
+    {
+        Debug.Log("now: " + state);
+        if (state == 1) OnFoldButtonClick(2);
+        else if (state == 2) OnFoldButtonClick(3);
+        else if (state == 3) OnFoldButtonClick(2);
+    }
+
+    // state3 按钮点击
+    public void OnState3ButtonClick()
+    {
+        state = 3;
+        timerStarted = true;
+        OnFoldButtonClick(4);
+    }
+
+    public void OnFoldButtonClick(int stateNum)
     {
 
         if (!timerStarted) return; // 没开始计时时不执行
 
-        state++;
+        state = stateNum;
         Debug.Log(state);
         RectTransform rt = animationPanel.GetComponent<RectTransform>();
         RectTransform ct = CountTimePanel.GetComponent<RectTransform>();
@@ -85,6 +106,8 @@ public class FoldButtonBehavior : MonoBehaviour
                 dt.transform.position = dragPanel.savedPos;
                 animationPanel.SetActive(true);
                 CountTimePanel.SetActive(true);
+                mainButton.SetActive(true);
+                state3Button.SetActive(false);
                 rt.anchoredPosition = new Vector2(200f, -228f);
                 ct.anchoredPosition = new Vector2(200f, -320);
                 ft.anchoredPosition = new Vector2(510f, -170);
@@ -100,6 +123,8 @@ public class FoldButtonBehavior : MonoBehaviour
 
             case 3:
                 // 第 2 次按 → 只显示 Icon 动画
+                state3Button.SetActive(true);
+                mainButton.SetActive(false);
                 dragPanel.canDrag = false;
                 animationPanel.SetActive(false);
                 CountTimePanel.SetActive(false);
@@ -118,6 +143,8 @@ public class FoldButtonBehavior : MonoBehaviour
                 dragPanel.canDrag = false;
                 animationPanel.SetActive(true);
                 CountTimePanel.SetActive(true);
+                mainButton.SetActive(true);
+                state3Button.SetActive(false);
                 rt.anchoredPosition = new Vector2(200f, 210f);
                 ct.anchoredPosition = new Vector2(200f, -185f);
                 ft.anchoredPosition = new Vector2(530f, -65f);
