@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
+// using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +18,7 @@ public class FoldButtonBehavior : MonoBehaviour
     public GameObject buttons;
     public GameObject UIbuttons;
     public GameObject Cat;
+    public GameObject DragParent;
     //fold button 皮肤
     public Sprite normalSkin;
     public Sprite transparentSkin;
@@ -27,6 +28,8 @@ public class FoldButtonBehavior : MonoBehaviour
 
     private int state = 0;              // 当前状态
     private bool timerStarted = false;
+    public DragPanel dragPanel;
+    
 
     void Update()
     {
@@ -38,6 +41,7 @@ public class FoldButtonBehavior : MonoBehaviour
     {
         timerStarted = true;
         state = 1;  // 显示动画板（状态1）
+        dragPanel.canDrag = false;
 
         animationPanel.SetActive(true);
         CountTimePanel.SetActive(true);
@@ -69,12 +73,16 @@ public class FoldButtonBehavior : MonoBehaviour
         RectTransform rt = animationPanel.GetComponent<RectTransform>();
         RectTransform ct = CountTimePanel.GetComponent<RectTransform>();
         RectTransform ft = foldButton.GetComponent<RectTransform>();
+        Transform dt = DragParent.GetComponent<Transform>();
         UnityEngine.UI.Image image = GetComponent<UnityEngine.UI.Image>();
 
         switch (state)
         {
             case 2:
                 // 第 1 次按 → 只显示动画板
+                dragPanel.canDrag = true;
+                // 读取玩家拖拽后的记录位置
+                dt.transform.position = dragPanel.savedPos;
                 animationPanel.SetActive(true);
                 CountTimePanel.SetActive(true);
                 rt.anchoredPosition = new Vector2(200f, -228f);
@@ -92,6 +100,7 @@ public class FoldButtonBehavior : MonoBehaviour
 
             case 3:
                 // 第 2 次按 → 只显示 Icon 动画
+                dragPanel.canDrag = false;
                 animationPanel.SetActive(false);
                 CountTimePanel.SetActive(false);
                 iconPanel.SetActive(true);
@@ -106,11 +115,14 @@ public class FoldButtonBehavior : MonoBehaviour
 
             case 4:
                 // 第 3 次按 → 主板 + 动画板
+                dragPanel.canDrag = false;
                 animationPanel.SetActive(true);
                 CountTimePanel.SetActive(true);
                 rt.anchoredPosition = new Vector2(200f, 210f);
                 ct.anchoredPosition = new Vector2(200f, -185f);
                 ft.anchoredPosition = new Vector2(530f, -65f);
+                dt.position = Vector3.zero;
+
                 image.sprite = normalSkin;
                 iconPanel.SetActive(false);
                 if (mainCanvas != null) mainCanvas.SetActive(true);
