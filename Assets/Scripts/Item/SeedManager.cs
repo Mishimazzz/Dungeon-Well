@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Collections;
+using TMPro;
 
 public class SeedManager : MonoBehaviour
 {
@@ -16,8 +18,20 @@ public class SeedManager : MonoBehaviour
   public bool isHavestItem = false;
 
   public float TotalTime;
+  private int GrowthRate;//每个植物的生长值固定 = 100
+  GameObject GrowthText;
   private float plantedTime; // 记录种下时间
   public FarmGridCell ownerCell;
+
+  void Start()
+  {
+    // 自动从 Resources 加载
+    GrowthText = Resources.Load<GameObject>("GrowthRate");
+    mainCanvas = FindObjectOfType<Canvas>();
+
+    if (GrowthText == null)
+      Debug.LogError("找不到 GrowthRate.prefab，请确认放在 Resources 下！");
+  }
 
   public void Init(ItemData seed)
   {
@@ -119,6 +133,11 @@ public class SeedManager : MonoBehaviour
   void OnMouseDown()
   {
     if (hasChanged) return;
+    if (TotalTime > 0 && currentStageObj != null && !currentStageObj.name.Contains(stage3Prefab.name))
+    {
+      GrowthTimeDecrease();
+    }
+
     if (currentStageObj != null && currentStageObj.name.Contains(stage3Prefab.name))
     {
       SoundManager.Instance.PlayHarvest();
@@ -193,5 +212,78 @@ public class SeedManager : MonoBehaviour
     else UpdateStage(currentTime);
   }
 
+/// <summary>
+/// 通过鼠标点击，可以增加生长值，从而减少农作物的生长时间。（100点生长值 = 1秒）
+/// 每次+10生长值
+/// </summary>
+  private void GrowthTimeDecrease()
+  {
+    if(GrowthRate == 100)
+    {
+      TotalTime--;
+      GrowthRate = 0;
+    }else
+    {
+      GrowthRate += 10;
+      ShowFloatingText("+10");
+    }
+  }
+
+  private Canvas mainCanvas;  // 在 Inspector 拖入你的 Canvas
+
+  void ShowFloatingText(string text)
+  {
+    Vector3 worldPos = transform.position + new Vector3(UnityEngine.Random.Range(-0.3f, 0.3f), 0.8f, 0);
+    Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
+
+    GameObject ft = Instantiate(GrowthText);
+
+    ft.transform.SetParent(this.transform, false);
+    ft.transform.SetParent(mainCanvas.transform, true);
+
+    RectTransform rt = ft.GetComponent<RectTransform>();
+
+    Vector2 uiPos;
+    RectTransformUtility.ScreenPointToLocalPointInRectangle(
+        mainCanvas.transform as RectTransform,
+        screenPos,
+        mainCanvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : mainCanvas.worldCamera,
+        out uiPos
+    );
+    rt.anchoredPosition = uiPos;
+
+    ft.GetComponent<TextMeshProUGUI>().text = text;
+
+    StartCoroutine(ArcMove(rt, currentStageObj));
+  }
+
+  IEnumerator ArcMove(RectTransform rt, GameObject plant)
+  {
+    Vector2 start = rt.anchoredPosition;
+    Vector2 control = start + new Vector2(UnityEngine.Random.Range(-50, 50), UnityEngine.Random.Range(80, 120));
+    Vector2 end = start + new Vector2(UnityEngine.Random.Range(-40, 40), -50);
+
+    float t = 0f;
+    float duration = 1f;
+
+    while (t < 1f)
+    {
+      if (plant == null)
+      {
+        if (plant == null) { Destroy(rt.gameObject); yield break; }
+        yield break;
+      }
+
+      t += Time.deltaTime / duration;
+
+      Vector2 a = Vector2.Lerp(start, control, t);
+      Vector2 b = Vector2.Lerp(control, end, t);
+      rt.anchoredPosition = Vector2.Lerp(a, b, t);
+
+      yield return null;
+    }
+
+    Destroy(rt.gameObject);
+  }
 
 }
