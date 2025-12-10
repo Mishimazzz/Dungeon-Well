@@ -2469,7 +2469,7 @@ RectTransform:
   - {fileID: 1799911133}
   - {fileID: 1901548511}
   - {fileID: 1167262149}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051138706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2820,7 +2820,7 @@ RectTransform:
   m_Children:
   - {fileID: 208846322}
   - {fileID: 196383926}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051138706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5632,6 +5632,58 @@ MonoBehaviour:
   itemDatabase: {fileID: 11400000, guid: 9c82ea941a2e6b34c817f35a10f4658c, type: 2}
   coinText: {fileID: 967361917}
   scrollContent: {fileID: 31885570}
+--- !u!1 &1051138704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051138706}
+  - component: {fileID: 1051138707}
+  m_Layer: 0
+  m_Name: UIRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051138706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051138704}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1520451762}
+  - {fileID: 511539914}
+  - {fileID: 600642873}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051138707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051138704}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847295eab9c6305468ffd926d62425d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1520451762}
+  - {fileID: 511539914}
+  - {fileID: 1167262149}
+  dragSpeed: 1
 --- !u!1 &1054705958
 GameObject:
   m_ObjectHideFlags: 0
@@ -8176,7 +8228,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 932800817}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1051138706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15237,6 +15289,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 886111666}
-  - {fileID: 1520451762}
-  - {fileID: 511539914}
-  - {fileID: 600642873}
+  - {fileID: 1051138706}
