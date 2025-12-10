@@ -24,9 +24,9 @@ public class TransparentInteractiveWindow : MonoBehaviour
     const uint SWP_NOZORDER = 0x0004;
     const uint SWP_SHOWWINDOW = 0x0040;
 
-    public int windowWidth = 1250;
-    public int windowHeight = 800;
-    public int margin = 12;
+    public int windowWidth = 1920;
+    public int windowHeight = 1080;
+    public int margin = 0;
     static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
 
     [StructLayout(LayoutKind.Sequential)]
