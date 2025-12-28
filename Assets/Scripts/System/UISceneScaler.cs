@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 public class UISceneScaler : MonoBehaviour
 {
-    [Header("三个 UI CanvasScaler")]
-    public CanvasScaler[] scalers;
+    [Header("自动收集到的 CanvasScaler")]
+    public List<CanvasScaler> scalers = new List<CanvasScaler>();
 
     [Header("三档尺寸（UI 与 场景一起变）")]
     public Vector2[] uiResolutions = {
@@ -24,6 +25,24 @@ public class UISceneScaler : MonoBehaviour
     void Start()
     {
         ApplyScale(currentIndex);
+    }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        RefreshScalers();
+        ApplyScale(currentIndex);
+    }
+
+    void RefreshScalers()
+    {
+        scalers.Clear();
+        scalers.AddRange(FindObjectsOfType<CanvasScaler>(true)); // true = 包括隐藏的
     }
 
     public void ScaleUp() // 相当于“放大按钮”

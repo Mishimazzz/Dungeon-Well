@@ -4,42 +4,19 @@ using UnityEngine;
 
 public class PersistentCanvases : MonoBehaviour
 {
-    private static GameObject uiCanvasInstance;
-    private static GameObject timeCanvasInstance;
+    private static PersistentCanvases instance;
 
-    [Header("Assign the two Canvases you want to persist")]
-    public GameObject UICanvas;
-    public GameObject TimeCanvas;
-
-    private void Awake()
+    void Awake()
     {
-        // UICanvas 保留
-        if (UICanvas != null)
+        if (instance != null && instance != this)
         {
-            if (uiCanvasInstance == null)
-            {
-                uiCanvasInstance = UICanvas;
-                DontDestroyOnLoad(uiCanvasInstance);
-            }
-            else if (UICanvas != uiCanvasInstance)
-            {
-                Destroy(UICanvas);
-            }
+            // 场景里如果又生成了一份 UIRoot，就把新的删掉
+            Destroy(gameObject);
+            return;
         }
 
-        // TimeCanvas 保留
-        if (TimeCanvas != null)
-        {
-            if (timeCanvasInstance == null)
-            {
-                timeCanvasInstance = TimeCanvas;
-                DontDestroyOnLoad(timeCanvasInstance);
-            }
-            else if (TimeCanvas != timeCanvasInstance)
-            {
-                Destroy(TimeCanvas);
-            }
-        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);   // 整个 UIRoot（包含所有 Canvas）一起保留
     }
 }
 
